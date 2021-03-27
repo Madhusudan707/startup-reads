@@ -1,0 +1,41 @@
+
+.search{
+    /* grid-area:search; */
+    /* max-width: 100%; */
+    /* align-items: center; */
+    /* justify-content:center; */
+    /* justify-items: center; */
+    /* justify-self: center; */
+    /* margin-top:4%; */
+    /* margin-left:8%; */
+   
+
+}
+.search>label{
+    
+}
+.search>label>input::placeholder{
+    font-size:16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+.search>label>input{
+    width: 83%;
+    padding: 10px 30px;
+   
+    outline:none;
+    border:0px;
+}
+
+.search>label{
+    position: relative;
+}
+.search>label:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 16px;
+    background: url("./search_icon.svg") center / contain no-repeat;
+  }

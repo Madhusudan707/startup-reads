@@ -1,0 +1,17 @@
+.product_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+
+} 
+.loader,.loading_error{
+    position:absolute;
+    top:40%;
+    text-align: center;
+    left:40%;
+    color:#f00;
+}
+.hide_loader{
+    display:none;
+}
+

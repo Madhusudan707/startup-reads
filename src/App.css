@@ -1,0 +1,15 @@
+a{
+  text-decoration: none;;
+}
+
+
+.App {
+ display:grid;
+ grid-template-areas: 
+ "header"
+ "main"
+}
+.button{
+  cursor:pointer
+}
+

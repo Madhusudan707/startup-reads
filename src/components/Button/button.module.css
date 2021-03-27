@@ -1,0 +1,21 @@
+.btn{
+    display:grid;
+    padding:0.5em 1em 0.5em 1em;
+    border-radius:100px;
+    color:#ffffff;
+    border:none;
+    font-size:1em;
+    position:relative;
+    background:#0652DD;
+    cursor:pointer;
+    height:2em;
+    width:11em;
+    overflow:hidden;
+    transition:transform 0.1s;
+    z-index:1;
+    align-self:flex-end;
+    justify-self:center;
+    margin-top:1%;
+    outline: none;
+    
+}

@@ -1,0 +1,6 @@
+.main{
+    display:grid;
+    grid-area:main;
+    grid-template-areas:"sort"
+    "product";
+}
