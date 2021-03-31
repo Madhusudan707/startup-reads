@@ -1,0 +1,27 @@
+
+
+.navbar{
+    grid-area:navbar;
+    position:fixed;
+    
+ 
+}
+
+.nav-ul{
+    overflow: hidden;
+}
+.nav-ul>li>a:focus{
+    font-weight: bold;
+    border-bottom: 1px solid #ffffff;
+}
+.nav-ul>li>a:hover{
+    border-bottom: 1px solid #ffffff;
+}
+
+@media screen and (max-width:414px){
+    
+    .nav-ul{
+        /* display:none */
+        margin-top:10%;
+    }
+}

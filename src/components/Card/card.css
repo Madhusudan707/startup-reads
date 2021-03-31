@@ -1,52 +1,24 @@
-/* * {
-    margin: 0;
-    padding: 0;
-} */
-
-/* .product_main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: card;
-    justify-items: center;
-
-} */
-/* .loading{
-    position:absolute;
-    top:40%;
-    text-align: center;
-    left:40%;
-    color:#f00;
-} */
-
-/* .card {
-    display: grid;
-    width: 210px;
-    border-radius:0.5rem;
-    margin: 1rem;
-    padding:0.5rem;
-    align-items:center;
-    justify-items: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    position:relative;
-} */
-
-/* .product>img {
-    width: 100%;
-    height: auto;
-    border:2px solid red;
-    position:absolute;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-}
-.product>button{
-    justify-content: center;
-    margin-left:8%;
-    justify-self: center;
-} */
-
 .card-main{
    display: grid;
    align-items: flex-end;
-   
+}
+.card{
+    width:250px;
+    height:400px;
 }
 
+.card-img>img{
+    height:250px;
+}
+.wishlist_icon{
+    cursor: pointer;
+    float: right;
+    margin-top: -14%;
+    margin-right: 4%;
+    width: 25px;
+}
+
+.card-title>h4{
+    text-align: center;
+    font-size: 1rem;
+}

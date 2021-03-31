@@ -5,15 +5,14 @@ import { useWishList } from '../../contexts/contexts'
 
 
 const Wishlist = () => {
-
     const {itemsInWishList} = useWishList()
-   
    
     return (
         <>
         {/* <img  src={isLoading && "https://cdn.dribbble.com/users/31776/screenshots/754788/loading_cart.gif"} className={styles.loading}/> */}
           <div className={styles.wishlist_main}>
-           <Card products={itemsInWishList} /> 
+         { itemsInWishList.length? <Card products={itemsInWishList} />: <h1 className={styles.no_wishlist_msg}>Make A Wish</h1> }
+          
            </div>
         </>
     )

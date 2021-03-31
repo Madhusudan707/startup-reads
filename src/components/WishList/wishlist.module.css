@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: card;
     justify-items: center;
+    margin-top:5%;
 
 }
 .loading{
@@ -34,6 +35,18 @@
 .wishlist>img {
     width: 110px;
 
+}
+.no_wishlist_msg{
+    position:absolute;
+    top:40%;
+    left:35%;
+    font-size:3rem;
+    align-self: center;
+    text-align: center;
+    border-bottom:1px dashed #000000;
+    color:#000000;
+  
+   
 }
 
 .info {

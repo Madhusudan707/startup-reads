@@ -3,4 +3,5 @@
     grid-area:main;
     grid-template-areas:"sort"
     "product";
+    margin-top:3%;
 }

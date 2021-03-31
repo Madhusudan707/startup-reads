@@ -1,118 +1,106 @@
-import {createContext,useContext,useState,useEffect} from "react"
-import axios from 'axios'
-
-
+import { createContext, useContext, useState, useEffect } from "react";
+import axios from "axios";
 
 //1. Product Context
 
 export const ProductContext = createContext();
 
+export const ProductProvider = ({ children }) => {
+  useEffect(() => {
+    productLoading(); /* name it loading product */
+  }, []);
 
-export const  ProductProvider = ({children})=>{
-    useEffect(()=>{
-        productLoading() /* name it loading product */
-    },[])
+  const [productList, setProductList] = useState([]);
 
-    const[productList,setProductList] = useState([])
+  const productLoading = async () => {
+    const response = await axios.get("data.json");
+    setProductList(response.data);
+  };
 
-   
+  return (
+    <ProductContext.Provider value={{ productList, setProductList }}>
+      {children}
+    </ProductContext.Provider>
+  );
+};
 
-        const productLoading=async ()=>{
-                const response = await axios.get('data.json')
-                setProductList(response.data)
-        }    
-
-        return (
-            <ProductContext.Provider value={{productList,setProductList}}>
-                {children}
-            </ProductContext.Provider>
-        )
-}
-
-export const useProducts = ()=>{
-    return useContext(ProductContext)
-}
+export const useProducts = () => {
+  return useContext(ProductContext);
+};
 
 //2. CartContext
 
 export const CartContext = createContext();
 
-export const CartProvider = ({children})=>{
+export const CartProvider = ({ children }) => {
+  const [itemsInCart, setItemsInCart] = useState([]);
+  useEffect(() => {
+    const itemsInCart = JSON.parse(localStorage.getItem("itemsInCart"));
+    if (itemsInCart) {
+      setItemsInCart(itemsInCart);
+    }
+  }, []);
 
+  useEffect(() => {
+    localStorage.setItem("itemsInCart", JSON.stringify(itemsInCart));
+  }, [itemsInCart]);
 
-    const [itemsInCart,setItemsInCart] = useState([])
-    useEffect(()=>{
-        const itemsInCart = JSON.parse(localStorage.getItem("itemsInCart"))
-        if(itemsInCart){
-            setItemsInCart(itemsInCart)
-        }
-    },[])
+  return (
+    <CartContext.Provider value={{ itemsInCart, setItemsInCart }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
 
-    useEffect(()=>{
-        localStorage.setItem("itemsInCart",JSON.stringify(itemsInCart))
-    },[itemsInCart])
-
-   
-
-    return (
-        <CartContext.Provider value={{itemsInCart,setItemsInCart}}>
-            {children}
-        </CartContext.Provider>
-    )
-}
-
-export const useCart = ()=>{
-    return useContext(CartContext)
-}
+export const useCart = () => {
+  return useContext(CartContext);
+};
 
 //3 WishListContext
 
-
 export const WishListContext = createContext();
 
-export const WishListProvider = ({children})=>{
-    const [itemsInWishList,setItemsInWishList] = useState([])
+export const WishListProvider = ({ children }) => {
+  const [itemsInWishList, setItemsInWishList] = useState([]);
 
-     useEffect(()=>{
-        const itemsInWishList = JSON.parse(localStorage.getItem("itemsInWishList"))
-        if(itemsInWishList){
-            setItemsInWishList(itemsInWishList)
-        }
-    },[])
+  useEffect(() => {
+    const itemsInWishList = JSON.parse(localStorage.getItem("itemsInWishList"));
+    if (itemsInWishList) {
+      setItemsInWishList(itemsInWishList);
+    }
+  }, []);
 
-    //Adding product to wishlilst
-    useEffect(()=>{
-        localStorage.setItem("itemsInWishList",JSON.stringify(itemsInWishList))
-    },[itemsInWishList])
+  //Adding product to wishlilst
+  useEffect(() => {
+    localStorage.setItem("itemsInWishList", JSON.stringify(itemsInWishList));
+  }, [itemsInWishList]);
 
-    return (
-        <WishListContext.Provider value={{itemsInWishList,setItemsInWishList}}>
-            {children}
-        </WishListContext.Provider>
-    )
+  return (
+    <WishListContext.Provider value={{ itemsInWishList, setItemsInWishList }}>
+      {children}
+    </WishListContext.Provider>
+  );
+};
 
-}
-
-export const useWishList = ()=>{
-    return useContext(WishListContext)
-}
-
+export const useWishList = () => {
+  return useContext(WishListContext);
+};
 
 //4
-export const CounterContext = createContext()
+export const CounterContext = createContext();
 
-export const CounterProvider = ({children})=>{
-    const [count,setCount]=useState(0)
-    return (
-        <CounterContext.Provider value={{count,setCount}}>
-            {children}
-        </CounterContext.Provider>
-    )
-}
+export const CounterProvider = ({ children }) => {
+  const [count, setCount] = useState(0);
+  return (
+    <CounterContext.Provider value={{ count, setCount }}>
+      {children}
+    </CounterContext.Provider>
+  );
+};
 
-export const useCounter=()=>{
-    return useContext(CounterContext)
-}
+export const useCounter = () => {
+  return useContext(CounterContext);
+};
 
 //5 Counter Context with useReducer
 

@@ -1,9 +1,21 @@
-.product_main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
 
-} 
+@media screen and (min-width: 414px){
+    .product_main {
+        grid-area:product;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+    } 
+}
+
+@media screen and (max-width:414px){
+    .product_main{
+        grid-area:product;
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-items: center;
+    }
+}
 .loader,.loading_error{
     position:absolute;
     top:40%;
