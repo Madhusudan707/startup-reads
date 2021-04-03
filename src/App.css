@@ -1,19 +1,12 @@
-a{
-  text-decoration: none;;
-}
-*{
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
+:root{
+    --primary-color:#1976d2;
+    --white-color:#ffffff;
 }
 
-.App {
- display:grid;
- grid-template-areas: 
- "header"
- "main"
+.App{
+    display:grid;
+    width:100%;
+    grid-template-areas: 
+    "header" 
+    "main";
 }
-.button{
-  cursor:pointer
-}
-

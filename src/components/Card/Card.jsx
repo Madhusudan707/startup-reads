@@ -1,53 +1,57 @@
-import React from "react";
-import Button from "../../components/Button/Button";
-import { useProducts, useCart, useWishList } from "../../contexts/contexts";
-import "./card.css";
+import React from 'react'
+import Button from '../Button/Button'
+import {useWishList} from '../../contexts/wishlist'
+import {useProducts} from '../../contexts/products'
+import { useCart } from "../../contexts/cart"
 
-const Card = ({ products }) => {
-  const { itemsInCart, setItemsInCart } = useCart();
-  const { setItemsInWishList } = useWishList();
-  const { productList, setProductList } = useProducts();
+import './card.css'
+const Card = ({productsList}) => {
+  
+  const {productsState,ProductsDispatch}= useProducts()
+  const {WishListDispatch} = useWishList()
+  const { cartState, CartDispatch } = useCart();
+  
 
-  const cartHandler = (product) => {
-    if (itemsInCart.length) {
-      let flag = true;
-      let newArr = itemsInCart.map((item) => {
-        if (item.isbn === product.isbn) {
-          flag = false;
-          return { ...item, qty: item.qty + 1 };
-        }
-        return item;
-      });
-      if (!flag) {
-        setItemsInCart(newArr);
-      }
-      if (flag) {
-        setItemsInCart((itemsInCart) => [
-          ...itemsInCart,
-          { ...product, qty: 1 },
-        ]);
-      }
-    } else {
-      setItemsInCart((itemsInCart) => [...itemsInCart, { ...product, qty: 1 }]);
-    }
-  };
 
   const wishListHandler = (product) => {
-    let newArr = productList.map((item) => {
+  
+    let newArr =productsState.data.map((item) => {
+     
       if (item.isbn === product.isbn) {
         return { ...item, wish: !product.wish };
       }
       return item;
     });
-    setProductList(newArr);
+    ProductsDispatch({type:"OnSuccess",payload:newArr});
 
     let newArr2 = newArr.filter((item) => item.wish===true ? item : null)
-    setItemsInWishList(newArr2);
+    WishListDispatch({type:"AddWish",payload:{product:newArr2}});
   };
 
-  return (
-    <>
-      {products.map((product) => {
+  const cartHandler = (product) => {
+   
+    if (cartState.cartItem.length) {
+      let flag = true;
+      let newArr = cartState.cartItem.map((item) => {
+        if (item.isbn === product.isbn) {
+          flag = false;
+          return { ...item, qty: item.qty + 1,cart:!product.cart };
+        }
+        return item;
+      });
+      if (!flag) {
+        CartDispatch({type:"AddToCartRepeated",payload:{product:newArr}})
+      }
+      if (flag) {
+        CartDispatch({type:"AddToCart",payload:{...product, qty: 1,cart:!product.cart }})
+      }
+    } else {
+       CartDispatch({type:"AddToCart",payload:{...product, qty: 1,cart:!product.cart }})
+    }
+  };
+    return (
+        <>
+      {productsList.map((product) => {
         return (
           <div className="card card-main" key={product.isbn}>
             <div className="card-title">
@@ -67,7 +71,6 @@ const Card = ({ products }) => {
                   wishListHandler(product);
                 }}
                 className="wishlist_icon"
-               
               />
               <Button
                 btnClass="btn btn-primary"
@@ -81,7 +84,7 @@ const Card = ({ products }) => {
         );
       })}
     </>
-  );
-};
+    )
+}
 
-export default Card;
+export default Card

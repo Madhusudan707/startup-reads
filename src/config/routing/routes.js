@@ -4,7 +4,7 @@ import { HOME, WISHLIST, CART,CHECKOUT} from './paths'
 import Main from "../../components/Main/Main"
 import Wishlist from "../../components/WishList/Wishlist"
 import Cart from "../../components/Cart/Cart"
-import Checkout from "../../components/Checkout/Checkout"
+import Checkout from '../../components/Checkout/Checkout'
 
 
 
@@ -28,4 +28,6 @@ const CHECKOUT_FOUR= {
     path:CHECKOUT
 }
 
-export default [PRODUCT_ONE,WISHLIST_TWO,CART_THREE,CHECKOUT_FOUR]
+const routes =  [PRODUCT_ONE,WISHLIST_TWO,CART_THREE,CHECKOUT_FOUR]
+
+export default routes

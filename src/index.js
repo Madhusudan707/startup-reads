@@ -1,28 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
 import App from "./App";
-import {
-  ProductProvider,
-  CartProvider,
-  WishListProvider,
-  CounterProvider,
-} from "./contexts/contexts";
+import { ProductsProvider } from "./contexts/products";
+import { WishListProvider } from "./contexts/wishlist";
+import { CartProvider } from "./contexts/cart";
+import { CounterProvider } from "./contexts/counter";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductProvider>
-      <WishListProvider>
-        <CartProvider>
-          <CounterProvider>
+    <CounterProvider>
+      <ProductsProvider>
+        <WishListProvider>
+          <CartProvider>
             <App />
-          </CounterProvider>
-        </CartProvider>
-      </WishListProvider>
-    </ProductProvider>
-
-    {/* <CartProvider >
-      <App/>
-    </CartProvider> */}
+          </CartProvider>
+        </WishListProvider>
+      </ProductsProvider>
+    </CounterProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

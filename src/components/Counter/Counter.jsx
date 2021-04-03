@@ -1,26 +1,30 @@
 import React,{useState} from 'react'
 import Button from '../Button/Button'
-import {useCart} from  '../../contexts/contexts'
-// import styles from './counter.module.css'
+import {useCart} from  '../../contexts/cart'
+import {useCounter} from '../../contexts/counter'
 
 const Counter = ({itemCount,isbn}) => {
-    const [count,setCount]=useState(itemCount)
+    const {counterState,CounterDispatch}=useCounter()
     const [btnDisable,setBtnDisable]=useState(false)
-    const {itemsInCart,setItemsInCart}=useCart()
+    const {cartState,CartDispatch}=useCart()
+    
+
+   
    const counterHandler=(incDec)=>{
-  
-      let newArr= itemsInCart.map((item)=>{
+      let newArr= cartState.cartItem.map((item)=>{
         if(item.isbn===isbn){
             switch(incDec){
                 case '+':
-                    setCount(count+1)
+                    CounterDispatch({type:"increment"})
+                    setBtnDisable(false)
                     return {...item,qty:item.qty+1}
     
                 case '-':
-                    if(count>1){
-                        setCount(count-1)
+                    if(counterState.count>0){
+                        CounterDispatch({type:"decrement"})
+                        setBtnDisable(false)
                         return {...item,qty:item.qty-1}
-                    }if(count===1){
+                    }else{
                        
                         setBtnDisable(true)
                        
@@ -33,18 +37,17 @@ const Counter = ({itemCount,isbn}) => {
           
         }return item
       })
-      setItemsInCart((newArr))
+    CartDispatch({type:"AddToCartRepeated",payload:{product:newArr}})
   }
     return (
+        // <div>hello</div>
         <div>
             <Button text="+" btnClass="btn btn-default"  btnFunc={()=>{counterHandler("+")}} />
             
-            <span>{count}</span>
-            <Button isDisabled={btnDisable} btnClass="btn btn-default" text="-" btnFunc={()=>{
+            <span>{itemCount}</span>
+            <Button isDisabled={btnDisable}  btnClass="btn btn-default" text="-" btnFunc={()=>{
                 counterHandler("-")
-                
                 }} />
-            
         </div>
     )
 }

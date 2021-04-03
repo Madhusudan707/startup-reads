@@ -1,0 +1,15 @@
+
+
+@media screen and (min-width:441px){
+    .products{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:){
+    .products{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+}

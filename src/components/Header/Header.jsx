@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from './header.module.css'
-import Navbar from '../Navbar/Navbar'
-
-
-
-
+import Brand from './Brand/Brand'
+import Navbar from './Navbar/Navbar'
+import Hamburger from './Hamburger/Hamburger'
+import './header.css'
 const Header = () => {
     return (
-        <div className={styles.header} >
-           <Navbar/>
+        <div className="header">
+         <Hamburger/>
+          <Brand/>
+          <Navbar/>
         </div>
     )
 }

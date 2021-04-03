@@ -2,98 +2,81 @@
   {
     "title":"PREDICTABLY IRRATIONAL",
     "isbn": "1933988673",
-    "pageCount": 416,
-    "publishedDate": { "$date": "2009-04-01T00:00:00.000-0700" },
     "image": "https://images-na.ssl-images-amazon.com/images/I/81brJ+Jh0zL.jpg",
-    "status": "PUBLISH",
-    "authors": ["W. Frank Ableson", "Charlie Collins", "Robi Sen"],
-    "categories": ["Open Source", "Mobile"],
     "price":150,
-     "wish":false
+    "wish":false,
+    "stock":true,
+    "cart":false,
+    "fastDelivery":false
   },
   {
     "title":"HOOKED",
     "isbn": "1935182722",
-    "pageCount": 592,
-    "publishedDate": { "$date": "2011-01-14T00:00:00.000-0800" },
     "image": "https://images-na.ssl-images-amazon.com/images/I/81L8JOVXJtL.jpg",
-    "status": "PUBLISH",
-    "authors": ["W. Frank Ableson", "Robi Sen"],
-    "categories": ["Java"],
     "price":220,
-    "wish":false
+    "wish":false,
+    "stock":true,
+    "cart":false,
+    "fastDelivery":false
   },
   {
     "title":"ZERO TO ONE",
     "isbn": "1617290084",
-    "pageCount": 0,
-    "publishedDate": { "$date": "2011-06-03T00:00:00.000-0700" },
     "image": "https://images-na.ssl-images-amazon.com/images/I/71Xygne8+qL.jpg",
-    "status": "PUBLISH",
-    "authors": ["Gojko Adzic"],
-    "categories": ["Software Engineering"],
     "price":120,
-    "wish":false
+    "wish":false,
+    "stock":false,
+    "cart":false,
+    "fastDelivery":false
   },
   {
     "title":"THE SUBTLE ART OF NOT GIVING A F*CK",
     "isbn": "1933988746",
-    "pageCount": 576,
-    "publishedDate": { "$date": "2009-02-02T00:00:00.000-0800" },
     "image": "https://images-na.ssl-images-amazon.com/images/I/71t4GuxLCuL.jpg",
-    "status": "PUBLISH",
-    "authors": ["Tariq Ahmed with Jon Hirschi", "Faisal Abid"],
-    "categories": ["Internet"],
     "price":130,
-    "wish":false
+    "wish":false,
+    "stock":false,
+    "cart":false,
+    "fastDelivery":true
   },
   {
     "title":"SPRINT",
     "isbn": "1935182420",
-    "pageCount": 600,
-    "publishedDate": { "$date": "2010-11-15T00:00:00.000-0800" },
     "image": "https://images-na.ssl-images-amazon.com/images/I/81xBzG4riDL.jpg",
-    "status": "PUBLISH",
-    "authors": ["Tariq Ahmed", "Dan Orlando", "John C. Bland II", "Joel Hooks"],
-    "categories": ["Internet"],
     "price":450,
-    "wish":false
+    "wish":false,
+    "stock":true,
+    "cart":false,
+    "fastDelivery":false
   },
   {
     "title":"GOOD TO GREAT",
     "isbn": "1933988312",
-    "pageCount": 425,
-    "publishedDate": { "$date": "2008-10-01T00:00:00.000-0700" },
     "image": "https://m.media-amazon.com/images/I/513OnP4AwTL.jpg",
-    "status": "PUBLISH",
-    "authors": ["Satnam Alag"],
-    "categories": ["Internet"],
     "price":700,
-    "wish":false
+    "wish":false,
+    "stock":true,
+    "cart":false,
+    "fastDelivery":true
   },
   {
     "title":"THE HARD THING ABOUT HARD THINGS",
     "isbn": "1933988320",
-    "pageCount": 432,
-    "publishedDate": { "$date": "2008-12-01T00:00:00.000-0800" },
     "image": "https://images-na.ssl-images-amazon.com/images/I/810u9MkT3SL.jpg",
-    "status": "PUBLISH",
-    "authors": ["Rob Allen", "Nick Lo", "Steven Brown"],
-    "categories": ["Web Development"],
     "price":650,
-    "wish":false
+    "wish":false,
+    "stock":true,
+    "cart":false,
+    "fastDelivery":false
   },
   {
     "title":"HOW TO WIN FRIENDS & INFLUENCE PEOPLE",
     "isbn": "1933988797",
-    "pageCount": 265,
-    "publishedDate": { "$date": "2010-10-15T00:00:00.000-0700" },
     "image": "https://images-na.ssl-images-amazon.com/images/I/41G9ghvlsTL._SX326_BO1,204,203,200_.jpg",
-    "status": "PUBLISH",
-    "authors": ["Bernerd Allmon", "Jeremy Anderson"],
-    "categories": ["Internet"],
     "price":140,
-    "wish":false
+    "wish":false,
+    "stock":false,
+    "cart":false,
+    "fastDelivery":true
   }
- 
 ]

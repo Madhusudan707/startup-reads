@@ -1,0 +1,20 @@
+/*1 Common */
+
+.brand{
+    display:grid;
+    grid-area:brand;
+    color:var(--white-color);
+    padding-left:1rem;
+}
+
+/*2. Desktop*/
+
+@media screen and (min-width:768px){
+    
+}
+/*3. Mobile*/
+@media screen and (max-width:441px){ 
+   .brand{
+       
+   }
+}

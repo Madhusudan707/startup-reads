@@ -1,0 +1,37 @@
+/*1 Common */
+
+.navbar{
+    display:grid;
+    grid-area:navbar;
+    align-content:center;
+    justify-content: flex-end;
+}
+.navbar>ul{
+    display:grid;
+    width:25rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+
+}
+.navbar>ul>li>a{
+    text-decoration: none;
+    color:var(--white-color)
+}
+
+.navbar>ul>li>a:hover,.navbar>ul>li>a:focus{
+    border-bottom:1px solid var(--white-color);
+    font-weight: bold;
+}
+
+/*2. Desktop*/
+
+@media screen and (min-width:768px){
+   
+}
+/*3. Mobile*/
+@media screen and (max-width:441px){ 
+    .navbar{
+        display:none;
+    }
+}
+

@@ -1,0 +1,17 @@
+.main{
+    display:grid;
+    grid-area:main;
+    grid-template-areas:"sort" "card" ;
+    margin-top:5%;
+}
+
+
+
+@media screen and (max-width:441px){
+    .main{
+        display:grid;
+        grid-area:main;
+        margin-top:15%;
+        justify-content:center;
+    }
+}

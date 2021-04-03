@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
+import Counter from '../../components/Counter/Counter'
 import styles from  "./cart.module.css";
-import { useCart } from "../../contexts/contexts";
-import Counter from "../Counter/Counter";
+import { useCart } from "../../contexts/cart"
 const Cart = () => {
-  const { itemsInCart, setItemsInCart } = useCart();
+  const { cartState, CartDispatch } = useCart();
   const [final, setFinal] = useState(0);
 
   const removeItemFromCart = (isbn) => {
-    let newArr2 = itemsInCart.filter((item) => item.isbn!==isbn)
-    setItemsInCart(newArr2);
+    let newArr2 = cartState.cartItem.filter((item) => item.isbn!==isbn)
+    CartDispatch({type:"AddToCartRepeated",payload:{product:newArr2}})
   };
 
   useEffect(() => {
+    const finalBill = () => {
+      let price = cartState.cartItem.reduce((acc, curr)=> acc + curr.qty * curr.price, 0);
+      setFinal(price);
+    };
     finalBill()
-  },[itemsInCart]);
+  },[cartState]);
 
-  const finalBill = () => {
-    let price = itemsInCart.reduce((acc, curr)=> acc + curr.qty * curr.price, 0);
-    setFinal(price);
-  };
-
+  
   return (
-    <>
-      <div>{itemsInCart.length ?
+      <div>{cartState.cartItem.length ?
         <table style={{ border: "2px solid black" }}>
           <thead>
             <tr>
@@ -50,7 +49,7 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            {itemsInCart.map((product) => {
+            {cartState.cartItem.map((product) => {
               return (
                 <tr key={product.isbn}>
                   <td>
@@ -65,7 +64,7 @@ const Cart = () => {
                   <td>{product.price}</td>
                   <td>
                     <Counter itemCount={product.qty} isbn={product.isbn} />
-                    {/*{product.qty}*/}
+                   
                   </td>
                   <td>{parseInt(product.price) * parseInt(product.qty)}</td>
                   <td>
@@ -83,9 +82,9 @@ const Cart = () => {
               );
             })}
           </tbody>
-        </table> : <p className={styles.empty_cart}>Add Something to the Cart</p>}
+        </table> 
+        : <p className={styles.empty_cart}>Add Something to the Cart</p>}
       </div>
-    </>
   );
 };
 
