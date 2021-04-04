@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { HOME, WISHLIST, CART, CHECKOUT } from "../../../routing/paths";
+import { WISHLIST, CART} from "../../../routing/paths";
 import { useWishList, useCart } from "../../../contexts/contexts";
 import "./navbar.css";
 const Navbar = () => {
@@ -32,10 +32,6 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <ul>
-        {/* <li>
-          {" "}
-          <Link to={HOME}>HOME</Link>
-        </li> */}
         <li>
           {" "}
           <Link to={WISHLIST}>
@@ -55,10 +51,6 @@ const Navbar = () => {
             </sup>
           </Link>
         </li>
-        {/* <li>
-          {" "}
-          <Link to={CHECKOUT}>CHECKOUT</Link>
-        </li> */}
       </ul>
     </div>
   );

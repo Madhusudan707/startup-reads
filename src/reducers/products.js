@@ -42,10 +42,9 @@ export const productsReducer = (state,action)=>{
         data:action.payload
       }
     case 'reset':
-      console.log("reset")
       return {
-        loading:false,
-        data:action.payload
+        loading:true,
+        data:[]
       }
       
     default:

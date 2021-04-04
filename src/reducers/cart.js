@@ -22,7 +22,6 @@ export const initialState ={
        
       case 'OnFailure':
         return{
-          loading:false,
           cartItem:[],
           error:'Unable to Load Cart, Try after sometime'
         }

@@ -2,7 +2,9 @@
     display:grid;
     grid-area:main;
     
-    grid-template-areas:"options card card card";
+    grid-template-areas:
+    "search card card card"
+    "options card card card";
   
     margin-top:5%;
     
