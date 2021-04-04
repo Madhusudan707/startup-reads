@@ -12,7 +12,7 @@ const Options = ({ func,heading,type,name,label1,label2,cardClass,value1,value2 
             {label1}
           </label>
           <label>
-            <input type="radio" name={name} onClick={func}  value={value2}/>
+            <input type={type} name={name} onClick={func}  value={value2}/>
             {label2}
           </label>
         </p>
