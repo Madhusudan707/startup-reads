@@ -9,6 +9,7 @@
     width: 15.625rem;
     display: block;
     margin: 0 auto;
+    
   }
   
   input.search-bar {
@@ -19,6 +20,7 @@
     font-size: 1rem;
     border: 1px solid #D0CFCE;
     outline: none;
+    box-shadow: 0 0 6px #d1d5db;
   }
   input.search-bar:focus {
     border: 1px solid #008ABF;
