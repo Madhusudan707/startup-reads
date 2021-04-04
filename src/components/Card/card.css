@@ -1,6 +1,8 @@
 .card {
+    display: grid;
     width: 15.625rem;
-    height: 25rem;
+    height: auto;
+    align-items: center;
 }
 
 .card-img>img {
