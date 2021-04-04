@@ -1,11 +1,11 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { HOME, WISHLIST, CART, CHECKOUT } from '../../../routing/paths'
-import {useWishList,useCart} from '../../../contexts/contexts'
-import './navbar.css'
+import { HOME, WISHLIST, CART, CHECKOUT } from "../../../routing/paths";
+import { useWishList, useCart } from "../../../contexts/contexts";
+import "./navbar.css";
 const Navbar = () => {
-  const {wishListState} = useWishList()
-  const {cartState} = useCart()
+  const { wishListState } = useWishList();
+  const { cartState } = useCart();
 
   const [totalItemsInCart, setTotalItemsInCart] = useState(0);
   const [totalItemsInWish, setTotalItemsInWish] = useState(0);
@@ -29,20 +29,19 @@ const Navbar = () => {
     totalWish();
   }, [wishListState]);
 
-    return (
-     
-        <div className='navbar'>
-            <ul>
-            <li>
+  return (
+    <div className="navbar">
+      <ul>
+        {/* <li>
           {" "}
           <Link to={HOME}>HOME</Link>
-        </li>
+        </li> */}
         <li>
           {" "}
           <Link to={WISHLIST}>
             <i className="fa fa-heart" aria-hidden="true"></i>
             <sup style={{ fontSize: "1rem" }}>
-              <b>{totalItemsInWish > 0 ? `${totalItemsInWish }` : ""}</b>
+              <b>{totalItemsInWish > 0 ? `${totalItemsInWish}` : ""}</b>
             </sup>
           </Link>
         </li>
@@ -56,18 +55,13 @@ const Navbar = () => {
             </sup>
           </Link>
         </li>
-        <li>
+        {/* <li>
           {" "}
           <Link to={CHECKOUT}>CHECKOUT</Link>
-        </li>
-            </ul>
-        </div>
-      
-       
-     
-    )
-}
+        </li> */}
+      </ul>
+    </div>
+  );
+};
 
-export default Navbar
-
-
+export default Navbar;

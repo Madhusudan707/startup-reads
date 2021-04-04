@@ -9,9 +9,10 @@
 
 .navbar>ul {
     display: grid;
-    width: 25rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 10rem;
+    grid-template-columns: 1fr 2fr;
     list-style-type: none;
+  
 
 }
 
