@@ -18,7 +18,7 @@ const Counter = ({ itemCount, isbn }) => {
             return { ...item, qty: item.qty + 1 };
 
           case "-":
-            if (counterState.count > 0) {
+            if (itemCount > 1) {
               CounterDispatch({ type: "decrement" });
               setBtnDisable(false);
               return { ...item, qty: item.qty - 1 };
