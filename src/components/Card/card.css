@@ -3,6 +3,15 @@
     grid-area:card;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.card{
+    display: grid;
+    align-items: center;
+    
+}
+
+.card-title{
+    text-align: center;
+}
 
 
 .card-img>img {
