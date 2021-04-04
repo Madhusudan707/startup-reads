@@ -1,8 +1,12 @@
 .main{
     display:grid;
     grid-area:main;
-    grid-template-areas:"sort" "card" ;
+    
+    grid-template-areas:"options card card card";
+  
     margin-top:5%;
+    
+   
 }
 
 

@@ -55,30 +55,64 @@ const Card = ({ productsList }) => {
     }
   };
 
-  return productsList.map((product) => (
-    <div className="card card-main" key={product.isbn}>
-      <div className="card-title">
-        <h4>{product.title}</h4>
-      </div>
-      <div className="card-img">
-        <img src={product.image} alt="product_img" loading="lazy" />
-      </div>
-      <div className="card-content">
-        <span> ₹{product.price}</span>
-        <img
-          src={product.wish ? "/heart_red.svg" : "/heart.svg"}
-          alt="heart"
-          onClick={() => wishListHandler(product)}
-          className="wishlist_icon"
-        />
-        <Button
-          btnClass="btn btn-primary"
-          text="ADD TO CART"
-          btnFunc={() => cartHandler(product)}
-        />
-      </div>
+  // return (productsList.map((product) => (
+  //   <div className="card-main">
+  //     <div className="card" key={product.isbn}>
+  //       <div className="card-title">
+  //         <h4>{product.title}</h4>
+  //       </div>
+  //       <div className="card-img">
+  //         <img src={product.image} alt="product_img" loading="lazy" />
+  //       </div>
+  //       <div className="card-content">
+  //         <span> ₹{product.price}</span>
+  //         <img
+  //           src={product.wish ? "/heart_red.svg" : "/heart.svg"}
+  //           alt="heart"
+  //           onClick={() => wishListHandler(product)}
+  //           className="wishlist_icon"
+  //         />
+  //         <Button
+  //           btnClass="btn btn-primary"
+  //           text="ADD TO CART"
+  //           btnFunc={() => cartHandler(product)}
+  //         />
+  //       </div>
+  //     </div>
+  //   </div>
+  // ))
+  // )
+
+  return (
+    <div className="card-main">
+      {productsList.map((product) => {
+        return (
+          <div className="card" key={product.isbn}>
+            <div className="card-title">
+              <h4>{product.title}</h4>
+            </div>
+            <div className="card-img">
+              <img src={product.image} alt="product_img" loading="lazy" />
+            </div>
+            <div className="card-content">
+              <span> ₹{product.price}</span>
+              <img
+                src={product.wish ? "/heart_red.svg" : "/heart.svg"}
+                alt="heart"
+                onClick={() => wishListHandler(product)}
+                className="wishlist_icon"
+              />
+              <Button
+                btnClass="btn btn-primary"
+                text="ADD TO CART"
+                btnFunc={() => cartHandler(product)}
+              />
+            </div>
+          </div>
+        );
+      })}
     </div>
-  ));
+  );
 };
 
 export default Card;

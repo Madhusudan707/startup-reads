@@ -1,7 +1,7 @@
 import React from "react";
 import Products from "../Products/Products";
 import { useProducts } from "../../contexts/contexts";
-import Sortproduct from "../SortProduct/SortProduct";
+import Options from '../Options/Options'
 import "./main.css";
 const Main = () => {
   const { productsState, ProductsDispatch } = useProducts();
@@ -51,15 +51,14 @@ const Main = () => {
   };
   return (
     <div className="main">
-      <Sortproduct
-        radioFunc={(e) => {
+        <Options heading="Sort By" type="radio" name="sort" label1="Low To High" label2="High To Low" value1="ascending" value2="descending" cardClass="sort" func={(e) => {
           sortHandler(e.target.value);
-        }}
-        checkboxFunc={(e) => {
+        }} />
+        
+        <Options heading="Filter By" type="checkbox" label1="In Stock" label2="Fast Delivery" value1= "in-stock" value2="fast-delivery" cardClass="filter" func = {(e) => {
           filterHandler(e.target.value);
-        }}
-      />
-      <Products />
+        }} />
+        <Products />
     </div>
   );
 };
