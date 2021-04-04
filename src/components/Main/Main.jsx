@@ -1,6 +1,6 @@
 import React from "react";
 import Products from "../Products/Products";
-import { useProducts } from "../../contexts/products";
+import { useProducts } from "../../contexts/contexts";
 import Sortproduct from "../SortProduct/SortProduct";
 import "./main.css";
 const Main = () => {

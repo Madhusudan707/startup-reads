@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../Card/Card";
 import "./products.css";
-import { useProducts } from "../../contexts/products";
+import { useProducts } from "../../contexts/contexts";
 const Products = () => {
   const { productsState } = useProducts();
   return (

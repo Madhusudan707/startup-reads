@@ -1,8 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { Link } from "react-router-dom";
 import { HOME, WISHLIST, CART, CHECKOUT } from '../../../routing/paths'
-import {useWishList} from '../../../contexts/wishlist'
-import  {useCart} from '../../../contexts/cart'
+import {useWishList,useCart} from '../../../contexts/contexts'
 import './navbar.css'
 const Navbar = () => {
   const {wishListState} = useWishList()

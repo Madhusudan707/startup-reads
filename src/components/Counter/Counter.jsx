@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
 import { useCart } from "../../contexts/cart";
-import { useCounter } from "../../contexts/counter";
+import { useCounter } from "../../contexts/contexts";
 
 const Counter = ({ itemCount, isbn }) => {
   const { counterState, CounterDispatch } = useCounter();

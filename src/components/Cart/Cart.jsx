@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Counter from "../../components/Counter/Counter";
 import "./cart.css";
-import { useCart } from "../../contexts/cart";
+import { useCart } from "../../contexts/contexts"
 
 const Cart = () => {
   const { cartState, CartDispatch } = useCart();
