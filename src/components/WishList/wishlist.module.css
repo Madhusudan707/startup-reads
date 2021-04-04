@@ -8,49 +8,45 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: card;
     justify-items: center;
-    margin-top:5%;
-
+    margin-top: 5%;
 }
-.loading{
-    position:absolute;
-    top:50%;
+
+.loading {
+    position: absolute;
+    top: 50%;
     text-align: center;
-    left:30%;
-    color:#f00;
+    left: 30%;
+    color: #f00;
 }
 
 .card {
     display: grid;
     width: 210px;
-    /* grid-row-gap:40px; */
-    /* border: 1px solid gray; */
-    border-radius:0.5rem;
+    border-radius: 0.5rem;
     margin: 1rem;
     padding: 1rem;
     align-self: stretch;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
 }
 
 .wishlist>img {
     width: 110px;
-
 }
-.no_wishlist_msg{
-    position:absolute;
-    top:40%;
-    left:35%;
-    font-size:3rem;
+
+.no_wishlist_msg {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    font-size: 3rem;
     align-self: center;
     text-align: center;
-    border-bottom:1px dashed #000000;
-    color:#000000;
-  
-   
+    border-bottom: 1px dashed #000000;
+    color: #000000;
 }
 
 .info {
-    display:grid;
+    display: grid;
     padding: 1rem;
 }
 

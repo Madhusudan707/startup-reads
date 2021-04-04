@@ -1,27 +1,18 @@
-.sort_products{
-    width:90%;
-   
-    display:grid;
-    grid-area:sort;
-   
-    
-}
-h3{
-    /* grid-area:text; */
-    padding:1rem;
+.sort_products {
+    width: 90%;
+    display: grid;
+    grid-area: sort;
 }
 
-h3>label{
+h3 {
+    padding: 1rem;
+}
+
+h3>label {
     font-weight: 400;
 }
 
-/* button{
-    
-    grid-area:button;
-    
-} */
-
-.btn-clear{
+.btn-clear {
     width: 10%;
     padding: 0.5rem 1rem;
     border-radius: 0.7rem;
@@ -30,9 +21,8 @@ h3>label{
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-   
-}
-.btn-clear:hover{
-    color:grey
 }
 
+.btn-clear:hover {
+    color: grey
+}

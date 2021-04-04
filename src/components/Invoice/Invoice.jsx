@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from './Invoice.module.css'
+import './invoice.css'
 const Invoice = () => {
     return (
-        <div className={styles.invoice_main}>
+        <div className="invoice_main">
             <h2>Invoice</h2>
             <hr/>
             <br/>

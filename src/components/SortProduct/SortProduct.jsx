@@ -1,11 +1,11 @@
 import React from "react";
 import "./sortProduct.css";
 
-const Sortproduct = ({ radioFunc,checkboxFunc }) => {
+const Sortproduct = ({ radioFunc, checkboxFunc }) => {
   return (
     <div className="sort_products">
       <h3>
-        PRICE &nbsp;
+        <span>PRICE</span>
         <label>
           <input
             type="radio"
@@ -13,7 +13,7 @@ const Sortproduct = ({ radioFunc,checkboxFunc }) => {
             value="ascending"
             onClick={radioFunc}
           />
-          LOW TO HIGH &nbsp;
+          <span>LOW TO HIGH</span>
         </label>
         <label>
           <input
@@ -22,26 +22,30 @@ const Sortproduct = ({ radioFunc,checkboxFunc }) => {
             value="descending"
             onClick={radioFunc}
           />
-          HIGH TO LOW
+          <span>HIGHT TO LOW</span>
         </label>
-        {/* <Link to={HOME}>HOME</Link> */}
         <label>
-         &nbsp;<button value='reset' className='btn-clear btn-default'  onClick={radioFunc}>Reset</button>
+          <button
+            value="reset"
+            className="btn-clear btn-default"
+            onClick={radioFunc}
+          >
+            Reset
+          </button>
         </label>
       </h3>
       <h3>
-        FILTER &nbsp;
+        FILTER
         <label>
-          <input type='checkbox' onClick={checkboxFunc} value='in-stock'/> &nbsp;
+          <input type="checkbox" onClick={checkboxFunc} value="in-stock" />{" "}
           IN-STOCK
         </label>
-        &nbsp; &nbsp;
+        
         <label>
-          <input type='checkbox' onClick={checkboxFunc} value='fast-delivery'/> &nbsp;
-          FAST-DELIVERY
+          <input type="checkbox" onClick={checkboxFunc} value="fast-delivery" />{" "}
+         FAST-DELIVERY
         </label>
       </h3>
-      
     </div>
   );
 };

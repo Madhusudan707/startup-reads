@@ -1,9 +1,8 @@
-@media screen and (min-width:441px){
-    
-}
-@media screen and (max-width:441px){
-  
-    
+@media screen and (min-width:441px) {}
+
+@media screen and (max-width:441px) {
+
+
     #sidebarMenu {
         height: 100%;
         position: fixed;
@@ -14,14 +13,16 @@
         transition: transform 250ms ease-in-out;
         background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
         background: #ffffff;
-       
+
     }
-    .sidebarMenuInner{
-        margin:0;
-        padding:0;
+
+    .sidebarMenuInner {
+        margin: 0;
+        padding: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.10);
     }
-    .sidebarMenuInner li{
+
+    .sidebarMenuInner li {
         list-style: none;
         color: #fff;
         text-transform: uppercase;
@@ -30,18 +31,20 @@
         cursor: pointer;
         border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     }
-    .sidebarMenuInner li span{
+
+    .sidebarMenuInner li span {
         display: block;
         font-size: 14px;
         color: rgba(255, 255, 255, 0.50);
     }
-    .sidebarMenuInner li a{
+
+    .sidebarMenuInner li a {
         color: #fff;
         text-transform: uppercase;
         font-weight: bold;
         cursor: pointer;
         text-decoration: none;
-         color:#000000
+        color: #000000
     }
 
 }
