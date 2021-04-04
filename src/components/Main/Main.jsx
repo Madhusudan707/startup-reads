@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState} from "react";
+import axios from 'axios' 
 import Products from "../Products/Products";
 import { useProducts } from "../../contexts/contexts";
 import Search from '../Search/Search'
@@ -6,7 +7,7 @@ import Options from '../Options/Options'
 import "./main.css";
 const Main = () => {
   const { productsState, ProductsDispatch } = useProducts();
-  
+  const [ischecked,setIsChecked] = useState() 
   const sortHandler = (value) => {
     switch (value) {
       case "ascending":
@@ -22,7 +23,18 @@ const Main = () => {
         ProductsDispatch({ type: "descending", payload: dscSort });
         break;
       case "reset":
-        ProductsDispatch({ type: "reset"});
+        const fetchData=async ()=>{ 
+          try{
+            const response = await axios.get("data.json")
+            ProductsDispatch({type:'reset',payload:response.data})
+            setIsChecked(false)
+          }
+          catch(err){
+            ProductsDispatch({type:'OnFailure',payload:""})
+          }
+      }
+      fetchData()
+       
         break;
       default:
         throw new Error();
@@ -46,6 +58,19 @@ const Main = () => {
         );
         ProductsDispatch({ type: "fast-delivery", payload: fastDelivery });
         break;
+        case "reset":
+          const fetchData=async ()=>{ 
+            try{
+              const response = await axios.get("data.json")
+              ProductsDispatch({type:'reset',payload:response.data})
+             
+            }
+            catch(err){
+              ProductsDispatch({type:'OnFailure',payload:""})
+            }
+        }
+        fetchData()
+        break;
       default:
         throw new Error();
     }
@@ -55,11 +80,11 @@ const Main = () => {
        <Search/>
         <Options heading="Sort By" type="radio" name="sort" label1="Low To High" label2="High To Low" value1="ascending" value2="descending" cardClass="sort" func={(e) => {
           sortHandler(e.target.value);
-        }} btnFunc={()=>{sortHandler("reset")}} />
+        }} btnFunc={()=>{sortHandler("reset")}} checked={ischecked} />
         
         <Options heading="Filter By" type="checkbox" label1="In Stock" label2="Fast Delivery" value1= "in-stock" value2="fast-delivery" cardClass="filter" func = {(e) => {
           filterHandler(e.target.value);
-        }} />
+        }} btnFunc={()=>{filterHandler("reset")}} checked={ischecked} />
         <Products />
     </div>
   );
