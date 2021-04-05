@@ -4,7 +4,7 @@ import { useCart } from "../../contexts/cart";
 import { useCounter } from "../../contexts/contexts";
 
 const Counter = ({ itemCount, isbn }) => {
-  const { counterState, CounterDispatch } = useCounter();
+  const { CounterDispatch } = useCounter();
   const [btnDisable, setBtnDisable] = useState(false);
   const { cartState, CartDispatch } = useCart();
 
