@@ -29,6 +29,7 @@ const Main = () => {
   };
 
   const filterHandler = (filterStr) => {
+  
     switch (filterStr) {
       case "in-stock":
         const inStock = productsState.data.filter(
@@ -44,7 +45,7 @@ const Main = () => {
         ProductsDispatch({ type: "fast-delivery", payload: fastDelivery });
         break;
       default:
-        throw new Error();
+        resetHandler()
     }
   };
 
@@ -70,7 +71,7 @@ const Main = () => {
         }} btnFunc={resetHandler} checked={isChecked} />
 
         <Options heading="Filter By" type="checkbox" label1="In Stock" label2="Fast Delivery" value1= "in-stock" value2="fast-delivery" cardClass="filter" func = {(e) => {
-          filterHandler(e.target.value);
+          filterHandler(e.target.checked?e.target.value:"");
         }} btnFunc={resetHandler} checked={isChecked} />
         <Products />
     </div>
