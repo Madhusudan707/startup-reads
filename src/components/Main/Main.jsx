@@ -7,7 +7,7 @@ import Options from '../Options/Options'
 import "./main.css";
 const Main = () => {
   const { productsState, ProductsDispatch } = useProducts();
-  const [ischecked,setIsChecked] = useState() 
+  const [isChecked,setIsChecked] = useState() 
 
   const sortHandler = (sortStr) => {
     switch (sortStr) {
@@ -49,6 +49,9 @@ const Main = () => {
   };
 
  const resetHandler=async()=>{
+  
+    setIsChecked(false)
+    
     try{
       const response = await axios.get("data.json")
       ProductsDispatch({type:'reset',payload:response.data})
@@ -57,17 +60,18 @@ const Main = () => {
     catch(err){
       ProductsDispatch({type:'OnFailure',payload:""})
     }
+    setIsChecked()
   }
   return (
     <div className="main">
         <Search/>
         <Options heading="Sort By" type="radio" name="sort" label1="Low To High" label2="High To Low" value1="ascending" value2="descending" cardClass="sort" func={(e) => {
           sortHandler(e.target.value);
-        }} btnFunc={resetHandler} checked={ischecked} />
+        }} btnFunc={resetHandler} checked={isChecked} />
 
         <Options heading="Filter By" type="checkbox" label1="In Stock" label2="Fast Delivery" value1= "in-stock" value2="fast-delivery" cardClass="filter" func = {(e) => {
           filterHandler(e.target.value);
-        }} btnFunc={resetHandler} checked={ischecked} />
+        }} btnFunc={resetHandler} checked={isChecked} />
         <Products />
     </div>
   );
