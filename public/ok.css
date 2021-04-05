@@ -450,15 +450,15 @@ button[disabled] {
   border-radius: 0.2rem;
 }
 
-.t_error{
+.t-error{
   background:#ef5350;
 }
 
-.t_warning{
+.t-warning{
   background:#ffee58;
   color:black;
 }
 
-.t_success{
+.t-success{
   background:#4caf50;
 }

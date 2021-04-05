@@ -1,0 +1,16 @@
+.toast_main{
+    position:fixed;
+    right:5%;
+    top:20%;
+ 
+   
+}
+
+.toast{
+    
+    transition: all .5s ease;
+   background-color: #59D78B;
+   display:grid;
+   
+  
+}
