@@ -8,8 +8,9 @@ import "./main.css";
 const Main = () => {
   const { productsState, ProductsDispatch } = useProducts();
   const [ischecked,setIsChecked] = useState() 
-  const sortHandler = (value) => {
-    switch (value) {
+
+  const sortHandler = (sortStr) => {
+    switch (sortStr) {
       case "ascending":
         const ascSort = [...productsState.data].sort(
           (a, b) => parseFloat(a.price) - parseFloat(b.price)
@@ -22,29 +23,14 @@ const Main = () => {
         );
         ProductsDispatch({ type: "descending", payload: dscSort });
         break;
-      case "reset":
-        const fetchData=async ()=>{ 
-          try{
-            const response = await axios.get("data.json")
-            ProductsDispatch({type:'reset',payload:response.data})
-            setIsChecked(false)
-          }
-          catch(err){
-            ProductsDispatch({type:'OnFailure',payload:""})
-          }
-      }
-      fetchData()
-       
-        break;
       default:
         throw new Error();
     }
   };
 
-  const filterHandler = (checkboxValue) => {
-    switch (checkboxValue) {
+  const filterHandler = (filterStr) => {
+    switch (filterStr) {
       case "in-stock":
-        console.log(checkboxValue);
         const inStock = productsState.data.filter(
           (item) => item.stock === true
         );
@@ -52,39 +38,36 @@ const Main = () => {
         break;
 
       case "fast-delivery":
-        console.log(checkboxValue);
         const fastDelivery = productsState.data.filter(
           (item) => item.fastDelivery === true
         );
         ProductsDispatch({ type: "fast-delivery", payload: fastDelivery });
         break;
-        case "reset":
-          const fetchData=async ()=>{ 
-            try{
-              const response = await axios.get("data.json")
-              ProductsDispatch({type:'reset',payload:response.data})
-             
-            }
-            catch(err){
-              ProductsDispatch({type:'OnFailure',payload:""})
-            }
-        }
-        fetchData()
-        break;
       default:
         throw new Error();
     }
   };
+
+ const resetHandler=async()=>{
+    try{
+      const response = await axios.get("data.json")
+      ProductsDispatch({type:'reset',payload:response.data})
+     
+    }
+    catch(err){
+      ProductsDispatch({type:'OnFailure',payload:""})
+    }
+  }
   return (
     <div className="main">
-       <Search/>
+        <Search/>
         <Options heading="Sort By" type="radio" name="sort" label1="Low To High" label2="High To Low" value1="ascending" value2="descending" cardClass="sort" func={(e) => {
           sortHandler(e.target.value);
-        }} btnFunc={()=>{sortHandler("reset")}} checked={ischecked} />
-        
+        }} btnFunc={resetHandler} checked={ischecked} />
+
         <Options heading="Filter By" type="checkbox" label1="In Stock" label2="Fast Delivery" value1= "in-stock" value2="fast-delivery" cardClass="filter" func = {(e) => {
           filterHandler(e.target.value);
-        }} btnFunc={()=>{filterHandler("reset")}} checked={ischecked} />
+        }} btnFunc={resetHandler} checked={ischecked} />
         <Products />
     </div>
   );
