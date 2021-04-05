@@ -1,14 +1,32 @@
 import React from "react";
+import axios from "axios"
 import {useProducts} from '../../contexts/contexts'
 import "./search.css";
 const Search = () => {
 
-  const {productsState,ProductsDispatch} = useProducts
+  const {productsState,ProductsDispatch} = useProducts()
 
-  const searchHandler = (searchStr)=>{
-    console.log(searchStr);
-    // const searchResult = productsState.data.title.toUpperCase().includes(searchStr.toUpperCase())
-    // console.log(searchResult)
+  const searchHandler = async (searchStr)=>{
+    
+    if(searchStr){
+      const data = productsState.data.filter((product)=>{
+        const response = product.title.toUpperCase().includes(searchStr.toUpperCase())
+       if(response){
+          return product
+       }return null
+      })
+      ProductsDispatch({type:'OnSuccess',payload:data})
+    }else{
+      try{
+        const response = await axios.get("data.json")
+        ProductsDispatch({type:'reset',payload:response.data})
+       
+      }
+      catch(err){
+        ProductsDispatch({type:'OnFailure',payload:""})
+      }
+    }
+    
   }
   return (
     <div className='search-main' >
