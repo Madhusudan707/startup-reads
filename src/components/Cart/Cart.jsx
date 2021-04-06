@@ -4,12 +4,12 @@ import "./cart.css";
 import { useCart } from "../../contexts/contexts"
 
 const Cart = () => {
-  const { cartState, CartDispatch } = useCart();
+  const { cartState, cartDispatch } = useCart();
   const [final, setFinal] = useState(0);
 
   const removeItemFromCart = (isbn) => {
     let newArr2 = cartState.cartItem.filter((item) => item.isbn !== isbn);
-    CartDispatch({ type: "AddToCartRepeated", payload: { product: newArr2 } });
+    cartDispatch({ type: "AddToCartRepeated", payload: { product: newArr2 } });
   };
 
   useEffect(() => {

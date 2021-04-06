@@ -4,16 +4,16 @@ import Card from "../Card/Card";
 import "./products.css";
 import { useProducts } from "../../contexts/contexts";
 const Products = () => {
-  const { productsState,ProductsDispatch} = useProducts();
+  const { productsState,productsDispatch} = useProducts();
 
   useEffect(()=>{
     const fetchData=async ()=>{ 
         try{
           const response = await axios.get("data.json")
-          ProductsDispatch({type:'OnSuccess',payload:response.data})
+          productsDispatch({type:'OnSuccess',payload:response.data})
         }
         catch(err){
-          ProductsDispatch({type:'OnFailure',payload:""})
+          productsDispatch({type:'OnFailure',payload:""})
         }
     }
     fetchData()

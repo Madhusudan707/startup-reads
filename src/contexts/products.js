@@ -8,7 +8,7 @@ export const ProductsProvider = ({ children }) => {
    
 
   return (
-    <ProductsContext.Provider value={{ productsState:state, ProductsDispatch:dispatch }}>
+    <ProductsContext.Provider value={{ productsState:state, productsDispatch:dispatch }}>
       {children}
     </ProductsContext.Provider>
   );

@@ -4,7 +4,7 @@ import {useProducts} from '../../contexts/contexts'
 import "./search.css";
 const Search = () => {
 
-  const {productsState,ProductsDispatch} = useProducts()
+  const {productsState,productsDispatch} = useProducts()
 
   const searchHandler = async (searchStr)=>{
     
@@ -15,15 +15,15 @@ const Search = () => {
           return product
        }return null
       })
-      ProductsDispatch({type:'OnSuccess',payload:data})
+      productsDispatch({type:'OnSuccess',payload:data})
     }else{
       try{
         const response = await axios.get("data.json")
-        ProductsDispatch({type:'reset',payload:response.data})
+        productsDispatch({type:'reset',payload:response.data})
        
       }
       catch(err){
-        ProductsDispatch({type:'OnFailure',payload:""})
+        productsDispatch({type:'OnFailure',payload:""})
       }
     }
     

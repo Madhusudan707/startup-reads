@@ -6,9 +6,9 @@ import { useCart, useWishList, useProducts } from "../../contexts/contexts";
 import "./card.css";
 
 const Card = ({ productsList }) => {
-  const { cartState, CartDispatch } = useCart();
-  const { WishListDispatch } = useWishList();
-  const { productsState, ProductsDispatch } = useProducts();
+  const { cartState, cartDispatch } = useCart();
+  const { wishListDispatch } = useWishList();
+  const { productsState, productsDispatch } = useProducts();
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastColor,setToastColor]=useState("#59D78B")
@@ -23,10 +23,10 @@ const Card = ({ productsList }) => {
       }
       return item;
     });
-    ProductsDispatch({ type: "OnSuccess", payload: newArr });
+    productsDispatch({ type: "OnSuccess", payload: newArr });
 
     let newArr2 = newArr.filter((item) => (item.wish === true ? item : null));
-    WishListDispatch({ type: "AddWish", payload: { product: newArr2 } });
+    wishListDispatch({ type: "AddWish", payload: { product: newArr2 } });
 
     setToastMsg(toastMsg);
     setShowToast(true);
@@ -56,18 +56,18 @@ const Card = ({ productsList }) => {
       });
 
       if (flag) {
-        CartDispatch({
+        cartDispatch({
           type: "AddToCart",
           payload: { ...product, qty: 1, cart: !product.cart },
         });
       } else {
-        CartDispatch({
+        cartDispatch({
           type: "AddToCartRepeated",
           payload: { product: newArr },
         });
       }
     } else {
-      CartDispatch({
+      cartDispatch({
         type: "AddToCart",
         payload: { ...product, qty: 1, cart: !product.cart },
       });

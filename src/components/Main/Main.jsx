@@ -6,7 +6,7 @@ import Search from '../Search/Search'
 import Options from '../Options/Options'
 import "./main.css";
 const Main = () => {
-  const { productsState, ProductsDispatch } = useProducts();
+  const { productsState, productsDispatch } = useProducts();
   const [isChecked,setIsChecked] = useState() 
 
   const sortHandler = (sortStr) => {
@@ -15,13 +15,13 @@ const Main = () => {
         const ascSort = [...productsState.data].sort(
           (a, b) => parseFloat(a.price) - parseFloat(b.price)
         );
-        ProductsDispatch({ type: "ascending", payload: ascSort });
+        productsDispatch({ type: "ascending", payload: ascSort });
         break;
       case "descending":
         const dscSort = [...productsState.data].sort(
           (a, b) => parseFloat(b.price) - parseFloat(a.price)
         );
-        ProductsDispatch({ type: "descending", payload: dscSort });
+        productsDispatch({ type: "descending", payload: dscSort });
         break;
       default:
         throw new Error();
@@ -35,14 +35,14 @@ const Main = () => {
         const inStock = productsState.data.filter(
           (item) => item.stock === true
         );
-        ProductsDispatch({ type: "in-stock", payload: inStock });
+        productsDispatch({ type: "in-stock", payload: inStock });
         break;
 
       case "fast-delivery":
         const fastDelivery = productsState.data.filter(
           (item) => item.fastDelivery === true
         );
-        ProductsDispatch({ type: "fast-delivery", payload: fastDelivery });
+        productsDispatch({ type: "fast-delivery", payload: fastDelivery });
         break;
       default:
         resetHandler()
@@ -55,11 +55,11 @@ const Main = () => {
     
     try{
       const response = await axios.get("data.json")
-      ProductsDispatch({type:'reset',payload:response.data})
+      productsDispatch({type:'reset',payload:response.data})
      
     }
     catch(err){
-      ProductsDispatch({type:'OnFailure',payload:""})
+      productsDispatch({type:'OnFailure',payload:""})
     }
     setIsChecked()
   }

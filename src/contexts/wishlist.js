@@ -10,7 +10,7 @@ export const WishListProvider = ({ children }) => {
 
 
   return (
-    <WishListContext.Provider value={{ wishListState:state, WishListDispatch:dispatch }}>
+    <WishListContext.Provider value={{ wishListState:state, wishListDispatch:dispatch }}>
       {children}
     </WishListContext.Provider>
   );

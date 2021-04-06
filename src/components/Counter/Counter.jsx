@@ -4,22 +4,22 @@ import { useCart } from "../../contexts/cart";
 import { useCounter } from "../../contexts/contexts";
 
 const Counter = ({ itemCount, isbn }) => {
-  const { CounterDispatch } = useCounter();
+  const { counterDispatch } = useCounter();
   const [btnDisable, setBtnDisable] = useState(false);
-  const { cartState, CartDispatch } = useCart();
+  const { cartState, cartDispatch } = useCart();
 
   const counterHandler = (incDec) => {
     let newArr = cartState.cartItem.map((item) => {
       if (item.isbn === isbn) {
         switch (incDec) {
           case "+":
-            CounterDispatch({ type: "increment" });
+            counterDispatch({ type: "increment" });
             setBtnDisable(false);
             return { ...item, qty: item.qty + 1 };
 
           case "-":
             if (itemCount > 1) {
-              CounterDispatch({ type: "decrement" });
+              counterDispatch({ type: "decrement" });
               setBtnDisable(false);
               return { ...item, qty: item.qty - 1 };
             } else {
@@ -33,7 +33,7 @@ const Counter = ({ itemCount, isbn }) => {
       }
       return item;
     });
-    CartDispatch({ type: "AddToCartRepeated", payload: { product: newArr } });
+    cartDispatch({ type: "AddToCartRepeated", payload: { product: newArr } });
   };
   return (
     <>

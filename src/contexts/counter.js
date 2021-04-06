@@ -6,7 +6,7 @@ export const CounterContext = createContext();
   export const CounterProvider =({children})=>{
     const [state, dispatch] = useReducer(counterReducer,initialState);
     return (
-        <CounterContext.Provider value={{counterState:state,CounterDispatch:dispatch}}>
+        <CounterContext.Provider value={{counterState:state,counterDispatch:dispatch}}>
             {children}
         </CounterContext.Provider>
     )
