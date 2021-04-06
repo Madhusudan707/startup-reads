@@ -6,42 +6,42 @@ export const initialState = {
 
 export const productsReducer = (state, action) => {
   switch (action.type) {
-    case "OnSuccess":
+    case "ON-SUCCESS":
       return {
         loading: false,
         data: action.payload,
         error: "",
       };
-    case "OnFailure":
+    case "ON-FAILURE":
       return {
         loading: false,
         data: {},
         error: "Unable to Load Products, Try after sometime",
       };
 
-    case "ascending":
+    case "ASCENDING":
       return {
         loading: false,
         data: action.payload,
       };
-    case "descending":
-      return {
-        loading: false,
-        data: action.payload,
-      };
-
-    case "in-stock":
+    case "DESCENDING":
       return {
         loading: false,
         data: action.payload,
       };
 
-    case "fast-delivery":
+    case "IN-STOCK":
       return {
         loading: false,
         data: action.payload,
       };
-    case "reset":
+
+    case "FAST-DELIVERY":
+      return {
+        loading: false,
+        data: action.payload,
+      };
+    case "RESET":
       return {
         loading: false,
         data: action.payload,

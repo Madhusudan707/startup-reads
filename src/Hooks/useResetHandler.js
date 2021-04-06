@@ -10,9 +10,9 @@ export const useResetHandler = () => {
 
     try {
       const response = await axios.get("data.json");
-      productsDispatch({ type: "reset", payload: response.data });
+      productsDispatch({ type: "RESET", payload: response.data });
     } catch (err) {
-      productsDispatch({ type: "OnFailure", payload: "" });
+      productsDispatch({ type: "ON-FAILURE", payload: "" });
     }
     setIsChecked();
   };

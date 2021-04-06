@@ -5,20 +5,20 @@ export const initialState = {
 
 export const cartReducer = (state, action) => {
   switch (action.type) {
-    case "AddToCart":
+    case "ADD-TO-CART":
       return {
         ...state,
         cartItem: [...state.cartItem, action.payload],
         error: "",
       };
 
-    case "AddToCartRepeated":
+    case "ADD-TO-CART-REPEATED":
       return {
         cartItem: action.payload.product,
         error: "",
       };
 
-    case "OnFailure":
+    case "ON-FAILURE":
       return {
         cartItem: [],
         error: "Unable to Load Cart, Try after sometime",

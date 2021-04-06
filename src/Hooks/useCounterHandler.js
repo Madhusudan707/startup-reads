@@ -13,13 +13,13 @@ export const useCounterHandler = ()=>{
               switch (incDec) {
                  
                 case "+":
-                  counterDispatch({ type: "increment" });
+                  counterDispatch({ type: "INCREMENT" });
                   setBtnDisable(false);
                   return { ...item, qty: item.qty + 1 };
       
                 case "-":
                   if (itemCount > 1) {
-                    counterDispatch({ type: "decrement" });
+                    counterDispatch({ type: "DECREMENT" });
                     setBtnDisable(false);
                     return { ...item, qty: item.qty - 1 };
                   } else {
@@ -33,7 +33,7 @@ export const useCounterHandler = ()=>{
             }
             return item;
           });
-          cartDispatch({ type: "AddToCartRepeated", payload: { product: newArr } });
+          cartDispatch({ type: "ADD-TO-CART-REPEATED", payload: { product: newArr } });
     }
 
     return {counterHandler,btnDisable}

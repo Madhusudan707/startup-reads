@@ -8,18 +8,18 @@ export const useFilterHandler=()=>{
     const filterHandler = (filterStr) => {
   
         switch (filterStr) {
-          case "in-stock":
+          case "IN-STOCK":
             const inStock = productsState.data.filter(
               (item) => item.stock === true
             );
-            productsDispatch({ type: "in-stock", payload: inStock });
+            productsDispatch({ type: "IN-STOCK", payload: inStock });
             break;
     
-          case "fast-delivery":
+          case "FAST-DELIVERY":
             const fastDelivery = productsState.data.filter(
               (item) => item.fastDelivery === true
             );
-            productsDispatch({ type: "fast-delivery", payload: fastDelivery });
+            productsDispatch({ type: "FAST-DELIVERY", payload: fastDelivery });
             break;
           default:
             resetHandler()

@@ -16,7 +16,7 @@ const Main = () => {
           sortHandler({e});
         }} btnFunc={resetHandler} checked={isChecked} />
 
-        <Options heading="Filter By" type="checkbox" label1="In Stock" label2="Fast Delivery" value1= "in-stock" value2="fast-delivery" cardClass="filter" func = {(e) => {
+        <Options heading="Filter By" type="checkbox" label1="In Stock" label2="Fast Delivery" value1= "IN-STOCK" value2="FAST-DELIVERY" cardClass="filter" func = {(e) => {
           filterHandler(e.target.checked?e.target.value:"");
         }} btnFunc={resetHandler} checked={isChecked} />
         <Products />

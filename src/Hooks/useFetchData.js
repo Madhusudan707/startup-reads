@@ -12,9 +12,9 @@ export const useFetchData = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get("data.json");
-      productsDispatch({ type: "OnSuccess", payload: response.data });
+      productsDispatch({ type: "ON-SUCCESS", payload: response.data });
     } catch (err) {
-      productsDispatch({ type: "OnFailure", payload: "" });
+      productsDispatch({ type: "ON-FAILURE", payload: "" });
     }
   };
 

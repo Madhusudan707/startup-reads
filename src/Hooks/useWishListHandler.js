@@ -16,10 +16,10 @@ export const useWishListHandler = () => {
       }
       return item;
     });
-    productsDispatch({ type: "OnSuccess", payload: newArr });
+    productsDispatch({ type: "ON-SUCCESS", payload: newArr });
 
     const newArr2 = newArr.filter((item) => (item.wish === true ? item : null));
-    wishListDispatch({ type: "AddWish", payload: { product: newArr2 } });
+    wishListDispatch({ type: "ADD-WISH", payload: { product: newArr2 } });
 
     setToastMsg(toastMsgParam);
     setShowToast(true);

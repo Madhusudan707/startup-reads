@@ -27,18 +27,18 @@ export const useCartHandler = () => {
 
       if (flag) {
         cartDispatch({
-          type: "AddToCart",
+          type: "ADD-TO-CART",
           payload: { ...product, qty: 1, cart: !product.cart },
         });
       } else {
         cartDispatch({
-          type: "AddToCartRepeated",
+          type: "ADD-TO-CART-REPEATED",
           payload: { product: newArr },
         });
       }
     } else {
       cartDispatch({
-        type: "AddToCart",
+        type: "ADD-TO-CART",
         payload: { ...product, qty: 1, cart: !product.cart },
       });
     }

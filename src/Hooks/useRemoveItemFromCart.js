@@ -5,7 +5,7 @@ export const useRemoveItemFromCart = () => {
 
   const removeItemFromCart = ({isbn}) => {
     let newArr2 = cartState.cartItem.filter((item) => item.isbn !== isbn);
-    cartDispatch({ type: "AddToCartRepeated", payload: { product: newArr2 } });
+    cartDispatch({ type: "ADD-TO-CART-REPEATED", payload: { product: newArr2 } });
   };
 
   return { removeItemFromCart };
