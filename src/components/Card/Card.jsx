@@ -11,9 +11,12 @@ const Card = ({ productsList }) => {
   const { productsState, ProductsDispatch } = useProducts();
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
+  const [toastColor,setToastColor]=useState("#59D78B")
 
   /* 1 Wishlist Handler */
   const wishListHandler = (product, toastMsg) => {
+    
+    product.wish?setToastColor("#d34d32"):setToastColor("#59D78B")
     let newArr = productsState.data.map((item) => {
       if (item.isbn === product.isbn) {
         return { ...item, wish: !product.wish };
@@ -34,12 +37,14 @@ const Card = ({ productsList }) => {
 
   /* 2 Cart Handler */
 
-  const cartHandler = (product) => {
+  const cartHandler = (e,product) => {
+    setToastColor("#59D78B")
     setToastMsg("Product Has Been Added To Cart");
     setShowToast(true);
     setTimeout(() => {
       setShowToast(false);
     }, 2000);
+    
     if (cartState.cartItem.length) {
       let flag = true;
       let newArr = cartState.cartItem.map((item) => {
@@ -71,7 +76,7 @@ const Card = ({ productsList }) => {
 
   return (
     <div className="card-main">
-      {showToast ? <Toast msg={toastMsg} /> : null}
+      {showToast ? <Toast msg={toastMsg} msgDel={toastColor} /> : null}
 
       {productsList.map((product) => {
         return (
@@ -98,9 +103,10 @@ const Card = ({ productsList }) => {
                 className="wishlist_icon"
               />
               <Button
+                id={product.isbn}
                 btnClass="btn btn-primary"
-                text="ADD TO CART"
-                btnFunc={() => cartHandler(product)}
+                text={"ADD TO CART"}
+                btnFunc={(e) => cartHandler(e,product)}
               />
             </div>
           </div>
