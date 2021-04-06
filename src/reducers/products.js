@@ -15,7 +15,7 @@ export const productsReducer = (state, action) => {
     case "ON-FAILURE":
       return {
         loading: false,
-        data: {},
+        data: [],
         error: "Unable to Load Products, Try after sometime",
       };
 

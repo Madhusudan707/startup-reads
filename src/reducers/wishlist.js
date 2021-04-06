@@ -1,6 +1,6 @@
 export const initialState ={
     wishes:[],
-    error:''
+    error:""
   }
   
   export const wishListReducer = (state,action)=>{
@@ -9,14 +9,14 @@ export const initialState ={
         return {
           
           wishes:action.payload.product,
-          error:''
+          error:""
         }
       
       case 'ON-FAILURE':
         return{
           loading:false,
           wishes:[],
-          error:'Unable to Load Wish, Try after sometime'
+          error:"Unable to Load Wish, Try after sometime"
         }
       default:
         return state
