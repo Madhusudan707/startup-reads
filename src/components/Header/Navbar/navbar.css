@@ -17,11 +17,10 @@
 }
 
 .navbar>ul>li>a {
-    text-decoration: none;
     color: var(--white-color)
 }
 
-.navbar>ul>li>a:hover,
+
 .navbar>ul>li>a:focus {
     border-bottom: 1px solid var(--white-color);
     font-weight: bold;
