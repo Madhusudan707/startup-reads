@@ -7,7 +7,7 @@ export const useCounterHandler = ()=>{
     const { cartState, cartDispatch } = useCart();
 
     const counterHandler=({itemCount,isbn,incDec})=>{
-        let newArr = cartState.cartItem.map((item) => {
+        const newArr = cartState.cartItem.map((item) => {
             
             if (item.isbn === isbn) {
               switch (incDec) {

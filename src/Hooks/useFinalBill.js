@@ -8,7 +8,7 @@ export const useFinalBill = () => {
     finalBill();
   }, [cartState]);
   const finalBill = () => {
-    let price = cartState.cartItem.reduce(
+    const price = cartState.cartItem.reduce(
       (acc, curr) => acc + curr.qty * curr.price,
       0
     );

@@ -17,7 +17,7 @@ export const useCartHandler = () => {
 
     if (cartState.cartItem.length) {
       let flag = true;
-      let newArr = cartState.cartItem.map((item) => {
+      const newArr = cartState.cartItem.map((item) => {
         if (item.isbn === product.isbn) {
           flag = false;
           return { ...item, qty: item.qty + 1, cart: !product.cart };

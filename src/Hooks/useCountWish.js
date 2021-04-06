@@ -10,7 +10,7 @@ export const useCountWish = () => {
   }, [wishListState]);
 
   const totalWish = () => {
-    let sumWish = wishListState.wishes.reduce(function (acc, curr) {
+    const sumWish = wishListState.wishes.reduce(function (acc, curr) {
       return curr.wish === true ? acc + curr.wish : 0;
     }, 0);
     setTotalItemsInWish(sumWish);

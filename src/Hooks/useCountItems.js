@@ -10,7 +10,7 @@ export const useCountItems = () => {
   }, [cartState]);
 
   const totalItems = () => {
-    let sumQty = cartState.cartItem.reduce(function (acc, curr) {
+    const sumQty = cartState.cartItem.reduce(function (acc, curr) {
       return acc + curr.qty;
     }, 0);
     setTotalItemsInCart(sumQty);
