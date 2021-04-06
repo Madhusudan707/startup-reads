@@ -9,18 +9,11 @@ const Search = () => {
         <input
           type="text"
           className="search-bar"
-          placeholder="Search Product Here"
+          placeholder="Search Product Here &#x1F50D;"
           onChange={(e) => {
             searchHandler(e.target.value);
           }}
         />
-        <a href="#!">
-          <img
-            className="search-icon"
-            src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
-            alt="search"
-          />
-        </a>
       </form>
     </div>
   );

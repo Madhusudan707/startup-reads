@@ -39,12 +39,3 @@
     transition: opacity 0.45s ease;
     opacity: 0;
   }
-  
-  .search-icon {
-    position: relative;
-    float: right;
-    width: 4.688rem;
-    height: 4.688;
-    top: -3.875rem;
-    right: -1.5rem;
-  }
