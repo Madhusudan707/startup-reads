@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import { useProducts } from "../contexts/contexts";
 import {useResetHandler} from './useResetHandler' 
 

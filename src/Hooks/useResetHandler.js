@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export const useResetHandler = () => {
   const [isChecked, setIsChecked] = useState();
-  const { productsState, productsDispatch } = useProducts();
+  const { productsDispatch } = useProducts();
   const resetHandler = async () => {
     setIsChecked(false);
 
