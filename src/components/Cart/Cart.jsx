@@ -1,27 +1,10 @@
-import React, { useEffect, useState } from "react";
 import Counter from "../../components/Counter/Counter";
 import "./cart.css";
-import { useCart } from "../../contexts/contexts"
+import { useRemoveItemFromCart, useFinalBill } from "../../Hooks/Hooks";
 
 const Cart = () => {
-  const { cartState, cartDispatch } = useCart();
-  const [final, setFinal] = useState(0);
-
-  const removeItemFromCart = (isbn) => {
-    let newArr2 = cartState.cartItem.filter((item) => item.isbn !== isbn);
-    cartDispatch({ type: "AddToCartRepeated", payload: { product: newArr2 } });
-  };
-
-  useEffect(() => {
-    const finalBill = () => {
-      let price = cartState.cartItem.reduce(
-        (acc, curr) => acc + curr.qty * curr.price,
-        0
-      );
-      setFinal(price);
-    };
-    finalBill();
-  }, [cartState]);
+  const { removeItemFromCart } = useRemoveItemFromCart();
+  const { final, cartState } = useFinalBill();
 
   return (
     <div>

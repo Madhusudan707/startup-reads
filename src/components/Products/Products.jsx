@@ -1,23 +1,10 @@
-import React,{useEffect} from "react";
-import axios from 'axios'
+import React from "react";
 import Card from "../Card/Card";
+import {useFetchData} from '../../Hooks/Hooks'
 import "./products.css";
-import { useProducts } from "../../contexts/contexts";
-const Products = () => {
-  const { productsState,productsDispatch} = useProducts();
 
-  useEffect(()=>{
-    const fetchData=async ()=>{ 
-        try{
-          const response = await axios.get("data.json")
-          productsDispatch({type:'OnSuccess',payload:response.data})
-        }
-        catch(err){
-          productsDispatch({type:'OnFailure',payload:""})
-        }
-    }
-    fetchData()
-  },[])
+const Products = () => {
+  const {productsState} = useFetchData()
 
   return (
     <div className="products">
