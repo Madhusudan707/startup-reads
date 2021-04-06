@@ -12,7 +12,7 @@ const Main = () => {
   return (
     <div className="main">
         <Search/>
-        <Options heading="Sort By" type="radio" name="sort" label1="Low To High" label2="High To Low" value1="ascending" value2="descending" cardClass="sort" func={(e) => {
+        <Options heading="Sort By" type="radio" name="sort" label1="Low To High" label2="High To Low" value1="ASCENDING" value2="DESCENDING" cardClass="sort" func={(e) => {
           sortHandler({e});
         }} btnFunc={resetHandler} checked={isChecked} />
 
