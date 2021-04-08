@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import routes from "./routing/routes";
 const App = () => {
@@ -7,16 +7,15 @@ const App = () => {
     <div className="App">
       <Router>
         <Header />
-        <Switch>
+        <Routes>
           {routes.map((route, key) => (
             <Route
-              exact
               path={route.path}
-              component={route.component}
+              element={<route.component/>}
               key={key}
             />
           ))}
-        </Switch>
+        </Routes>
       </Router>
     </div>
   );
