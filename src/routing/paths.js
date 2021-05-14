@@ -1,5 +1,7 @@
-export const HOME = "/"
-export const PRODUCT  = "/product";
-export const WISHLIST = "/wishlist";
-export const CART = "/cart";
-export const CHECKOUT = "/checkout";
+export const LANDING = "/"
+export const HOME = "/Home"
+export const WISHLIST = "/Wishlist"
+export const CART ="/Cart"
+export const PROFILE = "/Profile"
+export const PRODUCT_PAGE = '/Product/:id'
+

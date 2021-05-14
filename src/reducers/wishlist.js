@@ -5,14 +5,14 @@ export const initialState ={
   
   export const wishListReducer = (state,action)=>{
     switch(action.type){
-      case 'ADD-WISH':
+      case 'ADD_WISH':
         return {
           
           wishes:action.payload.product,
           error:""
         }
       
-      case 'ON-FAILURE':
+      case 'ON_FAILURE':
         return{
           loading:false,
           wishes:[],

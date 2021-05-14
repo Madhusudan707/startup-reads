@@ -1,31 +1,35 @@
-import { HOME, WISHLIST, CART, CHECKOUT } from "./paths";
+import { LANDING,HOME,WISHLIST,CART,PROFILE,PRODUCT_PAGE} from "./paths";
+import {LandingPage,HomePage,WishlistPage,CartPage,ProfilePage,ProductPage} from '../pages/index'
 
-// import Product from "../../components/Product/Product"
-import Main from "../components/Main/Main";
-import Wishlist from "../components/WishList/Wishlist";
-import Cart from "../components/Cart/Cart";
-import Checkout from "../components/Checkout/Checkout";
+const LANDING_ONE = {
+  component: LandingPage,
+  path: LANDING,
+};
 
-const PRODUCT_ONE = {
-  component: Main,
+const HOME_TWO = {
+  component: HomePage,
   path: HOME,
 };
 
-const WISHLIST_TWO = {
-  component: Wishlist,
+const WISHLIST_THREE = {
+  component: WishlistPage,
   path: WISHLIST,
 };
-
-const CART_THREE = {
-  component: Cart,
-  path: CART,
+const CART_FOUR = {
+  component: CartPage,
+  path:CART,
+};
+const PROFILE_FIVE = {
+  component: ProfilePage,
+  path:PROFILE,
 };
 
-const CHECKOUT_FOUR = {
-  component: Checkout,
-  path: CHECKOUT,
-};
+const PRODUCT_PAGE_SIX = {
+  component:ProductPage,
+  path:PRODUCT_PAGE
+}
 
-const routes = [PRODUCT_ONE, WISHLIST_TWO, CART_THREE, CHECKOUT_FOUR];
+
+const routes = [LANDING_ONE,HOME_TWO,WISHLIST_THREE,CART_FOUR,PROFILE_FIVE,PRODUCT_PAGE_SIX];
 
 export default routes;

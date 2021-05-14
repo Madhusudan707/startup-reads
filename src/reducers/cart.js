@@ -5,14 +5,14 @@ export const initialState = {
 
 export const cartReducer = (state, action) => {
   switch (action.type) {
-    case "ADD-TO-CART":
+    case "ADD_TO_CART":
       return {
         ...state,
         cartItem: [...state.cartItem, action.payload],
         error: "",
       };
 
-    case "ADD-TO-CART-REPEATED":
+    case "ADD_TO_CART_REPEATED":
       return {
         cartItem: action.payload.product,
         error: "",
