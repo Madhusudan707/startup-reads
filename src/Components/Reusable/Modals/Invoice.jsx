@@ -36,23 +36,23 @@ export const Invoice = () => {
                 <span>{languageState.data.name_of_item||"Name of Item"}</span>
                 <span>{languageState.data.items||"Items"} ID</span>
                 <span>1</span>
-                <span><i class="fas fa-rupee-sign"></i> 250</span>
+                <span><i className="fas fa-rupee-sign"></i> 250</span>
             </div>
             <div className='flex flex-row w-96 justify-end text-1xl py-2'>
                 <span className='px-2'>{languageState.data.subtotal||"Subtotal"}</span>
-                <span><i class="fas fa-rupee-sign"></i> 250</span>
+                <span><i className="fas fa-rupee-sign"></i> 250</span>
             </div>
             <div className='flex flex-row w-96 justify-end text-1xl py-2' >
                 <span className='px-2'>{languageState.data.shipping_and_handling||"SHIPPING & HANDLING"}</span>
-                <span><i class="fas fa-rupee-sign"></i> 60</span>
+                <span><i className="fas fa-rupee-sign"></i> 60</span>
             </div>
             <div className='flex flex-row w-96 justify-end text-1xl py-2'>
                 <span className='px-2'>{languageState.data.gst||"GST"} (5%)</span>
-                <span><i class="fas fa-rupee-sign"></i>15</span>
+                <span><i className="fas fa-rupee-sign"></i>15</span>
             </div>
             <div className='flex flex-row w-96 justify-end text-1xl py-2 border-t border-b'>
                 <span className='px-2'>{languageState.data.total||"Total"}</span>
-                <span><i class="fas fa-rupee-sign"></i>325</span>
+                <span><i className="fas fa-rupee-sign"></i>325</span>
             </div>
             <div className='flex flex-col font-bold py-2' >
                 <span>{languageState.data.billing_information||"BILLING INFORMATION"}</span>

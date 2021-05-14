@@ -44,8 +44,8 @@ export const ProductDetails = () => {
           </ul>
           <div className='flex flex-row'>
             <span className='border p-2 bg-green-500 text-white font-bold rounded-md mr-2'>Best Value</span>
-            <span className='border p-2 bg-red-500 text-white font-bold rounded-md mr-2'><i class="fas fa-rupee-sign"></i>{product.price}</span>
-            <span className='border p-2 bg-green-500 text-white font-bold rounded-md'>{product.ratings}<sup ><i class="fas fa-star"></i></sup>
+            <span className='border p-2 bg-red-500 text-white font-bold rounded-md mr-2'><i className="fas fa-rupee-sign"></i>{product.price}</span>
+            <span className='border p-2 bg-green-500 text-white font-bold rounded-md'>{product.ratings}<sup ><i className="fas fa-star"></i></sup>
             </span>
           </div>
         </div>
