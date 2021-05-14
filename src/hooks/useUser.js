@@ -64,6 +64,7 @@ export const useUser = () => {
           .signInWithEmailAndPassword(username, password);
           const authId = user.user.uid;
           if(authId){
+            console.log(`${api.URL}${api.users.GETBYAUTHID}${authId}`)
             const response = await axios.get(`${api.URL}${api.users.GETBYAUTHID}${authId}`)
             const name = response.data.user.name
             const _id = response.data.user._id

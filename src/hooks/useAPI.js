@@ -1,13 +1,12 @@
 
 export const useAPI = ()=>{
     const localDomain = "http://localhost:"
-    const serverDomain =""
     const port = "3002"
     const local= `${localDomain}${port}/`
-    const server=""
+    const remote="https://startup-reads-backend.maddydev.repl.co/"
    
     const api = {
-    URL:local,
+    URL:remote,
     books:{
         "GET":"books/",
         "POST":"books/"
