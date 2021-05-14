@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import {useAPI} from "../hooks"
 
 export const useAddress = () => {
   const [label, setLabel] = useState("");
@@ -9,13 +10,14 @@ export const useAddress = () => {
   const [pincode, setPinCode] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
+  const {api} = useAPI()
 
   const selectAddress = async (e) => {
     const addressLabel = e.target.value;
     const userId = localStorage.getItem("_id");
     try {
       const response = await axios.get(
-        `http://localhost:3002/address/${addressLabel}/user/${userId}`
+        `${api.URL}${api.address.GETBYLABEL}${userId}/${addressLabel}`
       );
       const address = response.data.address
         setLabel(address.label);

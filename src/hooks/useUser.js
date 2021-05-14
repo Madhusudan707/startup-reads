@@ -4,6 +4,7 @@ import firebase from "firebase/app";
 import axios from "axios";
 import "firebase/auth";
 import { useLogin } from "../contexts";
+import {useAPI} from '../hooks'
 
 export const useUser = () => {
   // const [name, setName] = useState("");
@@ -16,6 +17,7 @@ export const useUser = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
   const {setLogin,setName,setAuthId,name} = useLogin();
+  const {api} = useAPI()
 
   const createUser = async (e) => {
     e.preventDefault();
@@ -34,7 +36,7 @@ export const useUser = () => {
           .createUserWithEmailAndPassword(email, password);
         const authId = user.user.uid;
         if (authId) {
-          const response = await axios.post("http://localhost:3002/users", {
+          const response = await axios.post(`${api.URL}${api.users.POST}`, {
             authId: user.user.uid,
             name: name,
             email: email,
@@ -62,8 +64,7 @@ export const useUser = () => {
           .signInWithEmailAndPassword(username, password);
           const authId = user.user.uid;
           if(authId){
-            const response = await axios.get(`http://localhost:3002/users/user/${authId}`)
-            console.log(response)
+            const response = await axios.get(`${api.URL}${api.users.GETBYAUTHID}${authId}`)
             const name = response.data.user.name
             const _id = response.data.user._id
             userAuthenticate(name,authId,_id)

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios'
 import { useCart } from "../contexts";
-import {useCountItems,useFetchLibrary} from '../hooks'
+import {useCountItems,useFetchLibrary,useAPI} from '../hooks'
 
 export const useCartHandler = () => {
   const [showToast2, setShowToast2] = useState(false);
@@ -10,6 +10,7 @@ export const useCartHandler = () => {
   const { cartState, cartDispatch,setProductId} = useCart();
   const {totalItemsInCart} = useCountItems()
   const {refresh,setRefresh} = useFetchLibrary()
+  const {api}  = useAPI()
 
 
   const cartHandler = async ({ e, product }) => {
@@ -52,11 +53,11 @@ export const useCartHandler = () => {
     }
     try{
       setProductId(product._id)
-      const response = await axios.get(`http://localhost:3002/userActivity/user/${userId}`)
+      const response = await axios.get(`${api.URL}${api.usersActivity.GET}/user/${userId}`)
       if(response.data.data){
-        await axios.post(`http://localhost:3002/userActivity/user/${userId}/cart/update/${plusMinus}/${product._id}`)
+        await axios.post(`${api.URL}${api.usersActivity.POST}user/${userId}/cart/update/${plusMinus}/${product._id}`)
       }else{
-        await axios.post("http://localhost:3002/userActivity/cart",{
+        await axios.post(`${api.URL}${api.usersActivity.GETCARTITEMS}`,{
           _id:userId,
           cart:{count:1,productId:product._id}
         })

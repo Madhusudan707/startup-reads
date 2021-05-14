@@ -1,20 +1,22 @@
 import { useEffect,useState} from "react";
 import axios from 'axios'
 import { useLibrary,useWishList,useCart} from "../contexts/";
-
+import {useAPI} from '../hooks'
 export const useFetchLibrary = () => {
   const { libraryState, libraryDispatch } = useLibrary();
   const { wishListState,wishListDispatch } = useWishList();
   const { cartDispatch } = useCart();
   const [refresh,setRefresh] = useState(false)
+  const {api} = useAPI()
 
 
   useEffect(() => {
     (async()=>{
       try {
         const _id = localStorage.getItem("_id")
-        const response = await axios.get("http://localhost:3002/books");
-        const user = await axios.get(`http://localhost:3002/userActivity/user/${_id}`)
+        const response = await axios.get(`${api.URL}${api.books.GET}`);
+        const user = await axios.get(`${api.URL}${api.usersActivity.GET}user/${_id}`)
+        console.log(`u1,${api.URL}${api.usersActivity.GET}user/${_id}`)
         let updateUserActivity
         if(user.data.data){
         updateUserActivity = response.data.data.map((item)=>{

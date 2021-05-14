@@ -1,16 +1,19 @@
 import {Button} from '../Reusable'
 import {useEffect,useState} from 'react'
 import axios from 'axios'
+import {useAPI} from '../../hooks'
 export const Profile = () => {
     const [name,setName] = useState()
     const [password,setPassword] = useState()
     const [email,setEmail] = useState()
+    const {api} = useAPI()
     useEffect(()=>{
         (async()=>{
 
             try{
                 const userId = await localStorage.getItem("_id")
-                const response = await axios(`http://localhost:3002/users/${userId}`)
+                const response = await axios(`${api.URL}${api.users.GETBYID}${userId}`)
+               
                 const userData = response.data.data
 
                 setName(userData.name)

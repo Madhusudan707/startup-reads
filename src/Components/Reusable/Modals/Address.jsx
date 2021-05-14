@@ -1,6 +1,6 @@
 import { Button, Heading, Close,Payment } from "../";
 import {useEffect,useState} from 'react'
-import {useAddress} from "../../../hooks"
+import {useAddress,useAPI} from "../../../hooks"
 import {useLanguage} from '../../../contexts'
 import axios from "axios";
 export const Address = () => {
@@ -8,11 +8,13 @@ export const Address = () => {
 const {label,name,address,country,pincode,city,state,selectAddress} = useAddress()
 const [option,setOption] = useState([])
 const {languageState} = useLanguage()
+const {api} = useAPI()
  useEffect(()=>{
      (async()=>{
          try{
             const userId = await localStorage.getItem("_id")
-                const response = await axios.get(`http://localhost:3002/address/user/${userId}`)
+                const response = await axios.get(`${api.URL}${api.address.GETBYID}${userId}`)
+                console.log(`${api.URL}${api.address.GETBYID}${userId}`)
                 if(response.data.address){
                   setOption(response.data.address)
                 }

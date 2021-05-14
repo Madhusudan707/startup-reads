@@ -1,12 +1,13 @@
 import { useState } from "react";
 import {useCounter,useCart} from '../contexts'
-import { useRemoveItemFromCart} from "../hooks";
+import { useRemoveItemFromCart,useAPI} from "../hooks";
 import axios from 'axios'
 export const useCounterHandler = ()=>{
     const { counterDispatch } = useCounter();
     const [btnDisable, setBtnDisable] = useState(false);
     const { cartState, cartDispatch } = useCart();
     const { removeItemFromCart } = useRemoveItemFromCart();
+    const {api} = useAPI()
 
     const counterHandler=async ({itemCount,incDec,pid})=>{
      
@@ -32,7 +33,7 @@ export const useCounterHandler = ()=>{
           });
           
             try{
-              await axios.post(`http://localhost:3002/userActivity/user/${userId}/cart/update/${incDec}/${pid}`)
+              await axios.post(`${api.URL}${api.usersActivity.POST}user/${userId}/cart/update/${incDec}/${pid}`)
             }catch(err){
                 console.log(`${err}:Unable to update cart`)
             }

@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useLibrary } from "../contexts";
-
+import {useAPI} from '../hooks'
 export const useSearchHandler = () => {
   const { libraryState, libraryDispatch } = useLibrary();
+  const {api} = useAPI()
 
   const searchHandler = async (searchStr) => {
     if (searchStr) {
@@ -18,7 +19,7 @@ export const useSearchHandler = () => {
       libraryDispatch({ type: "ON_SUCCESS", payload: data });
     } else {
       try {
-        const response = await axios.get("http://localhost:3002/books");
+        const response = await axios.get(`${api.URL}${api.books.GET}`);
         libraryDispatch({ type: "RESET", payload: response.data.data });
       } catch (err) {
         console.log(err)
