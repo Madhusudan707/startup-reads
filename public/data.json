@@ -7,7 +7,12 @@
     "wish":false,
     "stock":true,
     "cart":false,
-    "fastDelivery":false
+    "fastDelivery":false,
+    "author":"Dan Ariely",
+    "publisher":"HarperCollins",
+    "genre":"Science",
+    "ratings":4.5,
+    "pages":304
   },
   {
     "title":"HOOKED",
@@ -17,7 +22,12 @@
     "wish":false,
     "stock":true,
     "cart":false,
-    "fastDelivery":false
+    "fastDelivery":false,
+    "author":"Nir Eyal",
+    "publisher":"Penguin Books Ltd",
+    "genre":"Business & Economics",
+    "ratings":4.6,
+    "pages":256
   },
   {
     "title":"ZERO TO ONE",
@@ -27,7 +37,12 @@
     "wish":false,
     "stock":false,
     "cart":false,
-    "fastDelivery":false
+    "fastDelivery":false,
+    "author":"Peter Thiel",
+    "publisher":"Crown Business",
+    "genre":"Business, Politics & Government",
+    "ratings":4.5,
+    "pages":224
   },
   {
     "title":"THE SUBTLE ART OF NOT GIVING A F*CK",
@@ -37,7 +52,12 @@
     "wish":false,
     "stock":false,
     "cart":false,
-    "fastDelivery":true
+    "fastDelivery":true,
+    "author":"Mark Manson",
+    "publisher":"HarperCollins",
+    "genre":"Self-Help",
+    "ratings":4.5,
+    "pages":224
   },
   {
     "title":"SPRINT",
@@ -47,7 +67,12 @@
     "wish":false,
     "stock":true,
     "cart":false,
-    "fastDelivery":false
+    "fastDelivery":false,
+    "author":"Jake Knapp",
+    "publisher":"Simon & Schuster",
+    "genre":"Business & Economics",
+    "ratings":4.5,
+    "pages":288
   },
   {
     "title":"GOOD TO GREAT",
@@ -57,7 +82,12 @@
     "wish":false,
     "stock":true,
     "cart":false,
-    "fastDelivery":true
+    "fastDelivery":true,
+    "author":"Jim Collins",
+    "publisher":"HarperCollins",
+    "genre":"Business & Economics",
+    "ratings":4.8,
+    "pages":300
   },
   {
     "title":"THE HARD THING ABOUT HARD THINGS",
@@ -67,7 +97,12 @@
     "wish":false,
     "stock":true,
     "cart":false,
-    "fastDelivery":false
+    "fastDelivery":false,
+    "author":"Ben Horowitz",
+    "publisher":"HarperCollins",
+    "genre":"Business & Economics",
+    "ratings":4.6,
+    "pages":304
   },
   {
     "title":"HOW TO WIN FRIENDS & INFLUENCE PEOPLE",
@@ -77,6 +112,11 @@
     "wish":false,
     "stock":false,
     "cart":false,
-    "fastDelivery":true
+    "fastDelivery":true,
+    "author":"Dale Carnegie",
+    "publisher":"Prakash Books",
+    "genre":"Self-Help",
+    "ratings":4.5,
+    "pages":280
   }
 ]
