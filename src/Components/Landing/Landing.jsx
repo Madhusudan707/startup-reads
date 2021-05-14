@@ -1,0 +1,41 @@
+import { Heading, Logo, Button, LinkText, Join, Login,SelectLanguage } from "../Reusable";
+import { useLanguage } from "../../contexts";
+import {useLanguageHandler} from '../../hooks'
+export const Landing = () => {
+  const { languageState } = useLanguage();
+  const {languageHandler} = useLanguageHandler()
+  return (
+    <div className=" flex flex-col lg:border-0 w-96 h-96 lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-blue-600 lg:rounded-lg lg:shadow-lg ">
+      <SelectLanguage changeFunction={(e)=>{languageHandler(e)}} selectClass="p-1"/>
+      <Heading
+        text={languageState.data.startup_reads || "StartUp-Reads"}
+        nameClass="text-3xl lg:text-5xl text-white font-bold  "
+      />
+      <Logo nameClass="rounded-full w-24 h-24 lg:h-52 lg:w-52 border shadow-md" />
+      <a href="#join">
+        <Button
+          text={languageState.data.join_startup_reads || "Join StartUp-Reads"}
+          nameClass="bg-blue-500 p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 "
+        />
+      </a>
+
+      {/* <Button
+          text="Continue As Guest"
+          nameClass="bg-blue-500 p-2  w-72 text-2xl text-white rounded-lg "
+        /> */}
+
+      <LinkText
+        text={
+          languageState.data.already_have_an_account ||
+          "Already have an account?"
+        }
+      />
+      <a href="#login" className="text-2xl hover:text-white">
+        {languageState.data.login ||
+          "Login"}
+      </a>
+      <Join />
+      <Login />
+    </div>
+  );
+};

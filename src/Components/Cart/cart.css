@@ -1,0 +1,11 @@
+@media screen and (max-width:441px){
+	.main{
+		display:none
+	}
+}
+
+@media  screen and (min-width:441px) {
+	.mobile-cart{
+		display:none;
+	}
+}

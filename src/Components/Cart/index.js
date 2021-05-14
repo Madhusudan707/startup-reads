@@ -1,0 +1,6 @@
+// export {Cart} from './Cart'
+export {CartHeading} from './CartHeading'
+export {CartItems} from './CartItems'
+export {Checkout} from './Checkout'
+export {ContinueShopping} from './ContinueShopping'
+export {Main} from './Main' 
