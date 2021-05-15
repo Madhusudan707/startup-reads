@@ -34,7 +34,7 @@ export const Login = () => {
         <div className="flex flex-row w-full flex-wrap">
         <div className='flex flex-col w-full'>
             <label className='px-2'> {languageState.data.enter_password||"Enter Password"} </label>
-            <input type="text"    className=" p-5 m-2"  onChange={(e) => {setPassword(e.target.value)}}/>
+            <input type="password"    className=" p-5 m-2"  onChange={(e) => {setPassword(e.target.value)}}/>
           </div>
          
 
@@ -44,11 +44,27 @@ export const Login = () => {
       {/* <p className="text-white font-bold text-center bg-red-700 p-2 w-96 place-self-center">{errorMsg}</p> */}
      
     <Button
-        text={languageState.data.join_now||"JOIN NOW"}
+        text={languageState.data.login||"LOGIN"}
         nameClass="bg-blue-500 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
         btnFunction={userLogin}
       />
+      <div className="social-login w-full text-center  p-2">
+                <Heading
+                  text={languageState.data.or_login_with||"OR Login With"}
+                  nameClass="text-white self-center w-full  text-2xl lg:text-2xl "
+                />
+                <span className="text-5xl text-white flex justify-around mt-5 ">
+                 <a href='#otp'> <i
+                    className="fas fa-mobile-alt self-end hover:text-gray-600"
+                    title={languageState.data.login_with_otp||"Login With OTP"}
+                  ></i></a>
+                  <Button nameClass="fab fa-facebook-square hover:text-gray-600" btnFunction={facebookSignInPopup}/>
+                  <Button nameClass="fab fa-google hover:text-gray-600" btnFunction={googleSignInPopup}/>
+                
+                </span>
+              </div>
     </div>
+    
   </div>
     {/* <div id="login" className="modal">
       <div className="modal-content flex flex-col items-center w-full relative    ">
