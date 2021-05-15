@@ -28,7 +28,7 @@ export const useUser = () => {
     } else if (!cpassword) {
       setErrorMsg("Please Enter Your Confirm Password");
     } else if (password !== cpassword) {
-      setErrorMsg("Password and Confirm Password did not match");
+      setErrorMsg("Password and Confirm Password did not matched");
     } else {
       try {
         const user = await firebase
@@ -170,5 +170,6 @@ export const useUser = () => {
     setAuthId,
     logout,
     errorMsg,
+    setErrorMsg,
   };
 };
