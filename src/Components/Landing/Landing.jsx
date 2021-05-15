@@ -5,7 +5,7 @@ export const Landing = () => {
   const { languageState } = useLanguage();
   const {languageHandler} = useLanguageHandler()
   return (
-    <div className=" flex flex-col lg:border-0 w-96 h-96 lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-yellow-400 lg:rounded-lg lg:shadow-lg ">
+    <div className=" flex flex-col lg:border-0 w-96 h-screen lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-yellow-400 lg:rounded-lg lg:shadow-lg ">
       <SelectLanguage changeFunction={(e)=>{languageHandler(e)}} selectClass="p-1"/>
       <Heading
         text={languageState.data.startup_reads || "StartUp-Reads"}
