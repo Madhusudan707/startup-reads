@@ -1,6 +1,7 @@
 .landing-page{
     /* background-image: url('https://t3.ftcdn.net/jpg/01/98/39/70/360_F_198397059_LLKE7c29g8TdJ8QebGLcosOphfBVuQe5.jpg') !important; */
-    background-image: url("http://localhost:3000/images/bg_landing2.svg");
+    /* background-image: url("http://localhost:3000/images/bg_landing2.svg"); */
+    background-image:url("https://startup-reads.netlify.app/images/bg_landing2.svg");
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
