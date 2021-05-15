@@ -16,7 +16,6 @@ export const useFetchLibrary = () => {
         const _id = localStorage.getItem("_id")
         const response = await axios.get(`${api.URL}${api.books.GET}`);
         const user = await axios.get(`${api.URL}${api.usersActivity.GET}user/${_id}`)
-        console.log(`u1,${api.URL}${api.usersActivity.GET}user/${_id}`)
         let updateUserActivity
         if(user.data.data){
         updateUserActivity = response.data.data.map((item)=>{
