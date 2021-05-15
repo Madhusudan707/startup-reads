@@ -53,7 +53,7 @@ export const useCartHandler = () => {
     }
     try{
       setProductId(product._id)
-      const response = await axios.get(`${api.URL}${api.usersActivity.GET}/user/${userId}`)
+      const response = await axios.get(`${api.URL}${api.usersActivity.GET}user/${userId}`)
       if(response.data.data){
         await axios.post(`${api.URL}${api.usersActivity.POST}user/${userId}/cart/update/${plusMinus}/${product._id}`)
       }else{
