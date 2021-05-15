@@ -27,7 +27,7 @@ export const Profile = () => {
     },[])
   return (
     <div className="flex flex-row justify-center items-center lg:mt-52 mt-32  ">
-      <div className="shadow-lg  p-5 m-5 lg:w-1/3 bg-blue-600  w-full">
+      <div className="shadow-lg  p-5 m-5 lg:w-1/3 bg-yellow-400  w-full">
         <div>
           <h1 className="text-3xl  text-black border-b p-2">Profile Info</h1>
         </div>

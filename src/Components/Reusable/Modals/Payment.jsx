@@ -9,7 +9,7 @@ export const Payment = () => {
       id="payment"
       className="modal w-full flex flex-col items-center justify-center z-10"
     >
-      <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-600 ">
+      <div className=" flex flex-col items-center justify-center border w-full p-16 bg-yellow-400 ">
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
         <Heading

@@ -1,4 +1,4 @@
-import { Button, Heading, Close,Otp } from "..";
+import { Button, Heading, Close,Otp,Toast } from "..";
 import { useUser } from "../../../hooks";
 import {useLanguage} from '../../../contexts'
 import "./modal.css";
@@ -9,10 +9,51 @@ export const Login = () => {
   const { userLogin, setUsername, setPassword,facebookSignInPopup,googleSignInPopup, errorMsg } = useUser();
   return (
     <>
-    <div id="login" className="modal">
+      <div  id="login"  className="modal w-full flex flex-col items-center justify-center z-10 ">
+    
+    <div className=" flex flex-col items-center justify-center border w-full p-16 bg-yellow-400 ">
+    {errorMsg ?<Toast msg={errorMsg} bgColor="#EF4444"/>:null}
+      <Close nameClass="text-white hover:text-red-500 text-3xl" />
+   
+         
+      <Heading
+         text={languageState.data.login||"Login"}
+        nameClass="text-center text-3xl lg:text-4xl text-white mb-5 pt-5 "
+      />
+    
+      <div className="flex flex-col w-full flex-wrap">
+        <div className="flex flex-row w-full flex-wrap">
+          <div className='flex flex-col w-full'>
+            <label className='px-2'>{languageState.data.enter_username_or_email||"Enter UserName or Email"}<sup className='text-red-500 text-lg'>*</sup> </label>
+            <input type="text"   className=" p-5 m-2"  
+            onChange={(e) => {setUsername(e.target.value)}} />
+
+          </div>
+         
+        </div>
+        <div className="flex flex-row w-full flex-wrap">
+        <div className='flex flex-col w-full'>
+            <label className='px-2'> {languageState.data.enter_password||"Enter Password"} </label>
+            <input type="text"    className=" p-5 m-2"  onChange={(e) => {setPassword(e.target.value)}}/>
+          </div>
+         
+
+        </div>
+      
+      </div>
+      {/* <p className="text-white font-bold text-center bg-red-700 p-2 w-96 place-self-center">{errorMsg}</p> */}
+     
+    <Button
+        text={languageState.data.join_now||"JOIN NOW"}
+        nameClass="bg-blue-500 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
+        btnFunction={userLogin}
+      />
+    </div>
+  </div>
+    {/* <div id="login" className="modal">
       <div className="modal-content flex flex-col items-center w-full relative    ">
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
-        <div className="lg:w-2/5 border w-96  flex flex-col lg:h-3/6  justify-center lg:items-center bg-blue-600">
+        <div className="lg:w-2/5 border w-96  flex flex-col lg:h-3/6  justify-center lg:items-center bg-yellow-400">
           <div className="flex flex-col items-center justify-center p-2 lg:py-5 ">
             <form
               onSubmit={userLogin}
@@ -66,7 +107,7 @@ export const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
     <Otp/>
     </>
   );
