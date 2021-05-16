@@ -44,7 +44,6 @@ export const Card = ({
             <Button
               nameClass="bg-gray-600 text-white p-4 rounded-md hover:bg-blue-500 w-full"
               text={languageState.data.go_to_cart || "GO TO CART"}
-              btnFunction={(e) => cartHandler({ e, product })}
             />
           </Link>
         ) : (
