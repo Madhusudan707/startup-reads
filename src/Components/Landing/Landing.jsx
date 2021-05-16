@@ -5,7 +5,7 @@ export const Landing = () => {
   const { languageState } = useLanguage();
   const {languageHandler} = useLanguageHandler()
   return (
-    <div className=" flex flex-col lg:border-0 w-96 h-screen lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-yellow-400 lg:rounded-lg lg:shadow-lg ">
+    <div className=" flex flex-col lg:border-0 w-96 h-screen lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-blue-400 lg:rounded-lg lg:shadow-lg ">
       <SelectLanguage changeFunction={(e)=>{languageHandler(e)}} selectClass="p-1"/>
       <Heading
         text={languageState.data.startup_reads || "StartUp-Reads"}
@@ -15,13 +15,13 @@ export const Landing = () => {
       <a href="#join">
         <Button
           text={languageState.data.join_startup_reads || "Join StartUp-Reads"}
-          nameClass="bg-blue-500 p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 "
+          nameClass="bg-blue-400 p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 "
         />
       </a>
 
       {/* <Button
           text="Continue As Guest"
-          nameClass="bg-blue-500 p-2  w-72 text-2xl text-white rounded-lg "
+          nameClass="bg-blue-400 p-2  w-72 text-2xl text-white rounded-lg "
         /> */}
 
       <LinkText
