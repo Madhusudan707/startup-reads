@@ -1,6 +1,6 @@
 import { Button } from "../Reusable";
 import { useLibrary } from "../../contexts";
-import { useCartHandler } from "../../hooks";
+import { useCartHandler} from "../../hooks";
 import { Link } from "react-router-dom";
 import { CART } from "../../routing/paths";
 export const ProductDetails = () => {
@@ -20,14 +20,13 @@ export const ProductDetails = () => {
               <Button
                 nameClass="bg-gray-600 text-white p-4  rounded-md hover:bg-red-500 lg:w-full w-12"
                 text="GO TO CART"
-                btnFunction={(e) => cartHandler({ e, product })}
               />
             </Link>
           ) : (
             <Button
               nameClass="bg-blue-500 text-white p-4 rounded-md hover:bg-red-500 w-full"
               text="ADD TO CART"
-              btnFunction={(e) => cartHandler({ e, product })}
+              btnFunction={() => cartHandler({product} )}
             />
           )}
         </div>

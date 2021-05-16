@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from 'axios'
-import { useCart } from "../contexts";
+import { useCart,useLibrary } from "../contexts";
 import {useCountItems,useFetchLibrary,useAPI} from '../hooks'
 
 export const useCartHandler = () => {
@@ -11,10 +11,9 @@ export const useCartHandler = () => {
   const {totalItemsInCart} = useCountItems()
   const {refresh,setRefresh} = useFetchLibrary()
   const {api}  = useAPI()
+  const {setProduct} = useLibrary()
 
-
-  const cartHandler = async ({ e, product }) => {
-    
+  const cartHandler = async ({product }) => {
     const plusMinus = "+"
     const userId = await localStorage.getItem("_id")
     // setToastColor2("#59D78B");
@@ -51,6 +50,10 @@ export const useCartHandler = () => {
         payload: { ...product, qty: 1, cart: !product.cart },
       });
     }
+
+  const  singleProduct = [{...product,cart:!product.cart}]
+    console.log(singleProduct)
+    setProduct(singleProduct[0])
     try{
       setProductId(product._id)
       const response = await axios.get(`${api.URL}${api.usersActivity.GET}user/${userId}`)
