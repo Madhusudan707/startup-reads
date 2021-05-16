@@ -1,20 +1,14 @@
-import {useSortHandler,useResetHandler} from '../../hooks'
-import {useLanguage} from '../../contexts'
+import { useSortHandler, useResetHandler } from "../../hooks";
+import { useLanguage,useWidget } from "../../contexts";
 
-export const Sort = ({
-  nameClass,
-  value,
-  type,
-  onClickFunction
-}) => {
-  const {languageState} = useLanguage()
-  const {sortHandler} = useSortHandler()
-  const {resetHandler,isChecked} = useResetHandler()
+export const Sort = ({ nameClass, value, type, onClickFunction }) => {
+  const { languageState } = useLanguage();
+  const { sortHandler } = useSortHandler();
+  const { resetHandler, isChecked } = useResetHandler();
+  const {toggleSort} = useWidget()
   return (
-    <div className="flex">
-      <div className="w-96 m-2 p-2 border flex flex-row items-center justify-evenly ">
-        <i title={languageState.data.sort || "Clear"} className="fas fa-sort fa-2x"></i>
-
+    <div className={`${toggleSort} flex-row fixed top-32 left-12 `}>
+      <div className="w-96 m-2 p-4 border flex flex-row items-center justify-evenly  bg-white ">
         <label>
           <input
             type="radio"
@@ -22,9 +16,11 @@ export const Sort = ({
             value="ASCENDING"
             className="mr-2"
             checked={isChecked}
-            onClick={(e)=>{sortHandler(e.target.value)}}
+            onClick={(e) => {
+              sortHandler(e.target.value);
+            }}
           />
-         { languageState.data.ascending || "Low To High"}
+          {languageState.data.ascending || "Low To High"}
         </label>
         <label>
           <input
@@ -33,11 +29,17 @@ export const Sort = ({
             value="DESCENDING"
             className="mr-2"
             checked={isChecked}
-            onClick={(e)=>{sortHandler(e.target.value)}}
+            onClick={(e) => {
+              sortHandler(e.target.value);
+            }}
           />
-          { languageState.data.descending || "Low To High"}
+          {languageState.data.descending || "Low To High"}
         </label>
-        <button className="far fa-trash-alt fa-1x cursor-pointer" title={languageState.data.clear || "Clear"} onClick={resetHandler}></button>
+        <button
+          className="far fa-trash-alt fa-1x cursor-pointer"
+          title={languageState.data.clear || "Clear"}
+          onClick={resetHandler}
+        ></button>
       </div>
     </div>
   );

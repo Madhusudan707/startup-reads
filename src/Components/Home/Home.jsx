@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {ProductCard } from "../";
-import { Search, Sort, Filter,Toast } from "../Reusable";
+import { Widget,Toast } from "../Reusable";
 import { useEffect } from "react";
 import { useFetchLibrary } from "../../hooks"
 export const Home = () => {
@@ -20,11 +20,7 @@ export const Home = () => {
   },[])
   return (
     <div>
-      <div className="flex flex-col w-full bg-blue-400 top-20  pt-3 lg:flex-row fixed lg:top-24  lg:p-5 lg:w-full ">
-        <Search />
-        <Sort />
-        <Filter />
-      </div>
+      <Widget/>
       <ProductCard />
       <Toast msg={msg} isHide={hide}/>
     </div>

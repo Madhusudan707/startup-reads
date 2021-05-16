@@ -1,4 +1,4 @@
-import { Heading, Logo, Button, LinkText, Join, Login,SelectLanguage } from "../Reusable";
+import { Heading, Logo, Button, LinkText, Join, Login} from "../Reusable";
 import { useLanguage } from "../../contexts";
 import {useLanguageHandler} from '../../hooks'
 export const Landing = () => {
@@ -6,7 +6,6 @@ export const Landing = () => {
   const {languageHandler} = useLanguageHandler()
   return (
     <div className=" flex flex-col lg:border-0 w-96 h-screen lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-blue-400 lg:rounded-lg lg:shadow-lg ">
-      <SelectLanguage changeFunction={(e)=>{languageHandler(e)}} selectClass="p-1"/>
       <Heading
         text={languageState.data.startup_reads || "StartUp-Reads"}
         nameClass="text-3xl lg:text-5xl text-white font-bold  "

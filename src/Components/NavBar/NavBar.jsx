@@ -1,6 +1,6 @@
-import { Logo,SelectLanguage } from "../Reusable/";
+import { Logo} from "../Reusable/";
 import { useLogin } from "../../contexts";
-import { useUser, useCountWish, useCountItems,useLanguageHandler } from "../../hooks";
+import { useUser, useCountWish, useCountItems } from "../../hooks";
 import { Link } from "react-router-dom";
 import { HOME, WISHLIST, CART, PROFILE } from "../../routing/paths";
 export const NavBar = () => {
@@ -8,7 +8,7 @@ export const NavBar = () => {
   const { logout } = useUser();
   const { totalItemsInWish } = useCountWish();
   const { totalItemsInCart } = useCountItems();
-  const {languageHandler} = useLanguageHandler()
+  
 
   return (
     <div className="fixed top-0 z-10 w-full flex flex-row text-2xl text-white items-center justify-center  lg:justify-end bg-blue-400 py-5 shadow">
@@ -39,7 +39,6 @@ export const NavBar = () => {
         ) : (
           "Login"
         )}
-         <SelectLanguage changeFunction={(e)=>{languageHandler(e)}} selectClass="p-1"/>
       </div>
      
     </div>

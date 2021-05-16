@@ -1,15 +1,13 @@
-import React from "react";
 import {useFilterHandler,useResetHandler} from '../../hooks'
-import {useLanguage} from '../../contexts'
+import {useLanguage,useWidget} from '../../contexts'
 export const Filter = () => {
   const {languageState} = useLanguage()
   const {filterHandler} = useFilterHandler()
   const {resetHandler,isChecked} = useResetHandler()
+  const {toggleFilter} = useWidget()
   return (
-    <div className="flex ">
-      <div className="w-96 m-2 p-2 border flex flex-row items-center justify-evenly ">
-      <i title={languageState.data.filter || "Clear"} className="fas fa-filter"></i>
-
+    <div className={`${toggleFilter} flex flex-row fixed top-32 left-12`}>
+      <div className="w-96 m-2 p-4 border flex flex-row items-center justify-evenly bg-white ">
         <label>
           <input
             type="checkbox"
@@ -34,6 +32,8 @@ export const Filter = () => {
         </label>
          <button className="far fa-trash-alt fa-1x cursor-pointer" title={languageState.data.clear || "Clear"} onClick={resetHandler}></button>
       </div>
+      
     </div>
+   
   );
 };

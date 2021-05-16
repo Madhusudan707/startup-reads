@@ -11,26 +11,29 @@ import {
   CartProvider,
   CounterProvider,
   LanguageProvider,
+  WidgetProvider,
 } from "./contexts";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <LanguageProvider>
-      <LoaderProvider>
-        <UserProvider>
-          <LibraryProvider>
-            <CounterProvider>
-              <WishListProvider>
-                <CartProvider>
-                  <App />
-                </CartProvider>
-              </WishListProvider>
-            </CounterProvider>
-          </LibraryProvider>
-        </UserProvider>
-      </LoaderProvider>
-      </LanguageProvider>
+      <WidgetProvider>
+        <LanguageProvider>
+          <LoaderProvider>
+            <UserProvider>
+              <LibraryProvider>
+                <CounterProvider>
+                  <WishListProvider>
+                    <CartProvider>
+                      <App />
+                    </CartProvider>
+                  </WishListProvider>
+                </CounterProvider>
+              </LibraryProvider>
+            </UserProvider>
+          </LoaderProvider>
+        </LanguageProvider>
+      </WidgetProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
