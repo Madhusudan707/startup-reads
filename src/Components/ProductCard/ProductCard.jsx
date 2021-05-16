@@ -1,7 +1,8 @@
+
 import { Card } from "../Reusable";
-import { useFetchLibrary } from "../../hooks";
+import {useLibrary} from '../../contexts'
 export const ProductCard = () => {
-  const { libraryState } = useFetchLibrary();
+  const { libraryState } = useLibrary();
   return (
     <div className="flex flex-col justify-center p-1 flex-wrap mt-72 lg:flex-row lg:p-10 lg:mt-52 lg:w-full">
       {libraryState.data.map((book) => {
