@@ -61,39 +61,39 @@ const {api} = useAPI()
           <div className="flex flex-row w-full flex-wrap">
           <div className='flex flex-col w-full'>
               <label className='px-2'>{languageState.data.address_type||"Address Type"}</label>
-              <input type="text"  defaultValue={label} className="lg:w-full w-72 p-5 m-2" />
+              <input type="text" placeholder='HOME' defaultValue={label} className="lg:w-full w-72 p-5 m-2" disabled />
             </div>
             
            </div>
           <div className="flex flex-row w-full flex-wrap">
             <div className='flex flex-col'>
               <label className='px-2'>{languageState.data.name||"Name"} </label>
-              <input type="text"  defaultValue={name} className="w-72 p-5 m-2" />
+              <input type="text" placeholder='Maddy'  defaultValue={name} className="w-72 p-5 m-2" disabled />
             </div>
             <div className='flex flex-col'>
               <label className='px-2'> {languageState.data.address||"Address"}  </label>
-              <input  type="text"   defaultValue={address} className="w-72 p-5 m-2" />
+              <input  type="text" placeholder='JAMSHEDPUR'   defaultValue={address} className="w-72 p-5 m-2" disabled/>
             </div>
           </div>
           <div className="flex flex-row w-full flex-wrap">
           <div className='flex flex-col'>
               <label className='px-2'>{languageState.data.country||"Country"}  </label>
-              <input type="text"  defaultValue={country}  className="w-72 p-5 m-2" />
+              <input type="text" placeholder='INDIA' defaultValue={country}  className="w-72 p-5 m-2" disabled />
             </div>
             <div className='flex flex-col'>
               <label className='px-2'>{languageState.data.pincode||"Pincode"}</label>
-              <input type="text"    defaultValue={pincode}  className="w-72 p-5 m-2"/>
+              <input type="text" placeholder='831011'   defaultValue={pincode}  className="w-72 p-5 m-2" disabled />
             </div>
 
           </div>
           <div className="flex flex-row w-full flex-wrap">
           <div className='flex flex-col'>
               <label className='px-2'>{languageState.data.city||"City"}</label>
-              <input type="text"  defaultValue={city} className="w-72 p-5 m-2" />
+              <input type="text" placeholder='JAMSHEDPUR'  defaultValue={city} className="w-72 p-5 m-2" disabled  />
             </div>
             <div className='flex flex-col'>
               <label className='px-2'>{languageState.data.state||"State"}</label>
-              <input type="text" defaultValue={state} className="w-72 p-5 m-2" />
+              <input type="text" placeholder='JHARKAHAND' defaultValue={state} className="w-72 p-5 m-2" disabled  />
             </div>
             
            

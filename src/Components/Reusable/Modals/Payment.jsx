@@ -26,14 +26,14 @@ export const Payment = () => {
           <div className="flex flex-row w-full flex-wrap">
             <div className='flex flex-col w-full'>
               <label className='px-2'>{languageState.data.name||"Name"} </label>
-              <input type="text"   className=" p-5 m-2" />
+              <input type="text" placeholder="MADHUSUDAN DAS"  className=" p-5 m-2" disabled />
             </div>
            
           </div>
           <div className="flex flex-row w-full flex-wrap">
           <div className='flex flex-col w-full'>
               <label className='px-2'> {languageState.data.card_number||"Card Number"}  </label>
-              <input type="text"    className=" p-5 m-2" />
+              <input type="text" placeholder='6759 6498 2643 8453'   className=" p-5 m-2" disabled />
             </div>
            
 
@@ -41,11 +41,11 @@ export const Payment = () => {
           <div className="flex flex-row w-full flex-wrap">
           <div className='flex flex-col'>
               <label className='px-2'>{languageState.data.expiration_date||"Expiration (mm/yy)"}  </label>
-              <input type="text"  className="w-72 p-5 m-2" />
+              <input type="text" placeholder="05/2024"  className="w-72 p-5 m-2" disabled />
             </div>
             <div className='flex flex-col'>
               <label className='px-2'>{languageState.data.security_code||"Security Code"}  </label>
-              <input type="text"  className="w-72 p-5 m-2" />
+              <input type="text" placeholder="123" className="w-72 p-5 m-2" disabled />
             </div>
             
            
