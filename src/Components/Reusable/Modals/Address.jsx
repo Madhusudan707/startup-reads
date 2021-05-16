@@ -32,7 +32,7 @@ const {api} = useAPI()
       id="address"
       className="modal w-full flex flex-col items-center justify-center z-10"
     >
-      <div className=" flex flex-col items-center justify-center border w-full p-16 bg-yellow-400 ">
+      <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-400 ">
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
         <Heading
@@ -102,7 +102,7 @@ const {api} = useAPI()
 
       <a href='#payment'>  <Button
          text= {languageState.data.continue_to_payment||"CONTINUE TO PAYMENT"}
-          nameClass="bg-blue-500 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
+          nameClass="bg-blue-400 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
         /></a>
       </div>
     </div>

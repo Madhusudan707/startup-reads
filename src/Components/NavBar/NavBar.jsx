@@ -11,7 +11,7 @@ export const NavBar = () => {
   const {languageHandler} = useLanguageHandler()
 
   return (
-    <div className="fixed top-0 z-10 w-full flex flex-row text-2xl text-white items-center justify-center  lg:justify-end bg-yellow-400 py-5 shadow">
+    <div className="fixed top-0 z-10 w-full flex flex-row text-2xl text-white items-center justify-center  lg:justify-end bg-blue-400 py-5 shadow">
       <div className="flex flex-row  w-16  lg:justify-start  lg:w-full lg:px-5 ">
         <Logo nameClass="rounded-full w-12 h-12 lg:h-16 lg:w-16 border shadow-md self-start justify-start" />
       </div>

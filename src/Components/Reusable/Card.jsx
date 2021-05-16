@@ -42,13 +42,13 @@ export const Card = ({
         {product.cart ? (
           <Link to={CART} className='w-full'>
             <Button
-              nameClass="bg-gray-600 text-white p-4 rounded-md hover:bg-blue-500 w-full"
+              nameClass="bg-gray-600 text-white p-4 rounded-md hover:bg-blue-400 w-full"
               text={languageState.data.go_to_cart || "GO TO CART"}
             />
           </Link>
         ) : (
           <Button
-            nameClass="bg-blue-500 text-white p-4 rounded-md hover:bg-gray-600 w-full"
+            nameClass="bg-blue-400 text-white p-4 rounded-md hover:bg-gray-600 w-full"
             text={languageState.data.add_to_cart || "ADD TO CART"}
             btnFunction={(e) => cartHandler({ e, product })}
           />

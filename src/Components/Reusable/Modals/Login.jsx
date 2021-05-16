@@ -19,7 +19,7 @@ export const Login = () => {
       id="login"
       className="modal w-full flex flex-col items-center justify-center z-10 "
     >
-      <div className=" flex flex-col items-center justify-center border w-6/6 p-16 bg-yellow-400 ">
+      <div className=" flex flex-col items-center justify-center border w-6/6 p-16 bg-blue-400 ">
         {errorMsg ? <Toast msg={errorMsg} bgColor="#EF4444" /> : null}
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
@@ -64,7 +64,7 @@ export const Login = () => {
 
         <Button
           text={languageState.data.login || "LOGIN"}
-          nameClass="bg-blue-500 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
+          nameClass="bg-blue-400 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
           btnFunction={userLogin}
         />
         <div className="social-login w-full text-center  p-2">

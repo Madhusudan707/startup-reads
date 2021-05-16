@@ -9,7 +9,7 @@ export const Invoice = () => {
 
   return (
     <div  id="invoice" className="modal w-full flex flex-col items-center justify-center z-10 " >
-      <div className=" flex flex-col items-center justify-center border w-full p-8 bg-yellow-400 ">
+      <div className=" flex flex-col items-center justify-center border w-full p-8 bg-blue-400 ">
         <Close nameClass="text-white hover:text-red-500 text-3xl no-print" />
         <Heading text= {languageState.data.invoice||"FAKE INVOICE"}   nameClass="no-print text-center text-3xl lg:text-4xl text-white mb-5 pt-5" />
         <div className='border p-16'>
@@ -63,7 +63,7 @@ export const Invoice = () => {
             <div className='flex justify-center items-center -2 border-t'>
             <Button
           text="PRINT"
-          nameClass="no-print bg-blue-500 text-white p-4 mt-4 shadow-md text-2xl hover:bg-gray-600"
+          nameClass="no-print bg-blue-400 text-white p-4 mt-4 shadow-md text-2xl hover:bg-gray-600"
           btnFunction={printHandler}
         />
             </div>

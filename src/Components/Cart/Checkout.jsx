@@ -49,7 +49,7 @@ export const Checkout = () => {
               <i className="fas fa-rupee-sign"></i>&nbsp;{final + 60}
             </span>
           </div>
-         <a href="#address"> <button className="bg-blue-500  hover:bg-gray-600 py-3 text-sm text-white uppercase w-full">
+         <a href="#address"> <button className="bg-blue-400  hover:bg-gray-600 py-3 text-sm text-white uppercase w-full">
          {languageState.data.checkout||"Checkout"} 
           </button></a>
         </div>

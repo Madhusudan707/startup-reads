@@ -45,7 +45,7 @@ export const Otp = () => {
                   }}
                 />
                  <Button
-                nameClass="bg-blue-500 p-2 mt-2  w-20 self-center text mb-5 text-white self-end rounded-lg"
+                nameClass="bg-blue-400 p-2 mt-2  w-20 self-center text mb-5 text-white self-end rounded-lg"
                 text="Get OTP" btnFunction={getOtp}
               />
                 {/* <a href="#!" onClick={getOtp} className='text-white text-right w-full p-2 font-bold'>Get OTP</a> */}
@@ -62,7 +62,7 @@ export const Otp = () => {
 
               <p className="text-red-500 text-center pb-5">{errorMsg}</p>
               <Button
-                nameClass="bg-blue-500 p-2  w-72 self-center text-2xl mb-5 text-white rounded-lg"
+                nameClass="bg-blue-400 p-2  w-72 self-center text-2xl mb-5 text-white rounded-lg"
                 text="Login"
               />
             <div id="recaptcha-container"></div>

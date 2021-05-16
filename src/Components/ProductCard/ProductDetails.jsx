@@ -24,7 +24,7 @@ export const ProductDetails = () => {
             </Link>
           ) : (
             <Button
-              nameClass="bg-blue-500 text-white p-4 rounded-md hover:bg-red-500 w-full"
+              nameClass="bg-blue-400 text-white p-4 rounded-md hover:bg-red-500 w-full"
               text="ADD TO CART"
               btnFunction={() => cartHandler({product} )}
             />

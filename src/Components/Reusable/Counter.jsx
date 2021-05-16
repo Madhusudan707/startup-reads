@@ -8,7 +8,7 @@ export const Counter = ({ itemCount,pid}) => {
     <div className='flex flex-row items-center justify-around'>
        <Button
         isDisabled={btnDisable}
-        nameClass="bg-blue-500 rounded-full h-8 w-8 text-white font-bold text-2xl flex items-center justify-center"
+        nameClass="bg-blue-400 rounded-full h-8 w-8 text-white font-bold text-2xl flex items-center justify-center"
         text="-"
         btnFunction={() => {
           counterHandler({itemCount,incDec:"-",pid});
@@ -19,7 +19,7 @@ export const Counter = ({ itemCount,pid}) => {
     
        <Button
         text="+"
-        nameClass="bg-blue-500 rounded-full h-8 w-8 text-white font-bold text-2xl flex items-center justify-center"
+        nameClass="bg-blue-400 rounded-full h-8 w-8 text-white font-bold text-2xl flex items-center justify-center"
         btnFunction={() => {
           counterHandler({itemCount,incDec:"+",pid});
         }}
