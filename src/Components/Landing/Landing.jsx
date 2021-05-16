@@ -11,7 +11,7 @@ export const Landing = () => {
         text={languageState.data.startup_reads || "StartUp-Reads"}
         nameClass="text-3xl lg:text-5xl text-white font-bold  "
       />
-      <Logo nameClass="rounded-full w-24 h-24 lg:h-52 lg:w-52 border shadow-md" />
+      <Logo nameClass="rounded-full w-24 h-24 lg:h-52 lg:w-52  shadow-md" />
       <a href="#join">
         <Button
           text={languageState.data.join_startup_reads || "Join StartUp-Reads"}
