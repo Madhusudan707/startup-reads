@@ -18,7 +18,7 @@ export const ProductDetails = () => {
           {product.cart ? (
             <Link to={CART} className=" ">
               <Button
-                nameClass="bg-gray-600 text-white p-4  rounded-md hover:bg-red-500 lg:w-full w-12"
+                nameClass="bg-gray-600 text-white p-4  rounded-md hover:bg-red-500 w-full"
                 text="GO TO CART"
               />
             </Link>
