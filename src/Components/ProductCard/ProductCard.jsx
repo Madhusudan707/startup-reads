@@ -4,7 +4,7 @@ import {useLibrary} from '../../contexts'
 export const ProductCard = () => {
   const { libraryState } = useLibrary();
   return (
-    <div className="flex flex-col justify-center p-1 flex-wrap mt-44 lg:flex-row lg:p-10 lg:mt-32 lg:w-full">
+    <div className="flex flex-col justify-center p-1 flex-wrap mt-24 lg:flex-row lg:p-10 lg:mt-32 lg:w-full">
       {libraryState.data.map((book) => {
         return (
           <Card

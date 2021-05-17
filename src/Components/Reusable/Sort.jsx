@@ -7,8 +7,8 @@ export const Sort = ({ nameClass, value, type, onClickFunction }) => {
   const { resetHandler, isChecked } = useResetHandler();
   const {toggleSort} = useWidget()
   return (
-    <div className={`${toggleSort} flex-row fixed top-28 left-44 `}>
-      <div className="w-72 p-4 border flex flex-row items-center justify-evenly  bg-white ">
+    <div className={`${toggleSort} flex-row fixed lg:top-28 lg:bottom-3/4 lg:left-44 bottom-16 w-full `}>
+      <div className="lg:w-72 w-full p-4 border flex flex-row items-center justify-evenly  bg-white ">
         <label>
           <input
             type="radio"

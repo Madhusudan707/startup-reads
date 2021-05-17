@@ -7,9 +7,9 @@ export const Search = ({ nameClass }) => {
   const {toggleSearch} = useWidget()
   
   return (
-    <div className={`${toggleSearch} flex-row justify-center lg:justify-end w-72 top-28 left-36  fixed border `}>
+    <div className={`${toggleSearch} flex-row justify-center lg:justify-end lg:w-72 w-full lg:top-28 lg:bottom-3/4 bottom-16 lg:z-0 z-10 lg:left-44 left-0    fixed `}>
       <input
-        className="w-96  p-4  text-center lg:w-full text-black"
+        className="w-full  lg:p-4 p-2 lg:mt-1 border text-center lg:w-full text-black"
         type="search"
         placeholder={languageState.data.search || "Search your Books"}
         onChange={(e) => {
