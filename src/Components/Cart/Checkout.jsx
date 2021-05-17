@@ -1,6 +1,5 @@
 import { useCart,useLanguage } from "../../contexts";
 import { useFinalBill } from "../../hooks";
-import {Address} from '../Reusable'
 export const Checkout = () => {
   const {languageState} = useLanguage()
   const { totalItemsInCart } = useCart();
@@ -53,8 +52,8 @@ export const Checkout = () => {
          {languageState.data.checkout||"Checkout"} 
           </button></a>
         </div>
+       
       </div>
-      <Address/>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import {Counter,Button,Address} from '../../Reusable'
+import {Counter,Button} from '../../Reusable'
 import { useCart } from "../../../contexts";
 import { useRemoveItemFromCart } from "../../../hooks";
 import {Checkout} from '../index'
@@ -56,10 +56,12 @@ export const MobileCart = () => {
                 )
 
         })}
+      
         <Checkout/>
+        
             </div>
         </div>
-        <Address/>
+       
         </>
     )
 }

@@ -7,7 +7,7 @@ export const Payment = () => {
       <>
     <div
       id="payment"
-      className="modal w-full flex flex-col items-center justify-center z-10"
+      className="modal w-full flex flex-col items-center justify-center"
     >
       <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-400 ">
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
@@ -26,7 +26,7 @@ export const Payment = () => {
           <div className="flex flex-row w-full flex-wrap">
             <div className='flex flex-col w-full'>
               <label className='px-2'>{languageState.data.name||"Name"} </label>
-              <input type="text" placeholder="MADHUSUDAN DAS"  className=" p-5 m-2" disabled />
+              <input type="text" placeholder="MADHUSUDAN DAS"  className=" p-5 m-2 " disabled />
             </div>
            
           </div>

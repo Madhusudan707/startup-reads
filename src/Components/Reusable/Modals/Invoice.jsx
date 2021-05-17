@@ -8,7 +8,7 @@ export const Invoice = () => {
     
 
   return (
-    <div  id="invoice" className="modal w-full flex flex-col items-center justify-center z-10 " >
+    <div  id="invoice" className="modal w-full flex flex-col items-center justify-center" >
       <div className=" flex flex-col items-center justify-center border w-full p-8 bg-blue-400 ">
         <Close nameClass="text-white hover:text-red-500 text-3xl no-print" />
         <Heading text= {languageState.data.invoice||"FAKE INVOICE"}   nameClass="no-print text-center text-3xl lg:text-4xl text-white mb-5 pt-5" />

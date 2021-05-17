@@ -2,6 +2,7 @@ import { Button, Heading, Close,Payment } from "../";
 import {useEffect,useState} from 'react'
 import {useAddress,useAPI} from "../../../hooks"
 import {useLanguage} from '../../../contexts'
+import './modal.css'
 import axios from "axios";
 export const Address = () => {
 
@@ -14,7 +15,6 @@ const {api} = useAPI()
          try{
             const userId = await localStorage.getItem("_id")
                 const response = await axios.get(`${api.URL}${api.address.GETBYID}${userId}`)
-                console.log(`${api.URL}${api.address.GETBYID}${userId}`)
                 if(response.data.address){
                   setOption(response.data.address)
                 }
@@ -30,7 +30,7 @@ const {api} = useAPI()
     <>
     <div
       id="address"
-      className="modal w-full flex flex-col items-center justify-center z-10"
+      className="modal w-full flex flex-col items-center justify-center "
     >
       <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-400 ">
         <Close nameClass="text-white hover:text-red-500 text-3xl" />

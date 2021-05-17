@@ -1,4 +1,4 @@
-import { Empty } from "../Reusable";
+import { Empty,Address } from "../Reusable";
 
 import { useCart } from "../../contexts";
 import {Main,ContinueShopping} from './index'
@@ -23,6 +23,8 @@ export const Cart = () => {
         <>
           <Main/>
           <MobileCart/>
+          <Address/>
+          
         </>
        
       )}
