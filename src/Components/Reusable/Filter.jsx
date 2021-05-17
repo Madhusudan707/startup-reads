@@ -6,8 +6,8 @@ export const Filter = () => {
   const {resetHandler,isChecked} = useResetHandler()
   const {toggleFilter} = useWidget()
   return (
-    <div className={`${toggleFilter} flex flex-row fixed top-32 left-12`}>
-      <div className="w-96 m-2 p-4 border flex flex-row items-center justify-evenly bg-white ">
+    <div className={`${toggleFilter} flex flex-row fixed top-28 left-44`}>
+      <div className="w-72  p-4 border flex flex-row items-center justify-evenly bg-white ">
         <label>
           <input
             type="checkbox"

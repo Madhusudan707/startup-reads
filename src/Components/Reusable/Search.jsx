@@ -7,7 +7,7 @@ export const Search = ({ nameClass }) => {
   const {toggleSearch} = useWidget()
   
   return (
-    <div className={`${toggleSearch} flex-row justify-center lg:justify-end w-96 top-36 left-12 fixed border `}>
+    <div className={`${toggleSearch} flex-row justify-center lg:justify-end w-72 top-28 left-36  fixed border `}>
       <input
         className="w-96  p-4  text-center lg:w-full text-black"
         type="search"
