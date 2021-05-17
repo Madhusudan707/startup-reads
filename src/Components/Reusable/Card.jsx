@@ -1,4 +1,4 @@
-import { Button} from "./";
+import { Button,Toast} from "./";
 import { useWishListHandler, useCartHandler, useProductDetails } from "../../hooks";
 import { CART } from "../../routing/paths";
 import { Link } from "react-router-dom";
@@ -13,14 +13,16 @@ export const Card = ({
   _id,
   isHide,
   product,
+  cartHandler,
 }) => {
   const { wishListHandler,} = useWishListHandler();
   const {languageState} = useLanguage()
-  const { cartHandler} = useCartHandler();
+  // const { cartHandler} = useCartHandler();
   const {productDetailsHandler} = useProductDetails()
 
   return (
     <>
+    
     <div className="card w-full lg:w-96 border p-2  flex flex-row flex-nowrap  justify-center items-center mb-5 lg:m-5 shadow-sm hover:shadow-md">
       <div className="card-content w:72 lg:w-96 flex flex-col rounded justify-center items-center ">
         <img src={imageURL} alt={bookTitle} className=" cursor-pointer w-72 lg:w-96 lg:h-96" onClick={()=>{productDetailsHandler(_id)}} />

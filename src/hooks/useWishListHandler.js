@@ -1,18 +1,24 @@
 import axios from "axios";
-import { useState } from "react";
+import {useEffect } from "react";
 import { useWishList, useLibrary} from "../contexts";
 import {useAPI} from '../hooks'
 export const useWishListHandler = () => {
-  const [showToast, setShowToast] = useState(false);
-  const [toastMsg, setToastMsg] = useState("");
-  const [toastColor, setToastColor] = useState("#59D78B");
   const { wishListDispatch } = useWishList();
-  const { libraryState, libraryDispatch } = useLibrary();
+  const { libraryState, libraryDispatch,toastMsg,setToastMsg,toastColor,setToastColor } = useLibrary();
   const {api} = useAPI()
  
-
+  useEffect(() => {
+    (async () => {
+      if (toastMsg) {
+        setTimeout(() => {
+          setToastMsg("");
+        }, 2000);
+      }
+    })();
+  }, [toastMsg]);
   const wishListHandler = async (wish,isbn,_id,toastMsgParam) => {
     const userId = localStorage.getItem("_id")
+    wish ?setToastMsg("Item is Removed from Wishlist"): setToastMsg("Item is Added to Wishlist")
     wish ? setToastColor("#d34d32") : setToastColor("#59D78B");
     const newArr = libraryState.data.map((item) => {
       if (item.isbn === isbn) {
@@ -62,5 +68,5 @@ export const useWishListHandler = () => {
     // }, 2000);
   };
 
-  return { wishListHandler, showToast, toastMsg, toastColor,wishListDispatch };
+  return { wishListHandler,wishListDispatch,toastColor };
 };

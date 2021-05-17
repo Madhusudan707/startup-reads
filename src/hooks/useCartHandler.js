@@ -1,28 +1,31 @@
-import { useState } from "react";
+import { useEffect} from "react";
 import axios from 'axios'
 import { useCart,useLibrary } from "../contexts";
 import {useCountItems,useFetchLibrary,useAPI} from '../hooks'
 
 export const useCartHandler = () => {
-  const [showToast2, setShowToast2] = useState(false);
-  const [toastMsg2, setToastMsg2] = useState("");
-  const [toastColor2, setToastColor2] = useState("#59D78B");
   const { cartState, cartDispatch,setProductId} = useCart();
   const {totalItemsInCart} = useCountItems()
   const {refresh,setRefresh} = useFetchLibrary()
   const {api}  = useAPI()
-  const {setProduct} = useLibrary()
+  const {setProduct,toastMsg,setToastMsg,toastColor,setToastColor} = useLibrary()
 
+  useEffect(() => {
+    (async () => {
+      if (toastMsg) {
+        setTimeout(() => {
+          setToastMsg("");
+        }, 2000);
+      }
+    })();
+  }, [toastMsg]);
+ 
   const cartHandler = async ({product }) => {
+
+    setToastMsg(`${product.title} IS ADDED TO CART`)
+    setToastColor("#d34d32")
     const plusMinus = "+"
     const userId = await localStorage.getItem("_id")
-    // setToastColor2("#59D78B");
-    // setToastMsg2("Product Has Been Added To Cart");
-    // setShowToast2(true);
-    // setTimeout(() => {
-    //   setShowToast2(false);
-    // }, 2000);
-
     if (cartState.cartItem.length) {
       let flag = true;
       const newArr = cartState.cartItem.map((item) => {
@@ -71,5 +74,5 @@ export const useCartHandler = () => {
     setRefresh(!refresh)
   };
 
-  return { cartHandler, showToast2, toastMsg2, toastColor2,totalItemsInCart };
+  return { cartHandler,totalItemsInCart,toastMsg,toastColor};
 };
