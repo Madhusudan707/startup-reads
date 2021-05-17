@@ -33,7 +33,7 @@ export const Sort = ({ nameClass, value, type, onClickFunction }) => {
               sortHandler(e.target.value);
             }}
           />
-          {languageState.data.descending || "Low To High"}
+          {languageState.data.descending || "High To Low"}
         </label>
         <button
           className="far fa-trash-alt fa-1x cursor-pointer"
