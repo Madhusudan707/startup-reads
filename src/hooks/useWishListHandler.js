@@ -8,7 +8,7 @@ export const useWishListHandler = () => {
   const { libraryState, libraryDispatch } = useLibrary();
   const { api } = useAPI();
   const [wishLoading, setWishLoading] = useState(false);
-  const { setToastMsg, setToastColor, toastColor, SUCCESS, DANGER } =
+  const { setToastMsg, setToastColor, SUCCESS, DANGER } =
     useToast();
 
   const wishListHandler = async (wish, isbn, _id) => {
