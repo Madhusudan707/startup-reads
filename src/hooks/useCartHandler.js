@@ -1,6 +1,5 @@
-import { useEffect} from "react";
 import axios from 'axios'
-import { useCart,useLibrary } from "../contexts";
+import { useCart,useLibrary,useToast } from "../contexts";
 import {useCountItems,useFetchLibrary,useAPI} from '../hooks'
 
 export const useCartHandler = () => {
@@ -8,22 +7,12 @@ export const useCartHandler = () => {
   const {totalItemsInCart} = useCountItems()
   const {refresh,setRefresh} = useFetchLibrary()
   const {api}  = useAPI()
-  const {setProduct,toastMsg,setToastMsg,toastColor,setToastColor} = useLibrary()
+  const {setProduct} = useLibrary()
+  const {setToastMsg,setToastColor,SUCCESS} = useToast()
 
-  useEffect(() => {
-    (async () => {
-      if (toastMsg) {
-        setTimeout(() => {
-          setToastMsg("");
-        }, 2000);
-      }
-    })();
-  }, [toastMsg]);
- 
   const cartHandler = async ({product }) => {
-
     setToastMsg(`${product.title} IS ADDED TO CART`)
-    setToastColor("#d34d32")
+    setToastColor(SUCCESS)
     const plusMinus = "+"
     const userId = await localStorage.getItem("_id")
     if (cartState.cartItem.length) {
@@ -55,7 +44,6 @@ export const useCartHandler = () => {
     }
 
   const  singleProduct = [{...product,cart:!product.cart}]
-    console.log(singleProduct)
     setProduct(singleProduct[0])
     try{
       setProductId(product._id)
@@ -74,5 +62,5 @@ export const useCartHandler = () => {
     setRefresh(!refresh)
   };
 
-  return { cartHandler,totalItemsInCart,toastMsg,toastColor};
+  return { cartHandler,totalItemsInCart};
 };

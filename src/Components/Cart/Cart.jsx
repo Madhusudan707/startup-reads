@@ -1,13 +1,15 @@
-import { Empty,Address } from "../Reusable";
+import { Empty,Address,Toast } from "../Reusable";
 
-import { useCart } from "../../contexts";
+import { useCart,useToast } from "../../contexts";
 import {Main,ContinueShopping} from './index'
 import {MobileCart} from './MobileCart/MobileCart'
 
 export const Cart = () => {
   const { cartState } = useCart();
+  const {toastMsg,toastColor} = useToast()
   return (
     <div className="container mx-auto lg:mt-32 mt-20">
+       {toastMsg?<Toast toastClass="fixed top-32 right-8" bgColor={toastColor} msg={toastMsg}/>:null} 
       {cartState.cartItem.length === 0 ? (
         <>
         <Empty

@@ -12,11 +12,13 @@ import {
   CounterProvider,
   LanguageProvider,
   WidgetProvider,
+  ToastProvider
 } from "./contexts";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <ToastProvider>
       <WidgetProvider>
         <LanguageProvider>
           <LoaderProvider>
@@ -34,6 +36,7 @@ ReactDOM.render(
           </LoaderProvider>
         </LanguageProvider>
       </WidgetProvider>
+      </ToastProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
