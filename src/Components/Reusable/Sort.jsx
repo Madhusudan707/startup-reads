@@ -7,7 +7,7 @@ export const Sort = ({ nameClass, value, type, onClickFunction }) => {
   const { resetHandler, isChecked } = useResetHandler();
   const {toggleSort} = useWidget()
   return (
-    <div className={`${toggleSort} flex-row fixed lg:top-24 lg:mt-3 top-2/4 mt-72 lg:left-44  w-full `}>
+    <div className={`${toggleSort} flex-row fixed lg:top-24 lg:mt-4 top-2/4 mt-72 lg:left-12  w-full `}>
       <div className="lg:w-72 w-full p-4 border flex flex-row items-center justify-evenly  bg-white ">
         <label>
           <input
