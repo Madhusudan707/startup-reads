@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { ProductCard } from "../";
 import { Widget, Toast } from "../Reusable";
-import { useEffect } from "react";
 import { useFetchLibrary } from "../../hooks";
+import {useLoader} from '../../contexts'
+import {Loading} from '../'
 
 export const Home = () => {
   const [hide, setHide] = useState();
   const [msg, setMsg] = useState("");
   const { refresh, setRefresh } = useFetchLibrary();
+  const { loading } = useLoader();
   useEffect(() => {
     (async () => {
       const username = await localStorage.getItem("name");
@@ -23,7 +25,7 @@ export const Home = () => {
   return (
     <div>
       <Widget />
-      <ProductCard />
+     {loading?<Loading/>:<ProductCard />} 
       <Toast msg={msg} isHide={hide} />
     </div>
   );

@@ -1,6 +1,6 @@
 import { useEffect,useState} from "react";
 import axios from 'axios'
-import { useLibrary,useWishList,useCart} from "../contexts/";
+import { useLibrary,useWishList,useCart,useLoader} from "../contexts/";
 import {useAPI} from '../hooks'
 export const useFetchLibrary = () => {
   const { libraryState, libraryDispatch } = useLibrary();
@@ -8,6 +8,7 @@ export const useFetchLibrary = () => {
   const { cartDispatch } = useCart();
   const [refresh,setRefresh] = useState(false)
   const {api} = useAPI()
+  const {setLoading} = useLoader()
 
 
   useEffect(() => {
@@ -15,6 +16,7 @@ export const useFetchLibrary = () => {
       try {
         const _id = localStorage.getItem("_id")
         const response = await axios.get(`${api.URL}${api.books.GET}`);
+       
         const user = await axios.get(`${api.URL}${api.usersActivity.GET}user/${_id}`)
         let updateUserActivity
         if(user.data.data){
@@ -42,10 +44,11 @@ export const useFetchLibrary = () => {
         }else{
           libraryDispatch({ type: "ON_SUCCESS", payload: response.data.data});
         }
+        response.status===200?setLoading(false):setLoading(true)
       } catch (err) {
         libraryDispatch({ type: "ON_FAILURE", payload: "" });
       }
-      
+     
     })()
      //Below Line remove the useEffect dependency warning
   //eslint-disable-next-line react-hooks/exhaustive-deps

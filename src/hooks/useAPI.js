@@ -21,8 +21,8 @@ export const useAPI = ()=>{
         },
     usersActivity:{
         "GET":"userActivity/",
-        "GETUSERBYID":"user/",
-        "GETCARTITEMS":"cart/",
+        "GETUSERBYID":"userActivity/user/",
+        "GETCARTITEMS":"userActivity/cart/",
         "POSTWISH":"userActivity/wish",
         "POST":"userActivity/"
     },

@@ -1,9 +1,9 @@
-import { Counter, Button } from "../Reusable";
+import { Counter, Button,Loader } from "../Reusable";
 import { useCart,useLanguage } from "../../contexts";
 import { useRemoveItemFromCart } from "../../hooks";
 export const CartItems = () => {
   const { cartState } = useCart();
-  const { removeItemFromCart } = useRemoveItemFromCart();
+  const { removeItemFromCart,deleteItem } = useRemoveItemFromCart();
   const {languageState} = useLanguage()
   return (
     <>
@@ -34,10 +34,11 @@ export const CartItems = () => {
             </span>
           
             <Button
-              nameClass="bg-red-500 text-white p-2 rounded-md w-24 "
+              nameClass={`bg-red-500 text-white p-2 rounded-md w-24`}
               text={languageState.data.remove||"REMOVE"}
               btnFunction={()=>{removeItemFromCart(product._id)}}
             />
+            <Loader toggle={deleteItem?"opacity-50":"opacity-0"}/>
            
             
           </div>

@@ -1,20 +1,9 @@
-import { useContext, createContext, useState, useEffect } from "react";
+import { useContext, createContext, useState} from "react";
 
 export const LoaderContext = createContext({});
 
 export const LoaderProvider = ({ children }) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      (async () => {
-        if (loading) {
-          setLoading(false);
-        }
-      })();
-    }, 5000);
-  }, [loading]);
-
+  const [loading, setLoading] = useState(false);
   return (
     <LoaderContext.Provider value={{ loading, setLoading }}>
       {children}

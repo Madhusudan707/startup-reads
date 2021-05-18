@@ -19,7 +19,6 @@ export const useCounterHandler = () => {
           setToastMsg(`ITEM ADDED TO CART`);
           setToastColor(SUCCESS);
           counterDispatch({ type: "INCREMENT" });
-          setBtnDisable(false);
           return { ...item, qty: item.qty + 1 };
         } else {
           if (itemCount > 1) {

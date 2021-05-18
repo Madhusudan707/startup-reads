@@ -1,3 +1,6 @@
 /* body{
     background:url("http://localhost:3000/images/bg_landing.svg")
 } */
+input::placeholder{
+    color:gray;
+}
