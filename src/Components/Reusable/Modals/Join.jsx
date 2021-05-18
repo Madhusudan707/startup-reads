@@ -23,6 +23,8 @@ export const Join = () => {
         }, 2000);
       }
     })();
+     //Below Line remove the useEffect dependency warning
+      //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errorMsg]);
 
   return (

@@ -9,7 +9,7 @@ export const useCounterHandler = () => {
   const { cartState, cartDispatch } = useCart();
   const { removeItemFromCart } = useRemoveItemFromCart();
   const { api } = useAPI();
-  const { toastMsg, setToastMsg, setToastColor, SUCCESS, DANGER } = useToast();
+  const { setToastMsg, setToastColor, SUCCESS, DANGER } = useToast();
 
   const counterHandler = async ({ itemCount, incDec, pid }) => {
     const userId = localStorage.getItem("_id");
