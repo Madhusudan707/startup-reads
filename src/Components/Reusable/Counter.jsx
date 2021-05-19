@@ -5,21 +5,21 @@ export const Counter = ({ itemCount, pid }) => {
   const { counterHandler, btnDisable, counterLoading } = useCounterHandler();
 
   return (
-    <div className="flex flex-row items-center justify-around">
+    <div className="flex flex-row items-center justify-around border-double border-4   border-gray-400 shadow-md">
       <Button
         isDisabled={btnDisable}
-        nameClass="bg-blue-400 rounded-full h-8 w-8 text-white font-bold text-2xl flex items-center justify-center"
+        nameClass="bg-gray-400 h-8 w-8 text-white font-bold text-2xl shadow-md flex items-center justify-center"
         text="-"
         btnFunction={() => {
           counterHandler({ itemCount, incDec: "-", pid });
         }}
       />
-      <span className="border-4 bg-red-500 text-white font-bold   px-2 ">
+      <span className=" text-black font-bold   px-2 ">
         {itemCount}
       </span>
       <Button
         text="+"
-        nameClass="bg-blue-400 rounded-full h-8 w-8 text-white font-bold text-2xl flex items-center justify-center"
+        nameClass="bg-gray-400  h-8 w-8 text-white font-bold text-2xl shadow-md flex items-center justify-center"
         btnFunction={() => {
           counterHandler({ itemCount, incDec: "+", pid });
         }}
