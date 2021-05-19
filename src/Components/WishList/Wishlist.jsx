@@ -1,11 +1,14 @@
-import { Card,Toast } from "../Reusable/";
+import { Card,Toast,Loader } from "../Reusable/";
 import {useToast} from '../../contexts'
 import { useFetchLibrary} from "../../hooks";
 
 export const WishList = () => {
   const {toastMsg,toastColor} = useToast()
-  const { wishListState} = useFetchLibrary();
+  const { wishListState,libraryLoading} = useFetchLibrary();
   return (
+    <>{
+      libraryLoading ? <Loader toggle="opacity-50" />
+      :
     <div className="flex flex-col justify-center p-1 flex-wrap mt-72 lg:flex-row lg:p-10 lg:mt-52 lg:w-full">
        {toastMsg?<Toast toastClass="fixed top-32 right-8" bgColor={toastColor} msg={toastMsg}/>:null} 
       {wishListState.wishes.map((book) => {
@@ -24,5 +27,7 @@ export const WishList = () => {
         );
       })}
     </div>
+}
+    </>
   );
 };
