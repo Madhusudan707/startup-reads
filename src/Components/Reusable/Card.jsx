@@ -18,7 +18,7 @@ export const Card = ({
   isHide,
   product,
 }) => {
-  const { wishListHandler,wishLoading } = useWishListHandler();
+  const { wishListHandler, wishLoading } = useWishListHandler();
   const { languageState } = useLanguage();
   const { cartHandler, itemLoading } = useCartHandler();
   const { productDetailsHandler } = useProductDetails();
@@ -41,21 +41,20 @@ export const Card = ({
             {!isHide && (
               <>
                 <Button
-                  nameClass={`fas fa-heart text-3xl justify-self-end hover:text-red-500 focus:outline-none ${wishLoading ? "hidden" : null} ${
-                    wish ? "text-red-500" : ""
-                  }`}
+                  nameClass={`fas fa-heart text-3xl justify-self-end hover:text-red-500 focus:outline-none ${
+                    wishLoading ? "hidden" : null
+                  } ${wish ? "text-red-500" : ""}`}
                   btnFunction={() => {
                     wishListHandler(wish, isbn, _id);
                   }}
                 />
-               
               </>
             )}
-             <i
-                  className={`absolute top-2 right-2   fas fa-sync fa-spin fa-2x ${
-                    wishLoading ? null : "hidden"
-                  }`}
-                ></i>
+            <i
+              className={`absolute top-2 right-2   fas fa-sync fa-spin fa-2x ${
+                wishLoading ? null : "hidden"
+              }`}
+            ></i>
           </div>
 
           {product.cart ? (
@@ -74,11 +73,12 @@ export const Card = ({
                 text={languageState.data.add_to_cart || "ADD TO CART"}
                 btnFunction={() => cartHandler(product)}
               />
-              <i
-                className={`fas fa-sync fa-spin ${
+              <Button
+                nameClass={`bg-blue-400 text-white p-4 rounded-md hover:bg-gray-600 w-full ${
                   itemLoading ? null : "hidden"
                 }`}
-              ></i>
+                text={<i className="fas fa-sync fa-spin"></i>}
+              />
             </>
           )}
         </div>
