@@ -10,7 +10,7 @@ const App = () => {
   const { login} = useLogin();
   return (
     <div>
-      {0 ? (
+      {loading ? (
         <Loading />
       ) : (
         <>
