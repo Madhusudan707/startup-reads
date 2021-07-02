@@ -32,7 +32,7 @@ export const Join = () => {
       id="join"
       className="modal w-full flex flex-col items-center justify-center z-10 "
     >
-      <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-400 ">
+      <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-400  ">
         {errorMsg ? <Toast msg={errorMsg} bgColor="#EF4444" /> : null}
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 

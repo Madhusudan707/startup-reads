@@ -17,9 +17,9 @@ export const Login = () => {
   return (
     <div
       id="login"
-      className="modal w-full flex flex-col items-center justify-center z-10 "
+      className="modal w-full flex flex-col items-center justify-center z-10  "
     >
-      <div className=" flex flex-col items-center justify-center border w-6/6 p-16 bg-blue-400 ">
+      <div className=" flex flex-col items-center justify-center  w-6/6 p-16 bg-blue-400 ">
         {errorMsg ? <Toast msg={errorMsg} bgColor="#EF4444" /> : null}
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
@@ -67,7 +67,7 @@ export const Login = () => {
           nameClass="bg-blue-400 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
           btnFunction={userLogin}
         />
-        <div className="social-login w-full text-center  p-2">
+        <div className="social-login w-full text-center  p-2 hidden">
           <Heading
             text={languageState.data.or_login_with || "OR Login With"}
             nameClass="text-white self-center w-full  text-2xl lg:text-2xl "

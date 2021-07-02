@@ -14,7 +14,7 @@ export const Landing = () => {
       <a href="#join">
         <Button
           text={languageState.data.join_startup_reads || "Join StartUp-Reads"}
-          nameClass="bg-blue-400 p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 "
+          nameClass=" p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 bg-red-500 "
         />
       </a>
 
