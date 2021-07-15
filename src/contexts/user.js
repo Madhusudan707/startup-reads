@@ -9,9 +9,9 @@ export const UserProvider = ({ children }) => {
   const navigate = useNavigate();
   useEffect(() => {
     (async () => {
-      const login = await JSON.parse(localStorage.getItem("login"))
-      const authId = await  localStorage.getItem("authId")
-      const name = await  localStorage.getItem("name")
+      const login =  JSON.parse(localStorage.getItem("login"))
+      const authId =   localStorage.getItem("authId")
+      const name = localStorage.getItem("name")
       
       if (login) {
         setLogin(login);
@@ -21,9 +21,8 @@ export const UserProvider = ({ children }) => {
         navigate("/");
       }
     })();
-     //Below Line remove the useEffect dependency warning
   //eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [login]);
+  }, []);
 
   return (
     <UserContext.Provider value={{ login, setLogin,name,setName,authId,setAuthId}}>
