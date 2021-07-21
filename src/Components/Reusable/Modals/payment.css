@@ -4,12 +4,14 @@
  
   input,
   button {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none; */
     outline: none;
-    border-style: none;
+    /* border-style: none; */
   }
+
+  
  
   /* html {
     background-color: #6772e5;
