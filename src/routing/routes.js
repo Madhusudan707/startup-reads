@@ -30,6 +30,7 @@ const PRODUCT_PAGE_SIX = {
 }
 
 
+
 const routes = [LANDING_ONE,HOME_TWO,WISHLIST_THREE,CART_FOUR,PROFILE_FIVE,PRODUCT_PAGE_SIX];
 
 export default routes;

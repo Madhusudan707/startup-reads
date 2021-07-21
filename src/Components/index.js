@@ -1,9 +1,10 @@
-export {Loading} from './Loading/Loading'
-export {Landing} from './Landing/Landing'
-export {Home} from './Home/Home'
-export {NavBar} from './NavBar/NavBar'
-export {ProductCard} from './ProductCard/ProductCard'
-export {ProductDetails} from './ProductCard/ProductDetails'
-export {WishList} from './WishList/Wishlist'
-export {Cart} from './Cart/Cart'
-export {Profile} from './Profile/Profile'
+export { Loading } from "./Loading/Loading";
+export { Landing } from "./Landing/Landing";
+export { Home } from "./Home/Home";
+export { NavBar } from "./NavBar/NavBar";
+export { ProductCard } from "./ProductCard/ProductCard";
+export { ProductDetails } from "./ProductCard/ProductDetails";
+export { WishList } from "./WishList/Wishlist";
+export { Cart } from "./Cart/Cart";
+export { Profile } from "./Profile/Profile";
+export { CardForm } from "./CardForm/CardForm";
