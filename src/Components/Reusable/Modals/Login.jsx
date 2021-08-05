@@ -67,6 +67,12 @@ export const Login = () => {
           nameClass="bg-blue-400 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
           btnFunction={userLogin}
         />
+        <div className='flex flex-col justify-center items-center mt-12 text-white font-bold'>
+          <p>Use the below test credentials to login</p>
+        <p>username:test@sr.com</p>
+        <p>password:123456</p>
+        </div>
+      
         <div className="social-login w-full text-center  p-2 hidden">
           <Heading
             text={languageState.data.or_login_with || "OR Login With"}
