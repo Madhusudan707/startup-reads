@@ -33,6 +33,11 @@ export const Landing = () => {
         {languageState.data.login ||
           "Login"}
       </a>
+      <div className='flex flex-col justify-center items-center mt-4 text-white font-bold'>
+          <p>Use the below test credentials to login</p>
+        <p>username:test@sr.com</p>
+        <p>password:123456</p>
+        </div>
       <Join />
       <Login />
     </div>
