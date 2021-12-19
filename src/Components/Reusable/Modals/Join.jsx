@@ -23,8 +23,8 @@ export const Join = () => {
         }, 2000);
       }
     })();
-     //Below Line remove the useEffect dependency warning
-      //eslint-disable-next-line react-hooks/exhaustive-deps
+    //Below Line remove the useEffect dependency warning
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errorMsg]);
 
   return (
@@ -37,7 +37,9 @@ export const Join = () => {
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
         <Heading
-          text={languageState.data.join_startup_reads || "Join StartUp-Reads"}
+          text={
+            languageState.data.join_startup_reads || "Join Digitally Course"
+          }
           nameClass="text-center text-3xl lg:text-4xl text-white mb-5 pt-5 "
         />
 
