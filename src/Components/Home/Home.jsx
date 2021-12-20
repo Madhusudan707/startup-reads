@@ -14,7 +14,7 @@ export const Home = () => {
   }, []);
   return (
     <div>
-      <Widget />
+      {/* <Widget /> */}
       {libraryLoading ? <Loader toggle="opacity-50" /> : <ProductCard />}
     </div>
   );
