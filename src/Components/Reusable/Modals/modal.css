@@ -1,4 +1,4 @@
-.loader-modal{
+.loader-modal {
   width: 100%;
   position: fixed;
   top: 0;
@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   /* background: rgba(0, 0, 0, 0.8); */
- 
+
   z-index: 999999;
   /* opacity: 0; */
   -webkit-transition: opacity 100ms ease-in;
@@ -33,7 +33,7 @@
   pointer-events: none;
   display: grid;
   align-items: center;
-  background:white;
+  background: white;
 }
 
 /* .modal_content {
@@ -80,10 +80,11 @@
 
 /*print */
 @media print {
-  .no-print{
+  .no-print {
     visibility: hidden;
   }
-  #invoice>div{
-    border:none
+
+  #invoice>div {
+    border: none
   }
 }

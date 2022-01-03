@@ -17,9 +17,9 @@ export const Login = () => {
   return (
     <div
       id="login"
-      className="modal w-full flex flex-col items-center justify-center z-10  "
+      className="modal w-full flex flex-col items-center justify-center z-10 bg-blue-400 "
     >
-      <div className=" flex flex-col items-center justify-center  w-6/6 p-16 bg-blue-400 ">
+      <div className=" flex flex-col items-center justify-center  w-6/6 p-16 bg-blue-400 h-screen w-full ">
         {errorMsg ? <Toast msg={errorMsg} bgColor="#EF4444" /> : null}
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
