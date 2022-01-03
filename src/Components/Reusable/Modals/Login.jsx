@@ -30,33 +30,35 @@ export const Login = () => {
 
         <div className="flex flex-col w-full flex-wrap ">
           <div className="flex flex-row w-full flex-wrap">
-            <div className="flex flex-col w-full">
-              <label className="px-2">
+            <div className="flex flex-col w-full my-2">
+              {/* <label className="">
                 {languageState.data.enter_username_or_email ||
                   "Enter UserName or Email"}
                 <sup className="text-red-500 text-lg">*</sup>{" "}
-              </label>
+              </label> */}
               <input
                 type="text"
-                className=" p-5 m-2"
+                className="px-5 py-2"
                 onChange={(e) => {
                   setUsername(e.target.value);
                 }}
+                placeholder="Enter UserName or Email"
               />
             </div>
           </div>
           <div className="flex flex-row w-full flex-wrap">
-            <div className="flex flex-col w-full">
-              <label className="px-2">
+            <div className="flex flex-col w-full  my-2">
+              {/* <label className="">
                 {" "}
                 {languageState.data.enter_password || "Enter Password"}{" "}
-              </label>
+              </label> */}
               <input
                 type="password"
-                className=" p-5 m-2"
+                className=" px-5 py-2"
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
+                placeholder="Enter Password"
               />
             </div>
           </div>
@@ -64,7 +66,7 @@ export const Login = () => {
 
         <Button
           text={languageState.data.login || "LOGIN"}
-          nameClass="bg-blue-400 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
+          nameClass="bg-white text-blue-400  font-bold rounded-lg  py-2 mt-4 w-full shadow-md hover:bg-gray-600"
           btnFunction={userLogin}
         />
 
