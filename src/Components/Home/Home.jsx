@@ -63,12 +63,13 @@ export const Home = () => {
                   ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum
                   dolor sit amet lorem ipsum dolor sit amet
                 </div>
-                <div
+                <a
+                  href="#!"
                   onClick={readMoreHandler}
                   className="self-end text-xs text-blue-400 font-medium py-2"
                 >
                   {readMore ? "Show Less" : "Read More"}
-                </div>
+                </a>
                 <div className="py-2 flex">
                   <div className="line-through font-bold text-blue-400">
                     ₹ 400/-

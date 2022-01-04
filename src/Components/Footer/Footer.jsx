@@ -48,12 +48,12 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-right">
+      {/* <div className="footer-right hidden">
         <p className="footer-company-about">
           <p className="text-2xl text-white">Social Connect</p>
         </p>
 
-        <div className="footer-icons">
+        <div className="footer-icons ">
           <a href="!#">
             <i className="fa fa-facebook"></i>
           </a>
@@ -67,7 +67,7 @@ export const Footer = () => {
             <i className="fa fa-github"></i>
           </a>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };
