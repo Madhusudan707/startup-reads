@@ -1,3 +1,7 @@
-input::placeholder{
-    color:gray;
+input::placeholder {
+    color: gray;
+}
+
+html {
+    scroll-behavior: smooth;
 }

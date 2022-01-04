@@ -8,3 +8,4 @@ export { WishList } from "./WishList/Wishlist";
 export { Cart } from "./Cart/Cart";
 export { Profile } from "./Profile/Profile";
 export { CardForm } from "./CardForm/CardForm";
+export { Footer } from "./Footer/Footer";
