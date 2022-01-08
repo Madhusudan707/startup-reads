@@ -24,10 +24,9 @@ export const Address = () => {
       } catch (err) {
         console.log(`${err} Unable to to Options`);
       }
-     
     })();
-     //Below Line remove the useEffect dependency warning
-      //eslint-disable-next-line react-hooks/exhaustive-deps
+    //Below Line remove the useEffect dependency warning
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
@@ -35,7 +34,7 @@ export const Address = () => {
         id="address"
         className="modal w-full flex flex-col items-center justify-center "
       >
-        <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-400 ">
+        <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-brand ">
           <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
           <Heading
@@ -170,7 +169,7 @@ export const Address = () => {
               text={
                 languageState.data.continue_to_payment || "CONTINUE TO PAYMENT"
               }
-              nameClass="bg-blue-400 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
+              nameClass="bg-blue-brand text-white p-4 mt-4 shadow-md hover:bg-gray-600"
             />
           </a>
         </div>

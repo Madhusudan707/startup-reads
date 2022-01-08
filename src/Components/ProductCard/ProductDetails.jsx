@@ -1,6 +1,6 @@
 import { Button } from "../Reusable";
 import { useLibrary } from "../../contexts";
-import { useCartHandler} from "../../hooks";
+import { useCartHandler } from "../../hooks";
 import { Link } from "react-router-dom";
 import { CART } from "../../routing/paths";
 export const ProductDetails = () => {
@@ -24,16 +24,18 @@ export const ProductDetails = () => {
             </Link>
           ) : (
             <Button
-              nameClass="bg-blue-400 text-white p-4 rounded-md hover:bg-red-500 w-full"
+              nameClass="bg-blue-brand text-white p-4 rounded-md hover:bg-red-500 w-full"
               text="ADD TO CART"
-              btnFunction={() => cartHandler({product} )}
+              btnFunction={() => cartHandler({ product })}
             />
           )}
         </div>
         <div className="w-4/4 px-4">
-          <span className='lg:text-2xl text-sm '>{product.title}({product.author})</span>
-         
-          <ul className='lg:text-2xl py-5 text-sm text-gray-600 '>
+          <span className="lg:text-2xl text-sm ">
+            {product.title}({product.author})
+          </span>
+
+          <ul className="lg:text-2xl py-5 text-sm text-gray-600 ">
             <li>Language: English</li>
             <li>Binding: Paperback</li>
             <li>Publisher: {product.publisher}</li>
@@ -41,10 +43,19 @@ export const ProductDetails = () => {
             <li>ISBN: {product.isbn}</li>
             <li>Pages: {product.pages}</li>
           </ul>
-          <div className='flex flex-row'>
-            <span className='border p-2 bg-green-500 text-white font-bold rounded-md mr-2'>Best Value</span>
-            <span className='border p-2 bg-red-500 text-white font-bold rounded-md mr-2'><i className="fas fa-rupee-sign"></i>{product.price}</span>
-            <span className='border p-2 bg-green-500 text-white font-bold rounded-md'>{product.ratings}<sup ><i className="fas fa-star"></i></sup>
+          <div className="flex flex-row">
+            <span className="border p-2 bg-green-500 text-white font-bold rounded-md mr-2">
+              Best Value
+            </span>
+            <span className="border p-2 bg-red-500 text-white font-bold rounded-md mr-2">
+              <i className="fas fa-rupee-sign"></i>
+              {product.price}
+            </span>
+            <span className="border p-2 bg-green-500 text-white font-bold rounded-md">
+              {product.ratings}
+              <sup>
+                <i className="fas fa-star"></i>
+              </sup>
             </span>
           </div>
         </div>

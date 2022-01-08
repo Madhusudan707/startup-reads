@@ -32,7 +32,7 @@ export const Join = () => {
       id="join"
       className="modal w-full flex flex-col items-center justify-center z-10 "
     >
-      <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-400  ">
+      <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-brand  ">
         {errorMsg ? <Toast msg={errorMsg} bgColor="#EF4444" /> : null}
         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
@@ -106,7 +106,7 @@ export const Join = () => {
 
         <Button
           text={languageState.data.join_now || "JOIN NOW"}
-          nameClass="bg-blue-400 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
+          nameClass="bg-blue-brand text-white p-4 mt-4 shadow-md hover:bg-gray-600"
           btnFunction={createUser}
         />
       </div>

@@ -5,7 +5,7 @@ export const Landing = () => {
   const { languageState } = useLanguage();
   const { languageHandler } = useLanguageHandler();
   return (
-    <div className=" flex flex-col lg:border-0 w-96 h-screen lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-blue-400 lg:rounded-lg lg:shadow-lg ">
+    <div className=" flex flex-col lg:border-0 w-96 h-screen lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-blue-brand lg:rounded-lg lg:shadow-lg ">
       <Heading
         text={languageState.data.startup_reads || "Digitally-Course"}
         nameClass="text-3xl lg:text-5xl text-white font-bold  "
@@ -22,7 +22,7 @@ export const Landing = () => {
 
       {/* <Button
           text="Continue As Guest"
-          nameClass="bg-blue-400 p-2  w-72 text-2xl text-white rounded-lg "
+          nameClass="bg-blue-brand p-2  w-72 text-2xl text-white rounded-lg "
         /> */}
 
       <LinkText

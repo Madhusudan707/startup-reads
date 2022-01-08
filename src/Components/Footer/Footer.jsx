@@ -2,11 +2,11 @@ import React from "react";
 import "./footer.css";
 export const Footer = () => {
   return (
-    <footer className="footer-distributed">
+    <footer className="footer-distributed flex justify-around items-center">
       <div className="footer-left">
         <p className="text-2xl text-white">About Digitally Course</p>
 
-        <p className="footer-links w-72 font-light text-justify">
+        <p className="footer-links w-full text-sm font-light text-justify">
           {/* <a href="!#" className="link-1">
             Home
           </a>
@@ -20,8 +20,15 @@ export const Footer = () => {
           <a href="!#">Faq</a>
 
           <a href="!#">Contact</a> */}
-          Digitally Course is an e-learning platform which focuses on secondary
-          school education in india
+          Digitally course is about learning to reach customers via various
+          digital channels like search engines, social media, email, and many
+          more. Digitally course will make sure you learn the skill of online
+          marketing by reaching your target audiences in a more powerful and
+          accurate way through several digital channels, to create an impact and
+          engage with them. Later, converting them to customers. It helps you to
+          develop and manage marketing techniques for your company website. You
+          will be certified by a Completion Certification after completing the
+          digitally course and clearing the examinations.
         </p>
 
         <p className="footer-company-name font-bold">DigitallyCourse©2021</p>

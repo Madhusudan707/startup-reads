@@ -39,7 +39,7 @@ export const Home = () => {
             <div className="flex justify-center w-full mt-5">
               <a
                 href="#courses"
-                className="text-white bg-blue-400 text-center rounded-lg px-7 py-3 font-bold hover:bg-blue-500 hover:shadow-lg "
+                className="text-white bg-blue-brand text-center rounded-lg px-7 py-3 font-bold hover:bg-blue-500 hover:shadow-lg "
               >
                 Explore Courses
               </a>
@@ -77,7 +77,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -108,7 +108,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -139,7 +139,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -170,7 +170,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -201,7 +201,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -232,7 +232,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -263,7 +263,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -294,7 +294,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -325,7 +325,7 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-400 text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
+                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
                   Buy Now
                 </button>
               </div>
@@ -333,6 +333,7 @@ export const Home = () => {
 
             {/* <ProductCard /> */}
           </div>
+
           <Footer />
         </>
       )}

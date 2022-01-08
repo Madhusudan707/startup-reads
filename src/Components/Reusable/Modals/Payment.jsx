@@ -14,8 +14,6 @@ import {
   useStripe,
 } from "@stripe/react-stripe-js";
 
-
-
 const CARD_OPTIONS = {
   iconStyle: "solid",
   style: {
@@ -122,7 +120,7 @@ const CheckoutForm = () => {
     name: "",
   });
   const { final } = useFinalBill();
-  const {navigate} = useNavigate()
+  const { navigate } = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -167,20 +165,19 @@ const CheckoutForm = () => {
     });
   };
 
-  return paymentMethod ?  (
+  return paymentMethod ? (
     <div className="Result">
       <div className="ResultTitle" role="alert">
         Payment successful
       </div>
       <div className="ResultMessage">
-        <div className='flex flex-col items-center justify-center text-2xl'>
-        Thanks for trying Stripe Elements. No money was charged, but we
-        generated a PaymentMethod: {paymentMethod.id}
-        <a href='#invoice' className='border text-3xl p-4 mt-16 text-red-500'>Generate Invoice</a>
+        <div className="flex flex-col items-center justify-center text-2xl">
+          Thanks for trying Stripe Elements. No money was charged, but we
+          generated a PaymentMethod: {paymentMethod.id}
+          <a href="#invoice" className="border text-3xl p-4 mt-16 text-red-500">
+            Generate Invoice
+          </a>
         </div>
-        
-       
-       
       </div>
       <ResetButton onClick={reset} />
     </div>
@@ -232,14 +229,14 @@ const CheckoutForm = () => {
           }}
         />
       </fieldset>
-      {error && 
-    
-        <div className='flex items-center justify-center tex-red-500'>
-            <ErrorMessage>{error.message}</ErrorMessage>
+      {error && (
+        <div className="flex items-center justify-center tex-red-500">
+          <ErrorMessage>{error.message}</ErrorMessage>
         </div>
-     }
+      )}
       <SubmitButton processing={processing} error={error} disabled={!stripe}>
-        Pay&nbsp;  <i className="fas fa-rupee-sign"></i>{final}
+        Pay&nbsp; <i className="fas fa-rupee-sign"></i>
+        {final}
       </SubmitButton>
     </form>
   );
@@ -260,24 +257,22 @@ const stripePromise = loadStripe(
 );
 
 export const Payment = () => {
- 
   return (
     <>
-    <div id="payment" className="modal w-full flex flex-col ">
-      <div className=" flex flex-col items-center justify-center  w-full p-16  ">
-        <Close nameClass="text-black hover:text-red-500 text-3xl" />
-        <Heading
+      <div id="payment" className="modal w-full flex flex-col ">
+        <div className=" flex flex-col items-center justify-center  w-full p-16  ">
+          <Close nameClass="text-black hover:text-red-500 text-3xl" />
+          <Heading
             text="FAKE PAYMENT"
-             nameClass="text-center text-3xl lg:text-4xl text-blue-400 mb-5 pt-5 "
-           />
-          
-        <Elements stripe={stripePromise} options={ELEMENTS_OPTIONS}>
-          <CheckoutForm />
-        </Elements>
-       
+            nameClass="text-center text-3xl lg:text-4xl text-blue-400 mb-5 pt-5 "
+          />
+
+          <Elements stripe={stripePromise} options={ELEMENTS_OPTIONS}>
+            <CheckoutForm />
+          </Elements>
+        </div>
       </div>
-    </div>
-    <Invoice/>
+      <Invoice />
     </>
   );
 
@@ -288,7 +283,7 @@ export const Payment = () => {
   //       id="payment"
   //       className="modal w-full flex flex-col items-center justify-center"
   //     >
-  //       <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-400 ">
+  //       <div className=" flex flex-col items-center justify-center border w-full p-16 bg-blue-brand ">
   //         <Close nameClass="text-white hover:text-red-500 text-3xl" />
 
   //         <Heading
@@ -330,7 +325,7 @@ export const Payment = () => {
 
   //        <a href='#invoice'> <Button
   //           text={languageState.data.make_payment||"MAKE PAYMENT"}
-  //           nameClass="bg-blue-400 text-white p-4 mt-4 shadow-md hover:bg-gray-600"
+  //           nameClass="bg-blue-brand text-white p-4 mt-4 shadow-md hover:bg-gray-600"
   //         /></a>
   //       </div>
   //     </div>

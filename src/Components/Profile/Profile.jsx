@@ -28,7 +28,7 @@ export const Profile = () => {
   }, []);
   return (
     <div className="flex flex-row justify-center items-center lg:mt-52 mt-32  ">
-      <div className="shadow-lg  p-5 m-5 lg:w-1/3 bg-blue-400  w-full">
+      <div className="shadow-lg  p-5 m-5 lg:w-1/3 bg-blue-brand  w-full">
         <div>
           <h1 className="text-3xl  text-black border-b p-2">Profile Info</h1>
         </div>
@@ -62,7 +62,7 @@ export const Profile = () => {
             <div className="flex flex-col  w-72">
               <Button
                 text="UPDATE"
-                nameClass="bg-blue-400 text-white text-2xl p-4 mt-4 shadow-md"
+                nameClass="bg-blue-brand text-white text-2xl p-4 mt-4 shadow-md"
               />
             </div>
           </div>
