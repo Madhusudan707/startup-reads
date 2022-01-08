@@ -7,19 +7,6 @@ export const Footer = () => {
         <p className="text-2xl text-white">About Digitally Course</p>
 
         <p className="footer-links w-full text-sm font-light text-justify">
-          {/* <a href="!#" className="link-1">
-            Home
-          </a>
-
-          <a href="!#">Blog</a>
-
-          <a href="!#">Pricing</a>
-
-          <a href="!#">About</a>
-
-          <a href="!#">Faq</a>
-
-          <a href="!#">Contact</a> */}
           Digitally course is about learning to reach customers via various
           digital channels like search engines, social media, email, and many
           more. Digitally course will make sure you learn the skill of online
