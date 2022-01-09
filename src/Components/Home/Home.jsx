@@ -27,7 +27,7 @@ export const Home = () => {
         <>
           <div className="mt-24 lg:py-20 mx-5 lg:mx-20 mb-20">
             <div className="flex justify-center w-full px-0 sm:px-10 md:px-16 lg:px-20">
-              <img src="images/hero.svg" alt="hero" className="lg:h-96" />
+              <img src="images/hero.png" alt="hero" className="lg:h-96" />
             </div>
 
             <div className="text-2xl font-bold text-center text-blue-400 pt-8 pb-2 lg:text-4xl">
