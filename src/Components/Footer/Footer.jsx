@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.css";
 export const Footer = () => {
   return (
-    <footer className="footer-distributed flex justify-around items-center">
+    <footer className="footer-distributed lg:flex justify-around items-center xl:flex flex-column">
       <div className="footer-left">
         <p className="text-2xl text-white">About Digitally Course</p>
 
@@ -17,8 +17,6 @@ export const Footer = () => {
           will be certified by a Completion Certification after completing the
           digitally course and clearing the examinations.
         </p>
-
-        <p className="footer-company-name font-bold">DigitallyCourse©2021</p>
       </div>
 
       <div className="footer-center">
@@ -33,7 +31,6 @@ export const Footer = () => {
           <i className="fa fa-phone"></i>
           <p>+1.555.555.5555</p>
         </div>
-
         <div>
           <i className="fa fa-envelope"></i>
           <p>
@@ -61,6 +58,9 @@ export const Footer = () => {
             <i className="fa fa-github"></i>
           </a>
         </div>
+      </div> */}
+      {/* <div className=" font-bold flex justify-center items-center text-white ">
+        DigitallyCourse©2021
       </div> */}
     </footer>
   );

@@ -8,6 +8,9 @@ export const Profile = () => {
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
   const { api } = useAPI();
+  const [updateName, setUpdateName] = useState();
+  const [updateEmail, setUpdateEmail] = useState();
+  const [updatePassword, setUpdatePassword] = useState();
   useEffect(() => {
     (async () => {
       try {
@@ -26,6 +29,8 @@ export const Profile = () => {
     //Below Line remove the useEffect dependency warning
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const updateHandler = () => {};
   return (
     <div className="flex flex-row justify-center items-center lg:mt-52 mt-32  ">
       <div className="shadow-lg  p-5 m-5 lg:w-1/3 bg-blue-brand  w-full">
@@ -39,13 +44,23 @@ export const Profile = () => {
           <div className="flex flex-row w-full flex-wrap">
             <div className="flex flex-col w-full">
               <label className="px-2">Name </label>
-              <input type="text" defaultValue={name} className=" p-5 m-2" />
+              <input
+                type="text"
+                defaultValue={name}
+                className=" p-5 m-2"
+                onChange={(e) => setUpdateName(e.target.value)}
+              />
             </div>
           </div>
           <div className="flex flex-row w-full flex-wrap">
             <div className="flex flex-col w-full">
               <label className="px-2"> Email </label>
-              <input type="text" defaultValue={email} className=" p-5 m-2" />
+              <input
+                type="text"
+                defaultValue={email}
+                className=" p-5 m-2"
+                onChange={(e) => setUpdateEmail(e.target.value)}
+              />
             </div>
           </div>
           <div className="flex flex-row w-full flex-wrap">
@@ -55,6 +70,7 @@ export const Profile = () => {
                 type="password"
                 defaultValue={password}
                 className=" p-5 m-2"
+                onChange={(e) => setUpdatePassword(e.target.value)}
               />
             </div>
           </div>
@@ -63,6 +79,7 @@ export const Profile = () => {
               <Button
                 text="UPDATE"
                 nameClass="bg-blue-brand text-white text-2xl p-4 mt-4 shadow-md"
+                btnFunction={updateHandler}
               />
             </div>
           </div>

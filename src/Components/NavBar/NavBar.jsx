@@ -10,12 +10,14 @@ export const NavBar = () => {
   const { totalItemsInCart } = useCountItems();
 
   return (
-    <div className="fixed top-0 z-10 w-full flex  text-2xl text-white items-center justify-between  lg:px-20 bg-blue-brand py-2 shadow px-5">
+    <div className="fixed top-0 z-10 w-full flex   text-2xl text-white items-center   lg:px-20 bg-blue-brand py-2 shadow px-5">
       <Link to={HOME}>
-        <Logo nameClass="rounded-full w-12 lg:h-16 lg:w-16 border shadow-md self-start justify-start" />
+        <Logo nameClass="rounded-full w-10 lg:h-16 lg:w-16 border shadow-md self-start justify-start" />
       </Link>
 
-      <div>
+      <div className="px-10">Digitally Course</div>
+
+      {/* <div>
         {login ? (
           <Link to={PROFILE} className="mr-5">
             <i className="fas fa-user-circle text-3xl"></i>
@@ -30,7 +32,7 @@ export const NavBar = () => {
         ) : (
           "Login"
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

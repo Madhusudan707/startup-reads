@@ -26,28 +26,28 @@ export const Home = () => {
       ) : (
         <>
           <div className="mt-24 lg:py-20 mx-5 lg:mx-20 mb-20">
-            <div className="flex justify-center w-full px-0 sm:px-10 md:px-16 lg:px-20">
+            {/* <div className="flex justify-center w-full px-0 sm:px-10 md:px-16 lg:px-20">
               <img src="images/hero.png" alt="hero" className="lg:h-96" />
-            </div>
+            </div> */}
 
-            <div className="text-2xl font-bold text-center text-blue-400 pt-8 pb-2 lg:text-4xl">
-              Digitally Course
+            <div className="text-2xl font-bold text-center text-blue-400 pt-3  lg:text-4xl">
+              Course Catalog
             </div>
-            <div className="text-sm font-light tracking-wider text-center lg:text-lg">
+            {/* <div className="text-sm font-light tracking-wider text-center lg:text-lg">
               Start Learning Smartly
-            </div>
-            <div className="flex justify-center w-full mt-5">
+            </div> */}
+            {/* <div className="flex justify-center w-full mt-5">
               <a
                 href="#courses"
                 className="text-white bg-blue-brand text-center rounded-lg px-7 py-3 font-bold hover:bg-blue-500 hover:shadow-lg "
               >
                 Explore Courses
               </a>
-            </div>
+            </div> */}
 
             <div
               id="courses"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16 py-20"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16 py-10"
             >
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -77,9 +77,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -108,9 +111,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -139,9 +145,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -170,9 +179,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -201,9 +213,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -232,9 +247,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -263,9 +281,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -294,9 +315,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
               <div className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center">
                 <div>
@@ -325,9 +349,12 @@ export const Home = () => {
                   <div className="font-bold pl-2">₹ 200/-</div>
                 </div>
 
-                <button className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3 font-bold hover:bg-blue-500 hover:shadow-lg ">
-                  Buy Now
-                </button>
+                <a
+                  href="https://rzp.io/i/u8IlsRa"
+                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                >
+                  <button className="font-bold">Buy Now</button>
+                </a>
               </div>
             </div>
 
