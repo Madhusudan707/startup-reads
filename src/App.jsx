@@ -1,25 +1,29 @@
-import { Loading,NavBar} from "./Components";
+import { Loading, NavBar } from "./Components";
 import { Routes, Route } from "react-router-dom";
 import routes from "./routing/routes";
-import { useLoader,useLogin } from "./contexts";
+import { useLoader, useLogin } from "./contexts";
 
 import "./App.css";
 
 const App = () => {
   const { loading } = useLoader();
-  const { login} = useLogin();
+  const { login } = useLogin();
   return (
     <div>
       {loading ? (
         <Loading />
       ) : (
         <>
-     {login?<NavBar/>:null}   
-        <Routes>
-          {routes.map((route, key) => (
-            <Route path={route.path} element={<route.component />} key={key} />
-          ))}
-        </Routes>
+          {login ? <NavBar /> : null}
+          <Routes>
+            {routes.map((route, key) => (
+              <Route
+                path={route.path}
+                element={<route.component />}
+                key={key}
+              />
+            ))}
+          </Routes>
         </>
       )}
     </div>

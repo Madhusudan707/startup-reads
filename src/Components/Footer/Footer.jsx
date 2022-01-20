@@ -23,18 +23,19 @@ export const Footer = () => {
         <div>
           <i className="fa fa-map-marker"></i>
           <p>
-            <span>444 S. Cedros Ave</span> Solana Beach, California
+            <span></span>Sikanderpur DLF Phase 3, Sector 26,
+            <br />
+            Gurugram, Delhi 122002
           </p>
         </div>
 
-        <div>
-          <i className="fa fa-phone"></i>
-          <p>+1.555.555.5555</p>
-        </div>
+        <div>{/* <i className="fa fa-phone"></i> */}</div>
         <div>
           <i className="fa fa-envelope"></i>
           <p>
-            <a href="mailto:support@company.com">support@company.com</a>
+            <a href="mailto:info@digitallycourse.com">
+              info@digitallycourse.com
+            </a>
           </p>
         </div>
       </div>
