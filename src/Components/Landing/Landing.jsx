@@ -22,7 +22,7 @@ export const Landing = () => {
           nameClass=" p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 bg-red-500 "
         />
       </a> */}
-      <a href="/home">
+      <a href="/courses">
         <Button
           text="Explore Courses"
           nameClass=" p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 bg-red-500 "

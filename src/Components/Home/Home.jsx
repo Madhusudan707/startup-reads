@@ -28,6 +28,7 @@ export const Home = () => {
       desc: "Digital Marketing basics is understanding the study of a digital marketing concept that is widely known all around the world. Digital marketing is also known to the term ‘’Internet Marketing’’ referring to the marketing done on the internet.",
       actualPrice: "₹ 499/-",
       discountedPrice: "₹ 199/-",
+      paymentURL: "https://rzp.io/l/jhdrhIhA",
     },
     {
       id: "2",
@@ -36,6 +37,7 @@ export const Home = () => {
       desc: "This online digital marketing certification course gives you an in-depth understanding and advanced knowledge of the eight most important digital marketing domains and for gaining domain experience to help you become industry-ready.",
       actualPrice: "₹ 999/-",
       discountedPrice: "₹ 499/-",
+      paymentURL: "https://rzp.io/l/VfjljaH",
     },
     {
       id: "3",
@@ -44,6 +46,7 @@ export const Home = () => {
       desc: "Digital Marketing associate program will give you an opportunity to implement the skills you learned in the Digital Marketing. Through dedicated mentoring sessions, you’ll learn how to solve a real-world, industry-aligned case studies.",
       actualPrice: "₹ 2999/-",
       discountedPrice: "₹ 1499/-",
+      paymentURL: "https://rzp.io/l/bvTg1HHmu",
     },
   ];
   return (
@@ -121,7 +124,7 @@ export const Home = () => {
                     </div>
 
                     <a
-                      href="https://rzp.io/i/u8IlsRa"
+                      href={item.paymentURL}
                       className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
                     >
                       <button className="font-bold">Buy Now</button>

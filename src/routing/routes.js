@@ -1,5 +1,20 @@
-import { LANDING,HOME,WISHLIST,CART,PROFILE,PRODUCT_PAGE} from "./paths";
-import {LandingPage,HomePage,WishlistPage,CartPage,ProfilePage,ProductPage} from '../pages/index'
+import {
+  LANDING,
+  HOME,
+  WISHLIST,
+  CART,
+  PROFILE,
+  PRODUCT_PAGE,
+  COURSE_PAGE,
+} from "./paths";
+import {
+  LandingPage,
+  HomePage,
+  WishlistPage,
+  CartPage,
+  ProfilePage,
+  ProductPage,
+} from "../pages/index";
 
 const LANDING_ONE = {
   component: LandingPage,
@@ -8,7 +23,7 @@ const LANDING_ONE = {
 
 const HOME_TWO = {
   component: HomePage,
-  path: HOME,
+  path: COURSE_PAGE,
 };
 
 const WISHLIST_THREE = {
@@ -17,20 +32,25 @@ const WISHLIST_THREE = {
 };
 const CART_FOUR = {
   component: CartPage,
-  path:CART,
+  path: CART,
 };
 const PROFILE_FIVE = {
   component: ProfilePage,
-  path:PROFILE,
+  path: PROFILE,
 };
 
 const PRODUCT_PAGE_SIX = {
-  component:ProductPage,
-  path:PRODUCT_PAGE
-}
+  component: ProductPage,
+  path: PRODUCT_PAGE,
+};
 
-
-
-const routes = [LANDING_ONE,HOME_TWO,WISHLIST_THREE,CART_FOUR,PROFILE_FIVE,PRODUCT_PAGE_SIX];
+const routes = [
+  LANDING_ONE,
+  HOME_TWO,
+  WISHLIST_THREE,
+  CART_FOUR,
+  PROFILE_FIVE,
+  PRODUCT_PAGE_SIX,
+];
 
 export default routes;
