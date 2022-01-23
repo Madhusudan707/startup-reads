@@ -1,14 +1,9 @@
 import { Logo } from "../Reusable/";
-import { useLogin } from "../../contexts";
-import { useUser, useCountWish, useCountItems } from "../../hooks";
+// import { useLogin } from "../../contexts";
+// import { useUser, useCountWish, useCountItems } from "../../hooks";
 import { Link } from "react-router-dom";
-import { HOME, WISHLIST, CART, PROFILE } from "../../routing/paths";
+import { HOME } from "../../routing/paths";
 export const NavBar = () => {
-  const { login } = useLogin();
-  const { logout } = useUser();
-  const { totalItemsInWish } = useCountWish();
-  const { totalItemsInCart } = useCountItems();
-
   return (
     <div className="fixed top-0 z-10 w-full flex   text-2xl text-white items-center   lg:px-20 bg-blue-brand py-2 shadow px-5">
       <Link to={HOME}>

@@ -2,13 +2,13 @@ import { Button } from "../Reusable";
 import { useLibrary } from "../../contexts";
 import { useCartHandler } from "../../hooks";
 import { Link } from "react-router-dom";
-import { CART } from "../../routing/paths";
+// import { CART } from "../../routing/paths";
 export const ProductDetails = () => {
   const { product } = useLibrary();
   const { cartHandler } = useCartHandler();
   return (
     <div className="flex flex-row justify-center items-center lg:mt-52 mt-52 p-4   ">
-      <div className="shadow-lg  lg:p-5 lg:m-5 lg:w-3/6 flex flex-row   lg:border-b-4 border-gray-600">
+      {/* <div className="shadow-lg  lg:p-5 lg:m-5 lg:w-3/6 flex flex-row   lg:border-b-4 border-gray-600">
         <div className="2/4">
           <img
             className="lg:w-72 lg:h-80 w-72 h-72 p-1 shadow-lg border-2"
@@ -59,7 +59,7 @@ export const ProductDetails = () => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

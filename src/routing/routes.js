@@ -1,6 +1,5 @@
 import {
   LANDING,
-  HOME,
   WISHLIST,
   CART,
   PROFILE,

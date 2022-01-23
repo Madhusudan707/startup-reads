@@ -1,9 +1,9 @@
 import { Heading, Logo, Button, LinkText, Join, Login } from "../Reusable";
-import { useLanguage } from "../../contexts";
-import { useLanguageHandler } from "../../hooks";
+// import { useLanguage } from "../../contexts";
+// import { useLanguageHandler } from "../../hooks";
 export const Landing = () => {
-  const { languageState } = useLanguage();
-  const { languageHandler } = useLanguageHandler();
+  // const { languageState } = useLanguage();
+  // const { languageHandler } = useLanguageHandler();
   return (
     <div className=" flex flex-col lg:border-0 w-96 h-screen lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-blue-brand lg:rounded-lg lg:shadow-lg ">
       {/* <Heading
@@ -44,8 +44,8 @@ export const Landing = () => {
       <a href="#login" className="text-2xl hover:text-white">
         {languageState.data.login || "Login"}
       </a> */}
-      <Join />
-      <Login />
+      {/* <Join />
+      <Login /> */}
     </div>
   );
 };
