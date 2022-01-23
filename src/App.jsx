@@ -10,22 +10,18 @@ const App = () => {
   const { login } = useLogin();
   return (
     <div>
-      {loading ? (
+      {/* {loading ? (
         <Loading />
       ) : (
         <>
-          {login ? <NavBar /> : null}
-          <Routes>
-            {routes.map((route, key) => (
-              <Route
-                path={route.path}
-                element={<route.component />}
-                key={key}
-              />
-            ))}
-          </Routes>
-        </>
-      )}
+          {login ? <NavBar /> : null} */}
+      <Routes>
+        {routes.map((route, key) => (
+          <Route path={route.path} element={<route.component />} key={key} />
+        ))}
+      </Routes>
+      {/* </>
+      )} */}
     </div>
   );
 };
