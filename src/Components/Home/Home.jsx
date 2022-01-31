@@ -15,10 +15,23 @@ export const Home = () => {
     //Below Line remove the useEffect dependency warning
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const readMoreHandler = () => {
-    console.log("hello");
-    setReadMore(!readMore);
+  const readMoreHandler = (id) => {
+    if (id === courseID) {
+      // setReadMore(!readMore);
+
+      setCourseID(null);
+    } else {
+      setCourseID(id);
+    }
   };
+
+  useEffect(() => {
+    if (courseID) {
+      setReadMore(false);
+    } else {
+      setReadMore(true);
+    }
+  }, [courseID]);
 
   const courses = [
     {
@@ -101,17 +114,17 @@ export const Home = () => {
                 </div>
                 <div
                   className={`${
-                    readMore ? "" : "line-clamp-2"
+                    courseID === item.id ? "" : "line-clamp-2"
                   } text-sm  font-light text-gray-700 tracking-wide text-justify`}
                 >
                   {item.desc}
                 </div>
                 <a
                   href="#!"
-                  onClick={readMoreHandler}
+                  onClick={() => readMoreHandler(item.id)}
                   className="self-end text-xs text-blue-400 font-medium py-2"
                 >
-                  {readMore ? "Show Less" : "Read More"}
+                  {courseID === item.id ? "Show Less" : "Read More"}
                 </a>
                 <div className="py-2 flex">
                   <div className="line-through font-bold text-blue-400">

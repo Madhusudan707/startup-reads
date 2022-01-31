@@ -15,7 +15,7 @@ export const LandingPage = () => {
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="flex justify-center items-center  w-full  h-screen border landing-page">
+    <div className=" landing-page">
       <Landing />
     </div>
   );

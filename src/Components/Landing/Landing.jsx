@@ -5,47 +5,56 @@ export const Landing = () => {
   // const { languageState } = useLanguage();
   // const { languageHandler } = useLanguageHandler();
   return (
-    <div className=" flex flex-col lg:border-0 w-96 h-screen lg:w-1/3 lg:h-2/3 justify-evenly items-center bg-blue-brand lg:rounded-lg lg:shadow-lg ">
-      {/* <Heading
-        text={languageState.data.startup_reads || "Digitally-Course"}
-        nameClass="text-3xl lg:text-5xl text-white font-bold  "
-      /> */}
-      {/* <Logo nameClass="rounded-full w-24 h-24 lg:h-52 lg:w-52  shadow-md" /> */}
-      <div className="flex justify-center w-full px-0 sm:px-10 md:px-16 lg:px-20">
-        <img src="images/hero.png" alt="hero" className="lg:h-96" />
+    <div>
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 py-24 px-24">
+        <div className="border px-12 flex flex-col items-center justify-center w-100">
+          <div className="pb-10 text-justify">
+            lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit
+            amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip
+            lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit
+            amet, consectetur adip
+          </div>
+          <div>
+            <button className="bg-blue-400 p-4">EXPLORE NOW</button>
+          </div>
+        </div>
+        <div className="">
+          <img src="images/test_hero.svg" alt="test_hero" width="400" />
+        </div>
       </div>
-      {/* <a href="#join">
-        <Button
-          text={
-            languageState.data.join_startup_reads || "Join Digitally-Course"
-          }
-          nameClass=" p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 bg-red-500 "
-        />
-      </a> */}
-      <a href="/courses">
-        <Button
-          text="Explore Courses"
-          nameClass=" p-2   w-72 text-2xl text-white rounded-lg hover:bg-gray-600 bg-red-500 "
-        />
-        <br />
-      </a>
-
-      {/* <Button
-          text="Continue As Guest"
-          nameClass="bg-blue-brand p-2  w-72 text-2xl text-white rounded-lg "
-        /> */}
-
-      {/* <LinkText
-        text={
-          languageState.data.already_have_an_account ||
-          "Already have an account?"
-        }
-      />
-      <a href="#login" className="text-2xl hover:text-white">
-        {languageState.data.login || "Login"}
-      </a> */}
-      {/* <Join />
-      <Login /> */}
+      <div className="flex flex-col items-center justify-center">
+        Grow Your NetWork
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 py-24">
+        <div className="bg-red-500">
+          <img
+            src="https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+            alt="pic1"
+          />
+        </div>
+        <div className="bg-blue-500">
+          <div>Will help you on the digital map through our courses</div>
+          <div>GET STARTED NOW !!</div>
+        </div>
+        <div className="bg-red-500">
+          <img
+            src="https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+            alt="pic1"
+          />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 py-24">
+        <div className="bg-red-500">
+          <div>About</div>
+          <div>About Description</div>
+        </div>
+        <div className="bg-blue-500">
+          <div>Location</div>
+          <div>Mail</div>
+          <div>Linkedin</div>
+          <div>Phone</div>
+        </div>
+      </div>
     </div>
   );
 };
