@@ -1,4 +1,4 @@
-import { Loading, NavBar } from "./Components";
+import { Loading, NavBar, Footer } from "./Components";
 import { Routes, Route } from "react-router-dom";
 import routes from "./routing/routes";
 import { useLoader, useLogin } from "./contexts";
@@ -20,6 +20,7 @@ const App = () => {
             <Route path={route.path} element={<route.component />} key={key} />
           ))}
         </Routes>
+        <Footer />
       </>
       {/* )} */}
     </div>

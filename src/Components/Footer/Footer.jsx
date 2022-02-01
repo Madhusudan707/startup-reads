@@ -38,6 +38,14 @@ export const Footer = () => {
             </a>
           </p>
         </div>
+        <div>
+          <i className="fa fa-linkedin"></i>
+          <p>
+            <a href="https://www.linkedin.com/company/digitally-course/">
+              LinkedIn
+            </a>
+          </p>
+        </div>
       </div>
 
       {/* <div className="footer-right hidden">

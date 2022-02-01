@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { HOME } from "../../routing/paths";
 export const NavBar = () => {
   return (
-    <div className="fixed top-0 z-10 w-full flex   text-2xl text-white items-center   lg:px-20 bg-blue-brand py-2 shadow px-5">
-      <Link to={HOME}>
+    <div className="fixed top-0 z-10 w-full flex   text-2xl text-white items-center   lg:px-20 bg-blue-900 py-2 shadow px-5">
+      <Link to="/">
         <Logo nameClass="rounded-full w-10 lg:h-16 lg:w-16 border shadow-md self-start justify-start" />
       </Link>
 

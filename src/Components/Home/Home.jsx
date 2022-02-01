@@ -63,7 +63,7 @@ export const Home = () => {
     },
   ];
   return (
-    <div>
+    <div className="bg-home">
       {/* <Widget /> */}
       {/* {libraryLoading ? (
         <Loader toggle="opacity-50" />
@@ -74,7 +74,7 @@ export const Home = () => {
               <img src="images/hero.png" alt="hero" className="lg:h-96" />
             </div> */}
 
-        <div className="text-2xl font-bold text-center text-blue-400 pt-3  lg:text-4xl">
+        <div className="text-2xl font-bold text-center text-black pt-3  lg:text-4xl">
           Course Catalog
         </div>
         {/* <div className="text-sm font-light tracking-wider text-center lg:text-lg">
@@ -96,7 +96,7 @@ export const Home = () => {
           {courses.map((item) => {
             return (
               <div
-                className="border-2 border-blue-400 rounded-lg p-4 flex flex-col items-center"
+                className="border-2 border-blue-900 rounded-lg p-4 flex flex-col items-center"
                 key={item.id}
                 onClick={() => {
                   setCourseID(item.id);
@@ -122,12 +122,12 @@ export const Home = () => {
                 <a
                   href="#!"
                   onClick={() => readMoreHandler(item.id)}
-                  className="self-end text-xs text-blue-400 font-medium py-2"
+                  className="self-end text-xs text-blue-900 font-medium py-2"
                 >
                   {courseID === item.id ? "Show Less" : "Read More"}
                 </a>
                 <div className="py-2 flex">
-                  <div className="line-through font-bold text-blue-400">
+                  <div className="line-through font-bold text-blue-900">
                     {item.actualPrice}
                   </div>
                   <div className="font-bold pl-2"> {item.discountedPrice}</div>
@@ -135,9 +135,9 @@ export const Home = () => {
 
                 <a
                   href={item.paymentURL}
-                  className="text-white bg-blue-brand text-center rounded-lg w-full mt-2 py-3  hover:bg-blue-500 hover:shadow-lg "
+                  className="text-white bg-blue-900 text-center rounded-lg w-full mt-2 py-3   hover:bg-blue-500 hover:shadow-lg "
                 >
-                  <button className="font-bold">Buy Now</button>
+                  <button className="font-bold ">Buy Now</button>
                 </a>
               </div>
             );
@@ -146,7 +146,7 @@ export const Home = () => {
 
         {/* <ProductCard /> */}
       </div>
-      <Footer />
+
       {/* </> */}
       {/* )} */}
     </div>
