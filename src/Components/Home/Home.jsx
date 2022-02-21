@@ -40,7 +40,7 @@ export const Home = () => {
       courseName: "Basic Digital Marketing",
       desc: "Digital Marketing basics is understanding the study of a digital marketing concept that is widely known all around the world. Digital marketing is also known to the term ‘’Internet Marketing’’ referring to the marketing done on the internet.",
       actualPrice: "₹ 499/-",
-      discountedPrice: "₹ 199/-",
+      discountedPrice: "₹ 99/-",
       paymentURL: "https://rzp.io/l/jhdrhIhA",
     },
     {
