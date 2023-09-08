@@ -20,9 +20,10 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "craco  react-scripts --openssl-legacy-provider build",
     "test": "craco test",
     "eject": "react-scripts eject"
+   
   },
   "eslintConfig": {
     "extends": [
